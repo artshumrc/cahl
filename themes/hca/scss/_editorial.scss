@@ -1,0 +1,79 @@
+/*
+ * Template editorial styles for reading
+ */
+
+ // Widths
+ .one-third {
+ 	width:33%;
+ }
+ .two-thirds {
+ 	width:66%;
+ }
+
+ .half-width {
+ 	width:50%;
+ }
+ .full-width {
+ 	width:100%;
+ }
+
+ .twenty-percent {
+ 	width:20%;
+ }
+ .forty-percent {
+ 	width:40%;
+ }
+ .sixty-percent {
+ 	width:60%;
+ }
+ .eighty-percent {
+ 	width:80%;
+ }
+
+
+ // Alignment and related styles
+ .pull-left, .alignleft {
+	float:left;
+ 	padding:20px 30px 20px 0px; 
+ 	p.wp-caption-text {
+ 		float:left;
+ 	}
+ }
+ .pull-right, .alignright {
+ 	float:right;
+ 	padding:20px 0 20px 30px; 
+ 	p.wp-caption-text {
+ 		float:right;
+ 	}
+}
+ .center, .aligncenter {
+ 	margin:0 auto;
+ 	text-align:center;
+ 	display:inline-block;
+ }
+
+
+// Font-related styles
+em {
+	font-style:italic;
+}
+
+
+// Image-related styles
+.caption, .wp-caption-text {
+	margin:20px 0;
+	font-size:16px;
+	font-style:italic;
+}
+.image-wrap {
+	overflow:hidden;
+	img {
+		width:100%;
+	}
+}
+.image-wrap.pull-right {
+	margin:10px 0 10px 10px;
+}
+.image-wrap.pull-left {
+	margin:10px 10px 10px 0px;
+}

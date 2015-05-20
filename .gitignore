@@ -1,0 +1,14 @@
+
+# Theme files 
+themes/*/node_modules
+themes/*/.sass-cache
+
+# Development
+*.swp
+*.swo
+themes/*/npm-debug.log
+
+# Wordpress
+themes/twenty*
+vendor
+wp-content

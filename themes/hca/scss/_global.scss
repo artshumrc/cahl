@@ -1,0 +1,286 @@
+/*
+ * Custom global styles
+ */
+
+html, body, input, p, span, label {
+	@include font-body; 
+}
+body {
+	background:$bg-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:300;
+	@include font-title; 
+}
+
+a {
+	color:$font-dark;
+	text-decoration: none;
+	&:hover {
+		color:$font-dark;
+		text-decoration: none;
+	}
+}
+p {
+	line-height:1.6em;
+}
+
+li {
+	list-style:none;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+
+// Set text highlighting to accent colors
+::selection {
+  background: $bg-accent-1;
+}
+::-moz-selection {
+  background: $bg-accent-1; 
+}
+
+/*
+ * Global structure styles
+ */
+
+.grid.inner {
+	width:100%;
+	max-width:1200px;
+	clear:both;
+	margin:0 auto;
+}
+.fixed {
+	position:fixed;
+}
+.social-wrap {
+	padding:5px;
+	span {
+		padding:10px;
+	}
+}
+// geo art
+.geo-wrap {
+	position:absolute;
+	width:100%;
+	left:50%;
+	bottom:270px;
+	margin-left:-700px;
+	.geo {
+		position:absolute;
+	}
+	.triangles {
+		top:50px;
+	}
+	.circles {
+		top:40px;
+	}
+	.squares {
+	}
+}
+.content.primary {
+	min-height: 600px;
+}
+
+/*
+ * Styles for navigation and header
+ */
+header {
+	display:block;
+	background:$bg-primary-trans-97;
+	color:$font-light;
+	position:fixed;
+	top:0;
+	z-index:99;
+	width:100%;
+	-webkit-transform: translateZ(0);
+	a {
+		color:$font-light;
+		&:hover {
+			color:$font-light;
+		}
+	}
+	.site-title-wrap {
+		float:left;
+		margin:7px 0px 0 35px;
+		width:30%;
+		img {
+			width:22px;
+			float:left;
+			margin-top:18px;
+			margin-right:8px;
+		}
+		h1.site-title {
+			float:left;
+			font-size:22px;
+			margin:13px 0 0 0;
+			padding:0;
+			@include font-accent;
+		}
+	}
+	.header-right-wrap {
+		float:right;
+	}
+	.header-dropdown {
+		.dropdown-head {
+			display:none;
+			span.fa {
+				display:block;
+				padding:13px;
+				font-size:20px;
+			}
+		}
+		.dropdown-panel {
+			display:block;
+			position:relative;
+		}
+	}
+}
+// general navigation rules (when not fixed)
+nav.primary {
+	font-size:15px;
+	a {
+		&:hover {
+			color:$font-light;
+		}
+	}
+
+	ul {
+		padding:0; margin:0;
+		float:right;
+		position:relative;
+		li {
+			float:left;
+			padding:0; margin:0;
+			a {
+				padding:25px 25px;
+				display:block;
+				border-left:1px solid $off-primary;
+				&:hover {
+					background: $off-primary;	
+				}
+			}
+
+		}
+		li:last-child {
+			a {
+				border-right:1px solid $border-dark;
+			}
+		}
+	}
+}
+
+/*
+ * Footer 
+ */
+
+footer {
+	min-height:250px;
+	clear:both;
+	background-color:$bg-footer;
+	color:$font-light;
+	padding:50px 0;
+	text-align:center;
+	width:100%;
+
+	h1 {
+		margin: 20px 0 50px 0;
+		padding:0;
+		@include font-accent(30px);
+	}
+	a {
+		color:$font-light;
+	}
+	p a {
+		color:$font-light;
+		text-decoration: underline;
+		&:hover {
+			color:$font-light;
+			text-decoration: underline;
+		}
+	}
+	.map-wrap {
+		height:150px;
+		width:40%;
+		overflow:hidden;
+		display:inline-block;
+		img {
+			margin-top:-150px;
+			width:150%;
+		}
+	}
+	nav.secondary {
+		margin:50px 0;
+		ul, li {
+			padding:0;
+			margin:0;
+		}
+		li {
+			display:inline-block;
+		}
+		a {
+			padding:20px 10px;
+			margin:0 10px;
+			font-size:20px;
+			&:hover {
+				color:$font-light;
+			}
+		}
+	}
+
+}
+
+/*
+ * Styles for Dropdowns
+ */ 
+
+.dropdown {
+	cursor:pointer;
+
+	.dropdown-head {
+		cursor:pointer;
+		display:block;
+
+		&:hover {
+			//background:$bg-accent-dark-1;
+		}
+
+		&.lowered {
+			background:$bg-accent-dark-2-trans-80;
+		}
+
+		label, .dropdown-arrow {
+			cursor:pointer;
+		}
+
+	}
+	.dropdown-head.lowered:hover {
+			background:$bg-accent-dark-2-trans-80;
+	}
+
+	.dropdown-panel {
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;
+
+	}
+	.dropdown-panel.lowered {
+		display:block !important;
+	}
+}
+::-webkit-input-placeholder {
+   color: $font-light;
+}
+:-moz-placeholder { 
+   color: $font-light;  
+}
+::-moz-placeholder {
+   color: $font-light;  
+}
+:-ms-input-placeholder {  
+   color: $font-light;  
+}

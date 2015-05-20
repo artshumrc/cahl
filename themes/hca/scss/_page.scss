@@ -1,0 +1,55 @@
+/*
+ * Page styles
+ */
+article.page {
+	.header-image-wrap {
+		height:350px;
+		overflow:hidden;
+		img {
+			width:100%;
+			min-width:1000px;
+		}
+	}
+	.article-content {
+		width:80%;
+		margin:50px auto 150px auto;
+		overflow: hidden;
+		h1.article-h1 {
+			font-size:40px;
+		}
+		h2 {
+			width:92%;
+			margin:30px auto;
+			font-size:30px;
+		}
+		p, ul, ol {
+			font-size:20px;
+			width:90%;
+			margin:30px auto;
+			li {
+				margin:10px 0;
+			}
+		}
+		.media-wrap {
+			width:100%;	
+			text-align:center;
+		}
+		.image-wrap {
+			max-height:500px;
+			overflow:hidden;
+			img {
+				width:100%;
+				min-width:400px;
+			}
+		}
+		.image-caption, .wp-caption-text {
+			display:block;
+			clear:both;
+			font-size:16px;
+			font-style:italic;
+			margin:10px 10px 0;
+			line-height:20px;
+			text-align:center;
+		}
+	}
+} 
