@@ -7,7 +7,7 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 
-class StarterSite extends TimberSite {
+class HarvardSite extends TimberSite {
 
 	function __construct() {
 		add_theme_support( 'post-formats' );
@@ -29,9 +29,6 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		return $context;
@@ -46,7 +43,7 @@ class StarterSite extends TimberSite {
 
 }
 
-new StarterSite();
+new HarvardSite();
 
 function myfoo( $text ) {
 	$text .= ' bar!';

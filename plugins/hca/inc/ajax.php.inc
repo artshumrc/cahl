@@ -32,10 +32,6 @@ function hca_get_posts_callback () {
 			$query_args[ $k ] = $v; 
 		}
 
-		// if we have a meta_query or a connected_to in our query, we must use the custom query
-		if ( $k == "meta_query" || $k == "connected_to" ) {
-			$use_custom_query = TRUE;
-		}	
 	}
 
 	// enforce no posts from trash
@@ -53,97 +49,9 @@ function hca_get_posts_callback () {
 	// get the Timber context 
 	$context = Timber::get_context();
 
-
-	// if we need to do a custom query for meta_query or p2p
-	if ( $use_custom_query ) {
-
-		// sanitize input variables for query
-		$query_args = hca_sanitize_values($query_args);
-		$paged = $query_args['paged'];
-
-		$query = "SELECT DISTINCT wposts.* FROM $wpdb->posts wposts 
-					LEFT JOIN $wpdb->postmeta totalorder 
-						ON (wposts.ID = totalorder.post_id AND totalorder.meta_key = 'total_order')
-
-						";
-
-		// process meta_queries
-		if ( array_key_exists( 'meta_query', $query_args ) && count($query_args['meta_query']) >= 1) {
-			$added_lines_to_from_query = FALSE;
-			foreach( $query_args['meta_query'] as $index => $meta_query ){
-				$name = "wpostmeta" . $index;
-				$query .= " JOIN $wpdb->postmeta " . $name . "
-									ON (wposts.ID = " . $name . ".post_id";
-
-				if( ($meta_query['key'] == "line_from" || $meta_query['key'] == "line_to") && $added_lines_to_from_query == FALSE ){
-					$query .= " AND " . $name . ".meta_key = '" . $meta_query['key'] . "'";
-
-
-					foreach( $query_args['meta_query'] as $meta_query){
-						if($meta_query['key'] == "line_from" || $meta_query['key'] == "line_to"){
-							if( is_array( $meta_query['value'] ) ){
-								$meta_value = " (" . implode(',', $meta_query['value']) . ") ";
-							}else {
-								$meta_value = $meta_query['value'];
-							}
-							$query .= " AND " . $name . ".meta_value " . $meta_query['compare'] . " " . $meta_value;
-						}
-					}
-
-					$query .= ")";
-					$added_lines_to_from_query = TRUE;
-					
-				}else{
-					if( is_array( $meta_query['value'] ) ){
-						$meta_value = " (" . implode(',', $meta_query['value']) . ") ";
-					}else {
-						$meta_value = $meta_query['value'];
-					}
-					$query .= " AND " . $name . ".meta_key = '" . $meta_query['key'] . "'
-								AND " . $name . ".meta_value " . $meta_query['compare'] . " " . $meta_value . ")";
-				}
-			}
-
-		}
-
-		// process p2p queries
-		if ( array_key_exists( 'connected_to', $query_args ) ) {
-			$query .= " JOIN $wpdb->p2p wp2p
-								ON (wposts.ID = wp2p.p2p_from 
-									AND wp2p.p2p_type = '" . $query_args['connected_type'] . "' 
-									AND wp2p.p2p_to IN (" . implode(',', $query_args['connected_to']) . ") )";
-		}
-
-		// Enforce user authentication 
-		// $query .= "INNER JOIN $wpdb->p2p wp2p_auth
-		//					ON (wposts.ID = wp2p_auth.p2p_from 
-		//						AND wp2p_auth.p2p_type = 'commentary_to_researcher'
-		//						AND wp2p_auth.p2p_to IN (" . implode(',', $valid_researchers) . ") )";
-
-		// add string search if necessary
-		$query .= "WHERE";
-
-		if (isset($query_args["s"])){
-			$query .= "(wposts.post_title LIKE '%" . $query_args['s'] . "%' OR wposts.post_content LIKE '%" . $query_args['s'] . "%') AND";
-		}
-
-		// finalize query
-		$query .= " wposts.post_type = 'commentary'
-						AND wposts.post_status IN ('publish', 'pending', 'draft') 
-					ORDER BY totalorder.meta_value ASC
-					LIMIT " . $query_args['posts_per_page'] . " 
-					OFFSET " . $query_args['posts_per_page'] * $query_args['paged']; 
-
-		$context['posts'] = $wpdb->get_results( $query, OBJECT );
-
-		// Unfortunately, right now, this still must happen for the paging to work correctly via Timber
-		$query_args["paged"] = $query_args["paged"] + 1;
-		query_posts( $query_args );
-
-	} else {
-		$query_args["paged"] = $query_args["paged"] + 1;
-		$context['posts'] = query_posts( $query_args );
-	}
+	// Query the posts
+	$query_args["paged"] = $query_args["paged"] + 1;
+	$context['posts'] = query_posts( $query_args );
 	$context['pagination'] = Timber::get_pagination();
 
 	// Then, return post values specified in request arguments
@@ -177,35 +85,6 @@ function hca_get_posts_callback () {
 						}
 					}
 
-				} elseif ( $rv == "max_num_pages" ) {
-					$post_data[$rv] = $res->max_num_pages;
-				} elseif ( $rv == "researcher" ) {
-
-					$connected = p2p_get_connections( 'commentary_to_researcher',
-															array(
-																	'direction' => 'from', 
-																	'from' => $post->ID, 
-																	'to' => 'any', 
-																	'fields' => 'all'
-																)
-														); 
-
-					$obj = get_post($connected[0]->p2p_to);
-					$post_data[$rv] = $obj;
-				} elseif ( $rv == "text" ) {
-					$connected = p2p_get_connections( 'text_to_commentary',
-															array(
-																	'direction' => 'to', 
-																	'from' => $post->ID, 
-																	'to' => 'any',  
-																	'fields' => 'all'
-																)
-														); 
-					$obj = array( 
-									"text" => get_post( $connected[0]->p2p_from ),
-									"meta" => p2p_get_meta( $connected[0]->p2p_id ),
-								);
-					$post_data[$rv] = $obj;
 				} else {
 					$meta = get_post_meta( $post->ID, $rv );
 					$post_data[$rv] = $meta[0]; 
@@ -226,7 +105,7 @@ function hca_get_posts_callback () {
 
 	// buffer output of timber render to get the pagination
 	ob_start();
-	$response['pagination'] = preg_replace('~[\r\n\t]+~', '', Timber::render( 'mods/pagination.twig', $context, FALSE ) );
+	$response['pagination'] = preg_replace('~[\r\n\t]+~', '', Timber::render( 'partials/pagination.twig', $context, FALSE ) );
 	ob_end_clean();
 
 	// Finally, json encode the post_data array and die 
@@ -254,22 +133,6 @@ function hca_sanitize_values($query_args){
 		}
 	}
 
-	// p2p variables
-	if (isset($query_args['connected_type'])){
-		$meta_query['connected_type'] = hca_strip_nonalphanum(sanitize_text_field($meta_query['connected_type'])); 
-	}
-	if (isset($query_args['connected_to'])){
-		$sanitized_connected_to = array();
-		if( is_array( $query_args['connected_to'] ) ){
-			foreach( $query_args['connected_to'] as $connected_to){
-				$sanitized_connected_to[] = hca_strip_nonalphanum(sanitize_text_field($connected_to));
-			}
-			$query_args['connected_to'] = $sanitized_connected_to; 
-		}else {
-			$query_args['connected_to'] = hca_strip_nonalphanum(sanitize_text_field($query_args['connected_to'])); 
-		}
-	}
-
 	// primary query params
 	$query_args['s'] = hca_strip_nonalphanum(sanitize_text_field($query_args['s']));
 	$query_args['posts_per_page'] = hca_strip_nonalphanum(sanitize_text_field($query_args['posts_per_page']));
@@ -281,31 +144,5 @@ function hca_sanitize_values($query_args){
 // Strip the non-alpha-numeric characters from a string
 function hca_strip_nonalphanum($string){
 	return preg_replace("/[^A-Za-z0-9 ]/", '', $string);
-}
-
-// Check the user authentication against the Researchers
-function hca_check_user_auth($user){
-	$researchers = new WP_Query( 
-				array( 
-					'post_type' => 'researcher', 
-					'posts_per_page' => -1 
-					) 
-			);
-	$auth_res = array();
-	foreach( $researchers->posts as $i => $researcher ) {
-
-		$authenticated_editors = get_post_meta( $researcher->ID, "authenticated_editors" );
-
-		foreach( $authenticated_editors as $auth_arr ) {
-			if ( is_array( $auth_arr ) == False ) {
-				$auth_arr = array($auth_arr);
-			}
-			if ( in_array( $user, $auth_arr) ){
-				$auth_res[] = $researcher->ID;	
-			}
-		} 
-	}
-
-	return $auth_res; 
 }
 

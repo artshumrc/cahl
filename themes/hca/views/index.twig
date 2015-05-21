@@ -1,9 +1,189 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+
+<div class="blocks">
+
+	<div class="block head">
+
+		<div class="top-left">
+			<div class="harvard-romance-languages-department-logo" alt="Harvard Romance Languages Department">
+				<img src="/wp-content/themes/hca/img/harvard_romance_languages_department_logo.jpg"/>
+			</div>
+
+		</div>
+
+		<div class="top-right">
+			<div class="languages">
+				<img class="french-flag" src="/wp-content/themes/hca/img/fr_flag.jpg" ng-click="toggle_language($event)" data-language="francais"/>
+				<img class="english-flag" src="/wp-content/themes/hca/img/en_flag.jpg" ng-click="toggle_language($event)" data-language="english"/>
+			</div>
+		</div>
+
+		<div class="bottom-right">
+			<div class="social-wrap">
+				<a href="/">
+					<span class="fa fa-facebook"></span>
+				</a>
+				<a href="/">
+					<span class="fa fa-twitter"></span>
+				</a>
+			</div>
+		</div>
+
+		<div class="center-wrap text-overlay">
+		
+			<h1 class="site-title">
+			Harvard Charlie Archive
+			</h1>
+
+			<nav role="main" class="primary head-nav">
+				<a href="#project">	
+					Project
+				</a>
+				<a href="#who-we-are">
+					Who We Are
+				</a>
+				<a href="#submission-proposal">
+					Submission Proposal
+				</a>
+
+			</nav>
+	
+		</div>
+
+
+	</div>
+
+	<div class="block intro">
+		<div class="block-inner">
+
+			<div class="intro-block-image">
+				<img class="/wp-content/themes/hca/img/image.jpg">
+			</div>
+
+			<div class="intro-block-text">
+				<h3>Paris, January 7th intro text . . . </h3>
+				<p>Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes caelo quae ducitis annum, liber et alma ceres, vestro si munere tellus, chaoniam pingui glandem mutavit aristra
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="block block-image intro-image">
+	</div>
+
+	<div class="block project-description">
+		<div class="block-inner">
+			<h2>Archive Project Description</h2>
+
+
+			<div class="project-description-text">
+				<p>Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes caelo quae ducitis annum, liber et alma ceres, vestro si munere tellus, chaoniam pingui glandem mutavit aristra
+				</p>
+			</div>
+
+			<div class="project-description-image">
+				<img class="/wp-content/themes/hca/img/image.jpg">
+			</div>
+
+		</div>
+	</div>
+
+	<div class="block how-it-works">
+		<div class="block-inner">
+			<h2>How It Works</h2>
+
+			<div class="flowchart-wrap">
+				<div class="step-one flowchart-step">
+					<span class="step-text">Step 1: Quid faciat laetas segetes</span>
+				</div>
+				<span class="flowchart-down fa fa-chevron-down"></span>
+				<div class="step-two flowchart-step">
+					<span class="step-text">Step 2: quo sidere terram vertere, Mycenas</span>
+				</div>
+
+				</div>
+				<span class="flowchart-down fa fa-chevron-down"></span>
+				<div class="step-three flowchart-step">
+					<span class="step-text">Step 3: ulmisque adiungere vites conveniat</span>
+				</div>	
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="block who-we-are">
+		<div class="block-inner">
+			<h2>Who We Are</h2>
+			<div class="team-member team-member-head">
+				<div class="team-member-image">
+					<img src="/wp-content/themes/hca/img/image.jpg"/>
+				</div>
+				<div class="team-member-text">
+					<h3>Doctor Virginie Green</h3>
+					<p>Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes</p>
+				</div>
+			</div>
+			<div class="team-member team-member-primary">
+				<div class="team-member-image">
+					<img src="/wp-content/themes/hca/img/image.jpg"/>
+				</div>
+				<div class="team-member-text">
+					<h3>HCA Team Member</h3>
+					<p>Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="block block-image submission-image">
+	</div>
+
+	<div class="block submission-proposal">
+		<div class="block-inner">
+			<h2>Submission Proposal for the Harvard Charlie Archive</h2>
+			<div class="submission-form-wrap">
+
+				<form class="submission-form" ng-submit="submit_form($event)" name="submission_form">
+
+					<div class="submission-input-field">
+						<label>First name:</label>
+						<input type="text" ng-model="submission_first_name" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>Last name:</label>
+						<input type="text" ng-model="submission_first_name" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>Item Description:</label>
+						<input type="textarea" ng-model="submission_first_name" />
+					</div>
+
+					<div class="accept-input-field final-field">
+						<input type="checkbox" ng-model="accept_terms" />
+						<span class="i-accept-text">I accept the Harvard Charlie Archive <a href="/terms">terms of use</a> for the materials I am submitting.</span>	
+					</div>
+					<div class="submit-input-field final-field">
+						<input type="submit" value="Submit"/>
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
 {% endblock %}

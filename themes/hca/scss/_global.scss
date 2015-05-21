@@ -6,19 +6,19 @@ html, body, input, p, span, label {
 	@include font-body; 
 }
 body {
-	background:$bg-light;
+	background:$light;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight:300;
+	weight:300;
 	@include font-title; 
 }
 
 a {
-	color:$font-dark;
+	color:$dark;
 	text-decoration: none;
 	&:hover {
-		color:$font-dark;
+		color:$dark;
 		text-decoration: none;
 	}
 }
@@ -37,10 +37,10 @@ li {
 
 // Set text highlighting to accent colors
 ::selection {
-  background: $bg-accent-1;
+  background: $accent-light-1;
 }
 ::-moz-selection {
-  background: $bg-accent-1; 
+  background: $accent-light-1; 
 }
 
 /*
@@ -62,25 +62,6 @@ li {
 		padding:10px;
 	}
 }
-// geo art
-.geo-wrap {
-	position:absolute;
-	width:100%;
-	left:50%;
-	bottom:270px;
-	margin-left:-700px;
-	.geo {
-		position:absolute;
-	}
-	.triangles {
-		top:50px;
-	}
-	.circles {
-		top:40px;
-	}
-	.squares {
-	}
-}
 .content.primary {
 	min-height: 600px;
 }
@@ -89,18 +70,18 @@ li {
  * Styles for navigation and header
  */
 header {
-	display:block;
-	background:$bg-primary-trans-97;
-	color:$font-light;
+	display:none;
+	background:$trans-light;
+	color:$dark;
 	position:fixed;
 	top:0;
 	z-index:99;
 	width:100%;
 	-webkit-transform: translateZ(0);
 	a {
-		color:$font-light;
+		color:$dark;
 		&:hover {
-			color:$font-light;
+			color:$dark;
 		}
 	}
 	.site-title-wrap {
@@ -121,12 +102,10 @@ header {
 			@include font-accent;
 		}
 	}
-	.header-right-wrap {
-		float:right;
-	}
 	.header-dropdown {
+		display:none;
 		.dropdown-head {
-			display:none;
+			display:block;
 			span.fa {
 				display:block;
 				padding:13px;
@@ -134,7 +113,7 @@ header {
 			}
 		}
 		.dropdown-panel {
-			display:block;
+			display:none;
 			position:relative;
 		}
 	}
@@ -144,7 +123,7 @@ nav.primary {
 	font-size:15px;
 	a {
 		&:hover {
-			color:$font-light;
+			color:$light;
 		}
 	}
 
@@ -158,16 +137,16 @@ nav.primary {
 			a {
 				padding:25px 25px;
 				display:block;
-				border-left:1px solid $off-primary;
+				border-left:1px solid $primary;
 				&:hover {
-					background: $off-primary;	
+					background: $primary;	
 				}
 			}
 
 		}
 		li:last-child {
 			a {
-				border-right:1px solid $border-dark;
+				border-right:1px solid $dark;
 			}
 		}
 	}
@@ -180,8 +159,8 @@ nav.primary {
 footer {
 	min-height:250px;
 	clear:both;
-	background-color:$bg-footer;
-	color:$font-light;
+	background-color:$dark;
+	color:$light;
 	padding:50px 0;
 	text-align:center;
 	width:100%;
@@ -192,13 +171,13 @@ footer {
 		@include font-accent(30px);
 	}
 	a {
-		color:$font-light;
+		color:$light;
 	}
 	p a {
-		color:$font-light;
+		color:$light;
 		text-decoration: underline;
 		&:hover {
-			color:$font-light;
+			color:$light;
 			text-decoration: underline;
 		}
 	}
@@ -226,7 +205,7 @@ footer {
 			margin:0 10px;
 			font-size:20px;
 			&:hover {
-				color:$font-light;
+				color:$light;
 			}
 		}
 	}
@@ -245,11 +224,11 @@ footer {
 		display:block;
 
 		&:hover {
-			//background:$bg-accent-dark-1;
+			//background:$accent-dark-1;
 		}
 
 		&.lowered {
-			background:$bg-accent-dark-2-trans-80;
+			background:$dark;
 		}
 
 		label, .dropdown-arrow {
@@ -258,7 +237,7 @@ footer {
 
 	}
 	.dropdown-head.lowered:hover {
-			background:$bg-accent-dark-2-trans-80;
+			background:$dark;
 	}
 
 	.dropdown-panel {
@@ -273,14 +252,14 @@ footer {
 	}
 }
 ::-webkit-input-placeholder {
-   color: $font-light;
+   color: $light;
 }
 :-moz-placeholder { 
-   color: $font-light;  
+   color: $light;  
 }
 ::-moz-placeholder {
-   color: $font-light;  
+   color: $light;  
 }
 :-ms-input-placeholder {  
-   color: $font-light;  
+   color: $light;  
 }

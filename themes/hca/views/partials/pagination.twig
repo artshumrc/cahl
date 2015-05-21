@@ -1,0 +1,30 @@
+
+{% if pagination.pages %}
+
+	<div class="pagination-mod">
+		<div class="pagination-inner">
+	
+	        <a href="#" class="pagination-prev pagination-arrow glyphicon glyphicon-chevron-left"></a>
+	
+			<ol class="pagination-items">
+	
+			 {% for page in pagination.pages %}
+	           {% if page.link %}
+		            <li class="pagination-item {{page.class}}">
+		                    <a href="{{page.link}}" class="pagination-item-link" data-page="{{page.title}}">{{page.title}}</a>
+		            </li>
+			   {% else %}
+		            <li class="pagination-item is-active {{page.class}}">
+		            	{{page.title}}
+		            </li>
+	           {% endif %}
+	        {% endfor %}
+	
+			</ol> <!-- pagination-items -->
+	
+	        <a href="#" class="pagination-next pagination-arrow glyphicon glyphicon-chevron-right"></a>
+	
+		</div> <!-- /pagination-inner -->
+	</div> <!-- /pagination-mod -->
+
+{% endif %}

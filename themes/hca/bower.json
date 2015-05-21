@@ -1,0 +1,17 @@
+{
+  "name": "hca",
+  "version": "0.0.0",
+  "authors": [
+    "Luke Hollis <lukehollis@gmail.com>"
+  ],
+  "description": "Harvard Charlie Archive",
+  "main": "index.php",
+  "license": "MIT",
+  "homepage": "hca.dev",
+  "private": true,
+  "devDependencies": {
+  },
+  "dependencies": {
+    "jquery": "*"
+  }
+}

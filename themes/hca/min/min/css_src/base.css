@@ -1,0 +1,738 @@
+/*
+ *
+ *
+ *   ___ ___ ___| |_|_|_____ ___ _| |___ ___ 
+ *  | .'|  _|  _|   | |     | -_| . | -_|_ -|
+ *  |__,|_| |___|_|_|_|_|_|_|___|___|___|___|
+ *
+ *
+ *             archimedes digital
+ *
+ *
+ * Base theme SCSS for Compass, containing pertinent
+ * site variables for HCA web application
+ *
+ */
+/*
+ * Color palette 
+ *
+ */
+/*
+ * Fonts  
+ *
+ * Title, body, accent
+ */
+@import url(/bower_components/bootstrap/dist/css/bootstrap.css);
+@font-face {
+  font-family: 'Glyphicons';
+  src: url("/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot");
+  src: url("/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+
+/*
+ * Util Mixins 
+ *
+ *  - a library of mixins customized for this project 
+ */
+/*
+ * Project Bootstrap Defaults import
+ *
+ */
+/* 
+ * Project Imports
+ *
+ *
+ */
+/*
+ * Custom global styles
+ */
+/* line 5, ../../scss/_global.scss */
+html, body, input, p, span, label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/* line 8, ../../scss/_global.scss */
+body {
+  background: white;
+}
+
+/* line 12, ../../scss/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  weight: 300;
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/* line 17, ../../scss/_global.scss */
+a {
+  color: #222222;
+  text-decoration: none;
+}
+/* line 20, ../../scss/_global.scss */
+a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+/* line 25, ../../scss/_global.scss */
+p {
+  line-height: 1.6em;
+}
+
+/* line 29, ../../scss/_global.scss */
+li {
+  list-style: none;
+}
+
+/* line 33, ../../scss/_global.scss */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+/* line 39, ../../scss/_global.scss */
+::selection {
+  background: #512723;
+}
+
+/* line 42, ../../scss/_global.scss */
+::-moz-selection {
+  background: #512723;
+}
+
+/*
+ * Global structure styles
+ */
+/* line 50, ../../scss/_global.scss */
+.grid.inner {
+  width: 100%;
+  max-width: 1200px;
+  clear: both;
+  margin: 0 auto;
+}
+
+/* line 56, ../../scss/_global.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 59, ../../scss/_global.scss */
+.social-wrap {
+  padding: 5px;
+}
+/* line 61, ../../scss/_global.scss */
+.social-wrap span {
+  padding: 10px;
+}
+
+/* line 65, ../../scss/_global.scss */
+.content.primary {
+  min-height: 600px;
+}
+
+/*
+ * Styles for navigation and header
+ */
+/* line 72, ../../scss/_global.scss */
+header {
+  display: none;
+  background: rgba(255, 255, 255, 0.93);
+  color: #222222;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+}
+/* line 81, ../../scss/_global.scss */
+header a {
+  color: #222222;
+}
+/* line 83, ../../scss/_global.scss */
+header a:hover {
+  color: #222222;
+}
+/* line 87, ../../scss/_global.scss */
+header .site-title-wrap {
+  float: left;
+  margin: 7px 0px 0 35px;
+  width: 30%;
+}
+/* line 91, ../../scss/_global.scss */
+header .site-title-wrap img {
+  width: 22px;
+  float: left;
+  margin-top: 18px;
+  margin-right: 8px;
+}
+/* line 97, ../../scss/_global.scss */
+header .site-title-wrap h1.site-title {
+  float: left;
+  font-size: 22px;
+  margin: 13px 0 0 0;
+  padding: 0;
+  font-family: 'IM Fell English';
+  font-size: 24px;
+}
+/* line 105, ../../scss/_global.scss */
+header .header-dropdown {
+  display: none;
+}
+/* line 107, ../../scss/_global.scss */
+header .header-dropdown .dropdown-head {
+  display: block;
+}
+/* line 109, ../../scss/_global.scss */
+header .header-dropdown .dropdown-head span.fa {
+  display: block;
+  padding: 13px;
+  font-size: 20px;
+}
+/* line 115, ../../scss/_global.scss */
+header .header-dropdown .dropdown-panel {
+  display: none;
+  position: relative;
+}
+
+/* line 122, ../../scss/_global.scss */
+nav.primary {
+  font-size: 15px;
+}
+/* line 125, ../../scss/_global.scss */
+nav.primary a:hover {
+  color: white;
+}
+/* line 130, ../../scss/_global.scss */
+nav.primary ul {
+  padding: 0;
+  margin: 0;
+  float: right;
+  position: relative;
+}
+/* line 134, ../../scss/_global.scss */
+nav.primary ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+/* line 137, ../../scss/_global.scss */
+nav.primary ul li a {
+  padding: 25px 25px;
+  display: block;
+  border-left: 1px solid #3c1612;
+}
+/* line 141, ../../scss/_global.scss */
+nav.primary ul li a:hover {
+  background: #3c1612;
+}
+/* line 148, ../../scss/_global.scss */
+nav.primary ul li:last-child a {
+  border-right: 1px solid #222222;
+}
+
+/*
+ * Footer 
+ */
+/* line 159, ../../scss/_global.scss */
+footer {
+  min-height: 250px;
+  clear: both;
+  background-color: #222222;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
+}
+/* line 168, ../../scss/_global.scss */
+footer h1 {
+  margin: 20px 0 50px 0;
+  padding: 0;
+  font-family: 'IM Fell English';
+  font-size: 30px;
+}
+/* line 173, ../../scss/_global.scss */
+footer a {
+  color: white;
+}
+/* line 176, ../../scss/_global.scss */
+footer p a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 179, ../../scss/_global.scss */
+footer p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+/* line 184, ../../scss/_global.scss */
+footer .map-wrap {
+  height: 150px;
+  width: 40%;
+  overflow: hidden;
+  display: inline-block;
+}
+/* line 189, ../../scss/_global.scss */
+footer .map-wrap img {
+  margin-top: -150px;
+  width: 150%;
+}
+/* line 194, ../../scss/_global.scss */
+footer nav.secondary {
+  margin: 50px 0;
+}
+/* line 196, ../../scss/_global.scss */
+footer nav.secondary ul, footer nav.secondary li {
+  padding: 0;
+  margin: 0;
+}
+/* line 200, ../../scss/_global.scss */
+footer nav.secondary li {
+  display: inline-block;
+}
+/* line 203, ../../scss/_global.scss */
+footer nav.secondary a {
+  padding: 20px 10px;
+  margin: 0 10px;
+  font-size: 20px;
+}
+/* line 207, ../../scss/_global.scss */
+footer nav.secondary a:hover {
+  color: white;
+}
+
+/*
+ * Styles for Dropdowns
+ */
+/* line 219, ../../scss/_global.scss */
+.dropdown {
+  cursor: pointer;
+}
+/* line 222, ../../scss/_global.scss */
+.dropdown .dropdown-head {
+  cursor: pointer;
+  display: block;
+}
+/* line 230, ../../scss/_global.scss */
+.dropdown .dropdown-head.lowered {
+  background: #222222;
+}
+/* line 234, ../../scss/_global.scss */
+.dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
+  cursor: pointer;
+}
+/* line 239, ../../scss/_global.scss */
+.dropdown .dropdown-head.lowered:hover {
+  background: #222222;
+}
+/* line 243, ../../scss/_global.scss */
+.dropdown .dropdown-panel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 250, ../../scss/_global.scss */
+.dropdown .dropdown-panel.lowered {
+  display: block !important;
+}
+
+/* line 254, ../../scss/_global.scss */
+::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 257, ../../scss/_global.scss */
+:-moz-placeholder {
+  color: white;
+}
+
+/* line 260, ../../scss/_global.scss */
+::-moz-placeholder {
+  color: white;
+}
+
+/* line 263, ../../scss/_global.scss */
+:-ms-input-placeholder {
+  color: white;
+}
+
+/*
+ * Homepage styles
+ */
+/* line 5, ../../scss/_index.scss */
+.block {
+  min-height: 550px;
+  padding: 90px 0 90px 0;
+  width: 100%;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid #666666;
+}
+/* line 15, ../../scss/_index.scss */
+.block .block-inner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* line 21, ../../scss/_index.scss */
+.block.block-image {
+  height: 421px;
+  min-height: 0;
+  background: #222222;
+}
+/* line 27, ../../scss/_index.scss */
+.block h2 {
+  font-size: 38px;
+  padding-bottom: 60px;
+}
+/* line 31, ../../scss/_index.scss */
+.block h3 {
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+/* line 35, ../../scss/_index.scss */
+.block p {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.66);
+  line-height: 1.5;
+}
+/* line 42, ../../scss/_index.scss */
+.block .text-content {
+  clear: both;
+}
+/* line 44, ../../scss/_index.scss */
+.block .text-content .text-column {
+  display: inline-block;
+}
+/* line 49, ../../scss/_index.scss */
+.block .text-overlay {
+  color: white;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 20px 50px;
+}
+/* line 55, ../../scss/_index.scss */
+.block .text-overlay h1 {
+  padding: 0;
+  font-size: 48px;
+  line-height: 60px;
+  width: 100%;
+}
+
+/* line 65, ../../scss/_index.scss */
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+/* line 72, ../../scss/_index.scss */
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+/* line 78, ../../scss/_index.scss */
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+/* line 85, ../../scss/_index.scss */
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+
+/* line 95, ../../scss/_index.scss */
+.scroll-indicator {
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  top: 570px;
+  right: 10%;
+  background: #222222;
+  cursor: pointer;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  z-index: 20;
+}
+/* line 105, ../../scss/_index.scss */
+.scroll-indicator:hover {
+  top: 572px;
+}
+/* line 109, ../../scss/_index.scss */
+.scroll-indicator span.fa {
+  padding: 20px;
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+/* line 118, ../../scss/_index.scss */
+.block.head {
+  background-image: url(/wp-content/themes/scrolls/min/img/houghton_scroll7.jpg);
+  background: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 650px;
+}
+/* line 126, ../../scss/_index.scss */
+.block.head .text-overlay {
+  text-align: center;
+  cursor: default;
+}
+/* line 131, ../../scss/_index.scss */
+.block.head .social-wrap span {
+  color: #fff;
+}
+
+/* line 139, ../../scss/_index.scss */
+.block.intro .intro-block-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  background: #222222;
+  padding: 10px;
+}
+/* line 146, ../../scss/_index.scss */
+.block.intro .intro-block-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 59%;
+  text-align: left;
+  padding: 0 50px;
+}
+
+/* line 158, ../../scss/_index.scss */
+.block.project-description .project-description-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  background: #222222;
+  padding: 10px;
+}
+/* line 165, ../../scss/_index.scss */
+.block.project-description .project-description-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 59%;
+  text-align: left;
+  padding: 0 50px;
+}
+
+/* line 175, ../../scss/_index.scss */
+.block.how-it-works .flowchart-step {
+  background: #666666;
+  padding: 30px 60px;
+  margin: 20px auto;
+  display: block;
+}
+/* line 181, ../../scss/_index.scss */
+.block.how-it-works .step-text {
+  color: white;
+  font-size: 20px;
+}
+/* line 185, ../../scss/_index.scss */
+.block.how-it-works .flowchart-down {
+  color: #666666;
+  font-size: 32px;
+  padding: 10px;
+}
+/* line 191, ../../scss/_index.scss */
+.block.how-it-works .step-one {
+  width: 80%;
+}
+/* line 195, ../../scss/_index.scss */
+.block.how-it-works .step-two {
+  width: 60%;
+}
+/* line 200, ../../scss/_index.scss */
+.block.how-it-works .step-three {
+  width: 40%;
+}
+
+/* line 206, ../../scss/_index.scss */
+.block.who-we-are .team-member {
+  text-align: left;
+  margin: 30px 0;
+}
+/* line 210, ../../scss/_index.scss */
+.block.who-we-are .team-member-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 10%;
+}
+/* line 215, ../../scss/_index.scss */
+.block.who-we-are .team-member-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 89%;
+}
+
+/*
+ * Page styles
+ */
+/* line 5, ../../scss/_page.scss */
+article.page .header-image-wrap {
+  height: 350px;
+  overflow: hidden;
+}
+/* line 8, ../../scss/_page.scss */
+article.page .header-image-wrap img {
+  width: 100%;
+  min-width: 1000px;
+}
+/* line 13, ../../scss/_page.scss */
+article.page .article-content {
+  width: 80%;
+  margin: 50px auto 150px auto;
+  overflow: hidden;
+}
+/* line 17, ../../scss/_page.scss */
+article.page .article-content h1.article-h1 {
+  font-size: 40px;
+}
+/* line 20, ../../scss/_page.scss */
+article.page .article-content h2 {
+  width: 92%;
+  margin: 30px auto;
+  font-size: 30px;
+}
+/* line 25, ../../scss/_page.scss */
+article.page .article-content p, article.page .article-content ul, article.page .article-content ol {
+  font-size: 20px;
+  width: 90%;
+  margin: 30px auto;
+}
+/* line 29, ../../scss/_page.scss */
+article.page .article-content p li, article.page .article-content ul li, article.page .article-content ol li {
+  margin: 10px 0;
+}
+/* line 33, ../../scss/_page.scss */
+article.page .article-content .media-wrap {
+  width: 100%;
+  text-align: center;
+}
+/* line 37, ../../scss/_page.scss */
+article.page .article-content .image-wrap {
+  max-height: 500px;
+  overflow: hidden;
+}
+/* line 40, ../../scss/_page.scss */
+article.page .article-content .image-wrap img {
+  width: 100%;
+  min-width: 400px;
+}
+/* line 45, ../../scss/_page.scss */
+article.page .article-content .image-caption, article.page .article-content .wp-caption-text {
+  display: block;
+  clear: both;
+  font-size: 16px;
+  font-style: italic;
+  margin: 10px 10px 0;
+  line-height: 20px;
+  text-align: center;
+}
+
+/*
+ * Single
+ */
+/* line 5, ../../scss/_single.scss */
+article.single h1 {
+  margin: 100px 0 0px;
+}
+/* line 8, ../../scss/_single.scss */
+article.single .article-content {
+  width: 80%;
+  margin: 50px auto 150px auto;
+}
+/* line 11, ../../scss/_single.scss */
+article.single .article-content h1 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+/* line 15, ../../scss/_single.scss */
+article.single .article-content .media-wrap {
+  float: left;
+  width: 66%;
+  margin: 0px 4% 40px 0;
+  text-align: center;
+}
+/* line 20, ../../scss/_single.scss */
+article.single .article-content .media-wrap .caption {
+  float: left;
+}
+/* line 24, ../../scss/_single.scss */
+article.single .article-content .image-wrap {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 29, ../../scss/_single.scss */
+article.single .article-content .image-wrap img {
+  width: 100%;
+}
+/* line 32, ../../scss/_single.scss */
+article.single .article-content .image-wrap h2.not-available {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -127px;
+  color: rgba(0, 0, 0, 0.4);
+}
+/* line 40, ../../scss/_single.scss */
+article.single .article-content p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+/* line 43, ../../scss/_single.scss */
+article.single .article-content p.meta {
+  font-size: 16px;
+  margin: 5px 0;
+}
+/* line 46, ../../scss/_single.scss */
+article.single .article-content p.meta span.label {
+  font-size: 16px;
+}
+/* line 50, ../../scss/_single.scss */
+article.single .article-content p span.label {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 55, ../../scss/_single.scss */
+article.single .article-content .longer-meta {
+  clear: both;
+  width: 90%;
+}
+/* line 58, ../../scss/_single.scss */
+article.single .article-content .longer-meta p {
+  line-height: 30px;
+}
+/* line 62, ../../scss/_single.scss */
+article.single .article-content a {
+  text-decoration: underline;
+}
+/* line 64, ../../scss/_single.scss */
+article.single .article-content a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Responsive styles
+ */

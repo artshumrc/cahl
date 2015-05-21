@@ -6,11 +6,11 @@
  *  |__,|_| |___|_|_|_|_|_|_|___|___|___|___|
  *
  *
- *      archimedes web - move the world
+ *             archimedes digital
  *
  *
  * Base theme SCSS for Compass, containing pertinent
- * site variables for Scrolls application 
+ * site variables for HCA web application
  *
  */
 
@@ -26,17 +26,16 @@
 
 
 /*
- * Aweb Portfolio Color palette 
+ * Color palette 
  *
  */
 
+// Basics
 $dark: #222;
 $grey: #666;
-$mss: #FFFDF5;
-$mss-dark: #A9947B;
-$light: $mss;
+$light: #fff;
 
-
+// Theme colors 
 $accent-light-2: rgba(101, 66, 62,1);
 $accent-light-1: rgba( 81, 39, 35,1);
 $primary: rgba( 60, 22, 18,1);
@@ -44,50 +43,14 @@ $off-primary: rgba(51, 19, 16, 1);
 $accent-dark-1: rgba( 39,  9,  6,1);
 $accent-dark-2: rgba( 19,  2,  0,1);
 
-// Define template colors 
-// - fonts
-$font-light:$light;
-$font-dark:$dark;
-$font-grey:$grey;
-$font-primary:$primary;
-$font-accent-light:$accent-light-2;
-$font-accent-dark:$accent-dark-1;
-
-// - architecture
-// - - backgrounds
-$bg-light:$light;
-$bg-dark:$dark;
-$bg-primary:$primary;
-$bg-accent-1:$accent-light-1;
-$bg-accent-2:$accent-light-2;
-$bg-accent-dark-1:$accent-dark-1;
-$bg-accent-dark-2:$accent-dark-2;
-$bg-footer:$accent-dark-2;
-// - - borders 
-$border-light:$light;
-$border-dark:$dark;
-$border-primary:$primary;
-$border-accent-1:$accent-light-1;
-$border-accent-2:$accent-light-2;
-$border-dark:$accent-dark-1;
-
-// specials
-$bg-primary-trans-90:rgba( 60, 22, 18, 0.9);
-$bg-primary-trans-97:rgba( 60, 22, 18, 0.97);
-$bg-accent-dark-2-trans-60:rgba(19,  2,  0, 0.6);
-$bg-accent-dark-2-trans-80:rgba(19,  2,  0, 0.8);
-$bg-accent-dark-2-trans-90:rgba(19,  2,  0, 0.9);
-$bg-accent-dark-1-trans-80:rgba(39,  9,  6, 0.8);
-$bg-accent-dark-1-trans-90:rgba(39,  9,  6, 0.9);
-$bg-accent-dark-1-trans-97:rgba(39,  9,  6, 0.97);
-
-
 // General help colors
 $trans-light: rgba(255,255,255,.93);
 $trans-light-8: rgba(255,255,255,.8);
+$mss: #FFFDF5;
+$mss-dark: #A9947B;
 
 /*
- * Aweb Portfolio Fonts  
+ * Fonts  
  *
  * Title, body, accent
  */
@@ -115,10 +78,8 @@ $trans-light-8: rgba(255,255,255,.8);
 }
 
 
-
-
 /*
- * Aweb Util Mixins 
+ * Util Mixins 
  *
  *  - a library of mixins customized for this project 
  */
@@ -147,7 +108,7 @@ $trans-light-8: rgba(255,255,255,.8);
 
 
 /*
- * Aweb Project Bootstrap Defaults import
+ * Project Bootstrap Defaults import
  *
  */
 @import "/bower_components/bootstrap/dist/css/bootstrap.css";
@@ -155,22 +116,14 @@ $trans-light-8: rgba(255,255,255,.8);
 
 
 /* 
- * Aweb Project Imports
+ * Project Imports
  *
- * - global:  global site architecture styles
- * - index: styles pertaining to special circumstances on the homepage
- * - archive: styles pertaining to the archive page and search tools
- * - blog: styles for blog-related materials, posts and such
- * - project: styles for projects, clients, and sundry items related to the projects
- * - responsive: responsive styles for the project
  *
  */
 
 // project styles
-@import "_editorial.scss";
 @import "_global.scss";
 @import "_index.scss";
-@import "_archive.scss";
 @import "_page.scss";
 @import "_single.scss";
 
