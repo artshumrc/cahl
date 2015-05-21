@@ -145,31 +145,114 @@
 
 	<div class="block submission-proposal">
 		<div class="block-inner">
-			<h2>Submission Proposal for the Harvard Charlie Archive</h2>
+			<h2>Propose a Submission</h2>
 			<div class="submission-form-wrap">
 
 				<form class="submission-form" ng-submit="submit_form($event)" name="submission_form">
 
 					<div class="submission-input-field">
-						<label>First name:</label>
+						<label>First name</label>
 						<input type="text" ng-model="submission_first_name" />
 					</div>
 
 					<div class="submission-input-field">
-						<label>Last name:</label>
-						<input type="text" ng-model="submission_first_name" />
+						<label>Last name</label>
+						<input type="text" ng-model="submission_last_name" />
 					</div>
 
 					<div class="submission-input-field">
-						<label>Item Description:</label>
-						<input type="textarea" ng-model="submission_first_name" />
+						<label>Email</label>
+						<input type="text" ng-model="submission_last_name" />
 					</div>
 
-					<div class="accept-input-field final-field">
+					<div class="submission-input-field">
+						<label>Street Address</label>
+						<input type="text" ng-model="submission_street_address" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>Country</label>
+						<input type="text" ng-model="submission_country" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>City</label>
+						<input type="text" ng-model="submission_city" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>State/Province</label>
+						<input type="text" ng-model="submission_state_province" />
+					</div>
+
+					<div class="submission-input-field">
+						<label>Zip Code</label>
+						<input type="text" ng-model="submission_zip_code" />
+					</div>
+
+					<div class="send-in-1-input-field half-field">
+						<input type="checkbox" ng-model="submission_by_internet" />
+						<span class="field-text">Will you send this material through email or the internet?</span>	
+					</div>
+
+					<div class="send-in-2-input-field half-field">
+						<input type="checkbox" ng-model="submission_by_mail" />
+						<span class="field-text">Will you send this material through postal services?</span>	
+					</div>
+
+					<h4>Type of material</h4>
+
+					<div class="submission-input-field-wide">
+						<label>Which terms would best describe this material?</label>
+						<span class="help-text">Example: Article, Artwork, Banner, Blog, Book, Cartoon, Comment, Debate, Drawing, Ephemeral, Essay, Fiction, Film, Graffiti, Magazine, Manuscript, Newspaper, Object, Pamphlet, Photograph, Poem, Poster, Song, Text, TV program, Tweet, Website, etc.</span>
+						<textarea ng-model="submission_description" ></textarea>
+					</div>
+
+					<div class="submission-input-field-wide">
+						<label>Describe in your own words the material you would like to donate</label>
+						<span class="help-text">Maximum 100 words.</span>
+						<textarea ng-model="submission_description" ></textarea>
+					</div>
+
+					<div class="submission-input-field-wide">
+						<label>Location of the material</label>
+						<span class="help-text">Where the material was made, found, used, processed, etc.</span>
+						<input type="text" ng-model="submission_last_name" />
+					</div>
+
+					<div class="submission-input-field-wide">
+						<label>Date of the material</label>
+						<span class="help-text">When the material was made, found, used, processed, etc.</span>
+						<input type="text" ng-model="submission_last_name" />
+					</div>
+
+					<div class="submission-input-field-wide">
+						<label>Author, maker, source</label>
+						<input type="text" ng-model="submission_last_name" />
+					</div>
+
+					<div class="submission-input-field-wide">
+						<label>Please attach a photo of the material, if possible</label>
+						<span class="help-text">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
+						<input type="text" ng-model="submission_last_name" />
+					</div>
+
+					<div class="send-in-2-input-field checkbox-field">
+						<input type="checkbox" ng-model="submission_by_mail" />
+						<span class="field-text">Would you like your name included in the Archive?</span>	
+					</div>
+
+
+
+					<!-- Last form fields and submit -->	
+
+					<div class="accept-input-field checkbox-field">
 						<input type="checkbox" ng-model="accept_terms" />
-						<span class="i-accept-text">I accept the Harvard Charlie Archive <a href="/terms">terms of use</a> for the materials I am submitting.</span>	
+						<span class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.</span>	
 					</div>
-					<div class="submit-input-field final-field">
+
+
+					<div class="submit-input-field checkbox-field">
 						<input type="submit" value="Submit"/>
 					</div>
 

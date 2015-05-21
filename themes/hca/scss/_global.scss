@@ -157,13 +157,14 @@ nav.primary {
  */
 
 footer {
-	min-height:250px;
+	height:220px;
 	clear:both;
 	background-color:$dark;
 	color:$light;
 	padding:50px 0;
 	text-align:center;
 	width:100%;
+	position:relative;
 
 	h1 {
 		margin: 20px 0 50px 0;
@@ -172,41 +173,21 @@ footer {
 	}
 	a {
 		color:$light;
-	}
-	p a {
-		color:$light;
 		text-decoration: underline;
 		&:hover {
 			color:$light;
-			text-decoration: underline;
+			text-decoration: none;
 		}
 	}
-	.map-wrap {
-		height:150px;
-		width:40%;
-		overflow:hidden;
-		display:inline-block;
-		img {
-			margin-top:-150px;
-			width:150%;
+
+	.footer-text {
+		text-align:left;
+		width:50%;
+		h3 {
+			font-size:26px;
 		}
-	}
-	nav.secondary {
-		margin:50px 0;
-		ul, li {
-			padding:0;
-			margin:0;
-		}
-		li {
-			display:inline-block;
-		}
-		a {
-			padding:20px 10px;
-			margin:0 10px;
-			font-size:20px;
-			&:hover {
-				color:$light;
-			}
+		span {
+			font-size:14px;
 		}
 	}
 

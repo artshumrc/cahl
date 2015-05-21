@@ -85,7 +85,7 @@
 .bottom-left {
 	position:absolute;
 	bottom:0;
-	right:0;
+	left:0;
 	padding:20px;
 
 }
@@ -126,12 +126,25 @@
 	.text-overlay {
 		text-align:center;
 		cursor:default;
+		margin-top:60px;
 	}
+
+	nav {
+		padding:30px 0;
+		a {
+			color:$light;
+			font-size:22px;
+			display:inline-block;
+			padding:5px 25px;
+		}
+	}
+
 	.social-wrap {
 		span {
 			color:#fff;
 		}
 	}
+
 }
 
 .block.intro {
@@ -217,4 +230,121 @@
 		vertical-align: top;
 		width:89%;
 	}
+}
+
+.block.submission-proposal {
+
+	h4 {
+		margin:0 auto;
+		text-align:center;
+		clear:both;
+		width:100%;
+		padding:50px 0;	
+	}
+
+	.submission-form {
+		text-align:left;
+		width:90%;
+		margin:0 auto;
+	}
+
+	input[type="text"], textarea {
+		font-size:20px;
+		padding:10px;
+	}
+	textarea {
+		height:180px;
+	}
+	
+
+	.submission-input-field {
+	
+		margin:0px 0 40px 0;
+		clear:both;
+		display:block;
+
+		label {
+			display:inline-block;
+			vertical-align: top;
+			width:20%;
+			font-size:18px;
+		}	
+		input[type="text"], textarea {
+			width:74%;
+			margin-left:5%;
+			display:inline-block;
+		}
+
+	}
+
+	.submission-input-field-wide {
+	
+		margin:0px 0 40px 0;
+		clear:both;
+		display:block;
+
+		label {
+			display:block;
+			width:70%;
+			font-size:18px;
+		}	
+		input[type="text"], textarea {
+			display:block;
+			width:98%;
+			margin:10px auto;
+		}
+
+		.help-text {
+			width:98%;
+			margin:10px auto;
+			display:block;
+			font-size:14px;
+			word-wrap:wrap;
+			color:rgba(0,0,0,0.6);
+		}
+
+	}
+
+	.half-field {
+		float:right;
+		clear:both;
+		width:74%;
+		margin-right:0.5%;
+		margin-bottom:30px;
+
+	}
+
+	.checkbox-field {
+		clear:both;
+		width:99%;
+		margin-bottom:30px;
+		display:block;
+
+		input[type="checkbox"] {
+			display:inline-block;
+			padding:10px;
+			border:1px solid $dark;
+			background:$light;
+		}
+
+		.field-text {
+			display:inline-block;
+			width:90%;
+			vertical-align: top;
+			margin-left:10px;
+
+		}
+
+	}
+
+	input[type="submit"] {
+		background:$light;
+		border:1px solid $dark;
+		color:$dark;
+		padding:20px 30px;
+		font-size:22px;
+
+	}
+
+
 }
