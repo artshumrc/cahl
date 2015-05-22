@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<div class="blocks">
+<div class="blocks" data-ng-controller="HCAController as hca_controller">
 
 	<div class="block head">
 
 		<div class="top-left">
 			<div class="harvard-romance-languages-department-logo">
-				<img src="/wp-content/themes/hca/img/harvard_romance_languages_and_literatures_department_logo.png"  alt="Harvard Romance Languages Department"/>
+				<img src="/wp-content/themes/hca/img/harvard_romance_languages_and_literatures_department_logo.png"  alt="Harvard Romance Languages and Literatures Department"/>
 			</div>
 
 		</div>
@@ -38,13 +38,13 @@
 			</h1>
 
 			<nav role="main" class="primary head-nav">
-				<a href="#project">	
+				<a href="#project" data-link_id="project">	
 					Project
 				</a>
-				<a href="#who-we-are">
+				<a href="#who-we-are" data-link_id="who-we-are">
 					Who We Are
 				</a>
-				<a href="#submission-proposal">
+				<a href="#propose-submission" data-link_id="propose-submission">
 					Submission Proposal
 				</a>
 
@@ -74,7 +74,7 @@
 	<div class="block block-image intro-image">
 	</div>
 
-	<div class="block project-description">
+	<div id="project" class="block project-description">
 		<div class="block-inner">
 			<h2>Archive Project Description</h2>
 
@@ -117,7 +117,7 @@
 		</div>
 	</div>
 
-	<div class="block who-we-are">
+	<div id="who-we-are" class="block who-we-are">
 		<div class="block-inner">
 			<h2>Who We Are</h2>
 			<div class="team-member team-member-head">
@@ -145,92 +145,93 @@
 	<div class="block block-image submission-image">
 	</div>
 
-	<div class="block submission-proposal">
+	<div id="propose-submission" class="block submission-proposal">
 		<div class="block-inner">
 			<h2>Propose a Submission</h2>
+			<span class="form-help-text">Please fill out as many values as possible to expedite our response to your proposal for a submission to the Harvard Charlie Archive.  <span class="required">*</span> denotes a required field.</span>
 			<div class="submission-form-wrap">
 
-				<form class="submission-form" ng-submit="submit_form($event)" name="submission_form">
+				<form class="submission-form" ng-submit="check_send($event)" name="submission_form">
 
 					<div class="submission-input-field">
-						<label>First name</label>
-						<input type="text" ng-model="submission.first_name" />
+						<label>First name<span class="required">*</span></label>
+						<input type="text" ng-model="submission.first_name" ng-maxlength="100" required/>
 					</div>
 
 					<div class="submission-input-field">
-						<label>Last name</label>
-						<input type="text" ng-model="submission.last_name" />
+						<label>Last name<span class="required">*</span></label>
+						<input type="text" ng-model="submission.last_name" ng-maxlength="100" required/>
 					</div>
 
 					<div class="submission-input-field">
-						<label>Email</label>
-						<input type="text" ng-model="submission.email" />
+						<label>Email<span class="required">*</span></label>
+						<input type="text" ng-model="submission.email" ng-maxlength="100" required/>
 					</div>
 
 					<div class="submission-input-field">
 						<label>Street Address</label>
-						<input type="text" ng-model="submission.street_address" />
+						<input type="text" ng-model="submission.street_address" ng-maxlength="200"/>
 					</div>
 
 					<div class="submission-input-field">
 						<label>Country</label>
-						<input type="text" ng-model="submission.country" />
+						<input type="text" ng-model="submission.country" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field">
 						<label>City</label>
-						<input type="text" ng-model="submission.city" />
+						<input type="text" ng-model="submission.city" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field">
 						<label>State/Province</label>
-						<input type="text" ng-model="submission.state_province" />
+						<input type="text" ng-model="submission.state_province" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field">
 						<label>Zip Code</label>
-						<input type="text" ng-model="submission.zip_code" />
+						<input type="text" ng-model="submission.zip_code" ng-maxlength="12"/>
 					</div>
 
 					<div class="send-in-1-input-field half-field">
-						<input type="checkbox" ng-model="submission.by_internet" />
-						<span class="field-text">Will you send this material through email or the internet?</span>	
+						<input id="send_in_1" type="checkbox" ng-model="submission.by_internet" />
+						<label for="send_in_1" class="field-text">Will you send this material through email or the internet?</label>	
 					</div>
 
 					<div class="send-in-2-input-field half-field">
-						<input type="checkbox" ng-model="submission.by_mail" />
-						<span class="field-text">Will you send this material through postal services?</span>	
+						<input id="send_in_2" type="checkbox" ng-model="submission.by_mail" />
+						<label for="send_in_2" class="field-text">Will you send this material through postal services?</label>	
 					</div>
 
 					<h4>Type of material</h4>
 
 					<div class="submission-input-field-wide">
-						<label>Which terms would best describe this material?</label>
+						<label>Which terms would best describe this material?<span class="required">*</span></label>
 						<span class="help-text">Example: Article, Artwork, Banner, Blog, Book, Cartoon, Comment, Debate, Drawing, Ephemeral, Essay, Fiction, Film, Graffiti, Magazine, Manuscript, Newspaper, Object, Pamphlet, Photograph, Poem, Poster, Song, Text, TV program, Tweet, Website, etc.</span>
-						<textarea ng-model="submission.description_terms" ></textarea>
+						<textarea ng-model="submission.description_terms" ng-maxlength="1000" required></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Describe in your own words the material you would like to donate</label>
+						<label>Describe in your own words the material you would like to donate<span class="required">*</span></label>
 						<span class="help-text">Maximum 100 words.</span>
-						<textarea ng-model="submission.description_text" ></textarea>
+						<textarea ng-model="submission.description_text" ng-maxlength="1000" required></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Location of the material</label>
 						<span class="help-text">Where the material was made, found, used, processed, etc.</span>
-						<input type="text" ng-model="submission.location" />
+						<input type="text" ng-model="submission.location" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Date of the material</label>
 						<span class="help-text">When the material was made, found, used, processed, etc.</span>
-						<input type="text" ng-model="submission.date" />
+						<input type="text" ng-model="submission.date" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Author, maker, source</label>
-						<input type="text" ng-model="submission.author_maker_source" />
+						<input type="text" ng-model="submission.author_maker_source" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
@@ -239,9 +240,9 @@
 						<input type="text" ng-model="submission.image" />
 					</div>
 
-					<div class="send-in-2-input-field checkbox-field">
-						<input type="checkbox" ng-model="submission.name_included" />
-						<span class="field-text">Would you like your name included in the Archive?</span>	
+					<div class="include-name-input-field checkbox-field">
+						<input id="include_name" type="checkbox" ng-model="submission.name_included" ng-maxlength="100"/>
+						<label for="include_name" class="field-text">Would you like your name included in the Archive?</label>	
 					</div>
 
 
@@ -249,8 +250,8 @@
 					<!-- Last form fields and submit -->	
 
 					<div class="accept-input-field checkbox-field">
-						<input type="checkbox" />
-						<span class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.</span>	
+						<input id="i_accept" type="checkbox" />
+						<label for="i_accept" class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.</label>	
 					</div>
 
 

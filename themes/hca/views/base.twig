@@ -6,7 +6,8 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig" data-ng-contoller="IndexController as index">
+	<body class="{{body_class}}" data-template="base.twig" ng-cloak >
+
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
@@ -20,13 +21,13 @@
 
 					<nav id="nav-main" class="nav-main" role="navigation">
 
-						<a href="#project">	
+						<a href="#project" data-link_id="project">	
 							Project
 						</a>
-						<a href="#who-we-are">
+						<a href="#who-we-are" data-link_id="who-we-are">
 							Who We Are
 						</a>
-						<a href="#submission-proposal">
+						<a href="#propose-submission" data-link_id="propose-submission">
 							Submission Proposal
 						</a>
 
@@ -54,7 +55,7 @@
 
 
         <script src="/wp-content/themes/hca/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/hca/node_modules/angular/angular.js" type="text/javascript"></script>
+        <script src="/wp-content/themes/hca/min/js/angular.min.js" type="text/javascript"></script>
         <script src="/wp-content/themes/hca/min/js/main.js" type="text/javascript"></script>
 
 

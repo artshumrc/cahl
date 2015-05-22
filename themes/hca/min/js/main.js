@@ -1,33 +1,23 @@
-angular.module('hca', [])
-	// configure angular templating denotation to play nice with Twig
-	.config(function($interpolateProvider){
-        $interpolateProvider.startSymbol('{[').endSymbol(']}');
-    });
+var app = angular.module('HarvardCharlieApp', []);
 
-angular.module('hca')
-// A small directive for helping with rendering Timber twig html in angular's world 
-.directive('compile', ['$compile', function ($compile) {
-	return function(scope, element, attrs) {
-		scope.$watch(
-			function(scope) {
-				return scope.$eval(attrs.compile);
-			},
-			function(value) {
-				element.html(value);
-				$compile(element.contents())(scope);
-			}
-		)};
-	}])
-
+angular.module('HarvardCharlieApp')
 // primary controller
-.controller('IndexController', ['$scope', function($scope) {
-	debugger;
+.controller('HCAController', ['$scope', function($scope) {
 
 	window.__Hc__ = window.__Hc__ || {};
 	var Hc = window.__Hc__;
 
 	$scope.submission = {};
 
+	$scope.check_send = function(e){
+
+		console.log("Submission:", $scope.submission);
+
+
+
+
+
+	};
 
 
 
@@ -80,6 +70,13 @@ $(document).ready(function($) {
 			}
 
 		}
+
+	});
+
+	$("nav a").bind("click",function(e){
+		$('html, body').animate({
+			scrollTop: $( "#" + e.target.dataset.link_id ).offset().top 
+		}, 300);
 
 	});
 

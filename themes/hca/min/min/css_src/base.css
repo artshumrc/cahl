@@ -252,7 +252,7 @@ nav.primary ul li:last-child a {
 footer {
   height: 220px;
   clear: both;
-  background-color: #130200;
+  background-color: #3c1612;
   color: white;
   padding: 50px 0;
   text-align: center;
@@ -597,7 +597,7 @@ footer .footer-logo img {
 
 /* line 238, ../../scss/_index.scss */
 .block.how-it-works {
-  background: #130200;
+  background: #3c1612;
   color: white;
 }
 /* line 241, ../../scss/_index.scss */
@@ -671,58 +671,66 @@ footer .footer-logo img {
   padding: 50px 0;
 }
 /* line 309, ../../scss/_index.scss */
+.block.submission-proposal .form-help-text {
+  display: inline-block;
+  width: 80%;
+  color: #666666;
+  margin: 0 auto 40px;
+  font-size: 14px;
+}
+/* line 318, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 315, ../../scss/_index.scss */
+/* line 324, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 319, ../../scss/_index.scss */
+/* line 328, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 324, ../../scss/_index.scss */
+/* line 333, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 330, ../../scss/_index.scss */
+/* line 339, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 336, ../../scss/_index.scss */
+/* line 345, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 344, ../../scss/_index.scss */
+/* line 353, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 350, ../../scss/_index.scss */
+/* line 359, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 355, ../../scss/_index.scss */
+/* line 364, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 361, ../../scss/_index.scss */
+/* line 370, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -731,7 +739,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 372, ../../scss/_index.scss */
+/* line 381, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -739,28 +747,28 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 381, ../../scss/_index.scss */
+/* line 390, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 387, ../../scss/_index.scss */
+/* line 396, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 394, ../../scss/_index.scss */
+/* line 403, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 404, ../../scss/_index.scss */
+/* line 413, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #666666;
   border: 1px solid #666666;
@@ -770,6 +778,11 @@ footer .footer-logo img {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+/* line 427, ../../scss/_index.scss */
+.required {
+  color: #a33d31;
 }
 
 /*

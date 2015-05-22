@@ -236,7 +236,7 @@
 }
 
 .block.how-it-works {
-	background:$accent-dark-2;
+	background:$primary;
 	color:$light;
 	.flowchart-step {
 		background:$light;
@@ -304,6 +304,15 @@
 		clear:both;
 		width:100%;
 		padding:50px 0;	
+	}
+
+	.form-help-text {
+		display:inline-block;
+		width:80%;
+		color:$grey;
+		margin:0 auto 40px;
+		font-size:14px;
+
 	}
 
 	.submission-form {
@@ -414,4 +423,7 @@
 	}
 
 
+}
+.required {
+	color:$required;
 }
