@@ -569,8 +569,8 @@ footer .footer-logo img {
 
 /* line 209, ../../scss/_index.scss */
 .block.intro-image {
-  background-image: url(/wp-content/themes/hca/img/graffiti4.jpg);
-  background-size: cover;
+  background-image: url(/wp-content/themes/hca/img/charlie_poster_pencil.jpg);
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -604,36 +604,37 @@ footer .footer-logo img {
 }
 /* line 241, ../../scss/_index.scss */
 .block.how-it-works .flowchart-step {
-  background: white;
+  background: #eee;
   padding: 50px;
   margin: 20px auto;
   display: block;
 }
 /* line 247, ../../scss/_index.scss */
 .block.how-it-works .step-text {
-  color: #222222;
-  font-size: 20px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
 }
-/* line 251, ../../scss/_index.scss */
+/* line 252, ../../scss/_index.scss */
 .block.how-it-works .flowchart-down {
-  color: white;
+  color: #ddd;
   font-size: 32px;
   padding: 10px;
 }
-/* line 257, ../../scss/_index.scss */
+/* line 258, ../../scss/_index.scss */
 .block.how-it-works .step-one {
   width: 80%;
 }
-/* line 261, ../../scss/_index.scss */
+/* line 262, ../../scss/_index.scss */
 .block.how-it-works .step-two {
   width: 70%;
 }
-/* line 266, ../../scss/_index.scss */
+/* line 267, ../../scss/_index.scss */
 .block.how-it-works .step-three {
   width: 60%;
 }
 
-/* line 271, ../../scss/_index.scss */
+/* line 272, ../../scss/_index.scss */
 .block.submission-image {
   background-image: url(/wp-content/themes/hca/img/charlie_fabric_mural.jpg);
   background-size: cover;
@@ -641,30 +642,38 @@ footer .footer-logo img {
   background-position: center;
 }
 
-/* line 279, ../../scss/_index.scss */
+/* line 280, ../../scss/_index.scss */
 .block.who-we-are .team-member {
   text-align: left;
   margin: 30px 0;
 }
-/* line 283, ../../scss/_index.scss */
+/* line 284, ../../scss/_index.scss */
 .block.who-we-are .team-member-image {
   display: inline-block;
   vertical-align: top;
   width: 12%;
   margin: 20px 5% 20px 0;
 }
-/* line 288, ../../scss/_index.scss */
+/* line 289, ../../scss/_index.scss */
 .block.who-we-are .team-member-image img {
   width: 100%;
 }
-/* line 292, ../../scss/_index.scss */
+/* line 293, ../../scss/_index.scss */
 .block.who-we-are .team-member-text {
   display: inline-block;
   vertical-align: top;
   width: 82%;
 }
+/* line 300, ../../scss/_index.scss */
+.block.who-we-are .team-member-head .team-member-image {
+  width: 25%;
+}
+/* line 303, ../../scss/_index.scss */
+.block.who-we-are .team-member-head .team-member-text {
+  width: 69%;
+}
 
-/* line 301, ../../scss/_index.scss */
+/* line 311, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -672,7 +681,7 @@ footer .footer-logo img {
   width: 100%;
   padding: 50px 0;
 }
-/* line 309, ../../scss/_index.scss */
+/* line 319, ../../scss/_index.scss */
 .block.submission-proposal .form-help-text {
   display: inline-block;
   width: 80%;
@@ -680,59 +689,59 @@ footer .footer-logo img {
   margin: 0 auto 40px;
   font-size: 14px;
 }
-/* line 318, ../../scss/_index.scss */
+/* line 328, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 324, ../../scss/_index.scss */
+/* line 334, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 328, ../../scss/_index.scss */
+/* line 338, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 332, ../../scss/_index.scss */
+/* line 342, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 338, ../../scss/_index.scss */
+/* line 348, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 344, ../../scss/_index.scss */
+/* line 354, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 352, ../../scss/_index.scss */
+/* line 362, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 358, ../../scss/_index.scss */
+/* line 368, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 363, ../../scss/_index.scss */
+/* line 373, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 369, ../../scss/_index.scss */
+/* line 379, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -741,7 +750,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 380, ../../scss/_index.scss */
+/* line 390, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -749,36 +758,36 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 387, ../../scss/_index.scss */
+/* line 397, ../../scss/_index.scss */
 .block.submission-proposal .half-field label {
   cursor: pointer;
 }
-/* line 393, ../../scss/_index.scss */
+/* line 403, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 399, ../../scss/_index.scss */
+/* line 409, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field label {
   cursor: pointer;
 }
-/* line 403, ../../scss/_index.scss */
+/* line 413, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 410, ../../scss/_index.scss */
+/* line 420, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 420, ../../scss/_index.scss */
+/* line 430, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #3c1612;
   border: none;
@@ -790,7 +799,7 @@ footer .footer-logo img {
   font-weight: 700;
 }
 
-/* line 434, ../../scss/_index.scss */
+/* line 444, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }

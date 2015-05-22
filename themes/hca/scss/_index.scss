@@ -207,8 +207,8 @@
 }
 
 .block.intro-image {
-	background-image:url(/wp-content/themes/hca/img/graffiti4.jpg);
-	background-size:cover;
+	background-image:url(/wp-content/themes/hca/img/charlie_poster_pencil.jpg);
+	background-size:100% auto;
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -239,17 +239,18 @@
 	background:$primary;
 	color:$light;
 	.flowchart-step {
-		background:$light;
+		background:#eee;
 		padding:50px;
 		margin:20px auto;
 		display:block;
 	}	
 	.step-text {
-		color:$dark;
-		font-size:20px;
+		color:#444;
+		font-size:18px;
+		font-weight:700;
 	}
 	.flowchart-down{
-		color:$light;
+		color:#ddd;
 		font-size:32px;
 		padding:10px;
 	}
@@ -293,6 +294,15 @@
 		display:inline-block;
 		vertical-align: top;
 		width:82%;
+
+	}
+	.team-member-head {
+		.team-member-image {
+			width:25%;
+		}
+		.team-member-text {
+			width:69%;
+		}
 	}
 }
 

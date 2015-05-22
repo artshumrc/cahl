@@ -9,12 +9,6 @@ angular.module('HarvardCharlieApp')
 
 	$scope.submission = {
 
-		first_name : "test",
-		last_name : "test",
-		email : "test",
-		description_terms : "test",
-		description_text : "test"
-
 	};
 
 	$scope.update = function(){
