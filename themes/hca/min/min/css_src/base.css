@@ -61,9 +61,9 @@ body {
 /* line 12, ../../scss/_global.scss */
 h1, h2, h3, h4, h5, h6 {
   weight: 300;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 700;
 }
 
 /* line 17, ../../scss/_global.scss */
@@ -154,80 +154,92 @@ header a {
 header a:hover {
   color: #222222;
 }
-/* line 87, ../../scss/_global.scss */
-header .site-title-wrap {
-  float: left;
-  margin: 7px 0px 0 35px;
-  width: 30%;
+/* line 88, ../../scss/_global.scss */
+header .hdr-logo-link {
+  display: inline-block;
+  vertical-align: top;
 }
-/* line 91, ../../scss/_global.scss */
-header .site-title-wrap img {
-  width: 22px;
-  float: left;
-  margin-top: 18px;
-  margin-right: 8px;
+/* line 93, ../../scss/_global.scss */
+header .hdr-logo-link img {
+  margin: 17px 10px 17px 30px;
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
 }
-/* line 97, ../../scss/_global.scss */
-header .site-title-wrap h1.site-title {
-  float: left;
-  font-size: 22px;
-  margin: 13px 0 0 0;
-  padding: 0;
+/* line 102, ../../scss/_global.scss */
+header .hdr-logo-link h1.hdr-logo {
+  display: inline-block;
+  vertical-align: top;
   font-family: 'IM Fell English';
-  font-size: 24px;
+  font-size: 22px;
 }
-/* line 105, ../../scss/_global.scss */
+/* line 110, ../../scss/_global.scss */
+header #nav-main {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+/* line 114, ../../scss/_global.scss */
+header #nav-main a {
+  display: inline-block;
+  padding: 25px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+/* line 124, ../../scss/_global.scss */
 header .header-dropdown {
   display: none;
 }
-/* line 107, ../../scss/_global.scss */
+/* line 126, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head {
   display: block;
 }
-/* line 109, ../../scss/_global.scss */
+/* line 128, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head span.fa {
   display: block;
   padding: 13px;
   font-size: 20px;
 }
-/* line 115, ../../scss/_global.scss */
+/* line 134, ../../scss/_global.scss */
 header .header-dropdown .dropdown-panel {
   display: none;
   position: relative;
 }
 
-/* line 122, ../../scss/_global.scss */
+/* line 141, ../../scss/_global.scss */
 nav.primary {
   font-size: 15px;
 }
-/* line 125, ../../scss/_global.scss */
+/* line 144, ../../scss/_global.scss */
 nav.primary a:hover {
   color: white;
 }
-/* line 130, ../../scss/_global.scss */
+/* line 149, ../../scss/_global.scss */
 nav.primary ul {
   padding: 0;
   margin: 0;
   float: right;
   position: relative;
 }
-/* line 134, ../../scss/_global.scss */
+/* line 153, ../../scss/_global.scss */
 nav.primary ul li {
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 137, ../../scss/_global.scss */
+/* line 156, ../../scss/_global.scss */
 nav.primary ul li a {
   padding: 25px 25px;
   display: block;
   border-left: 1px solid #3c1612;
 }
-/* line 141, ../../scss/_global.scss */
+/* line 160, ../../scss/_global.scss */
 nav.primary ul li a:hover {
   background: #3c1612;
 }
-/* line 148, ../../scss/_global.scss */
+/* line 167, ../../scss/_global.scss */
 nav.primary ul li:last-child a {
   border-right: 1px solid #222222;
 }
@@ -235,100 +247,104 @@ nav.primary ul li:last-child a {
 /*
  * Footer 
  */
-/* line 159, ../../scss/_global.scss */
+/* line 178, ../../scss/_global.scss */
 footer {
   height: 220px;
   clear: both;
-  background-color: #222222;
+  background-color: #270906;
   color: white;
   padding: 50px 0;
   text-align: center;
   width: 100%;
   position: relative;
 }
-/* line 169, ../../scss/_global.scss */
+/* line 188, ../../scss/_global.scss */
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
   font-family: 'IM Fell English';
   font-size: 30px;
 }
-/* line 174, ../../scss/_global.scss */
+/* line 193, ../../scss/_global.scss */
 footer a {
   color: white;
   text-decoration: underline;
 }
-/* line 177, ../../scss/_global.scss */
+/* line 196, ../../scss/_global.scss */
 footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 183, ../../scss/_global.scss */
+/* line 202, ../../scss/_global.scss */
 footer .footer-text {
-  text-align: left;
+  text-align: right;
   width: 50%;
 }
-/* line 186, ../../scss/_global.scss */
+/* line 205, ../../scss/_global.scss */
 footer .footer-text h3 {
   font-size: 26px;
 }
-/* line 189, ../../scss/_global.scss */
+/* line 208, ../../scss/_global.scss */
 footer .footer-text span {
   font-size: 14px;
+}
+/* line 214, ../../scss/_global.scss */
+footer .footer-logo img {
+  display: none;
 }
 
 /*
  * Styles for Dropdowns
  */
-/* line 200, ../../scss/_global.scss */
+/* line 225, ../../scss/_global.scss */
 .dropdown {
   cursor: pointer;
 }
-/* line 203, ../../scss/_global.scss */
+/* line 228, ../../scss/_global.scss */
 .dropdown .dropdown-head {
   cursor: pointer;
   display: block;
 }
-/* line 211, ../../scss/_global.scss */
+/* line 236, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered {
   background: #222222;
 }
-/* line 215, ../../scss/_global.scss */
+/* line 240, ../../scss/_global.scss */
 .dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
   cursor: pointer;
 }
-/* line 220, ../../scss/_global.scss */
+/* line 245, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered:hover {
   background: #222222;
 }
-/* line 224, ../../scss/_global.scss */
+/* line 249, ../../scss/_global.scss */
 .dropdown .dropdown-panel {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 231, ../../scss/_global.scss */
+/* line 256, ../../scss/_global.scss */
 .dropdown .dropdown-panel.lowered {
   display: block !important;
 }
 
-/* line 235, ../../scss/_global.scss */
+/* line 260, ../../scss/_global.scss */
 ::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 238, ../../scss/_global.scss */
+/* line 263, ../../scss/_global.scss */
 :-moz-placeholder {
   color: white;
 }
 
-/* line 241, ../../scss/_global.scss */
+/* line 266, ../../scss/_global.scss */
 ::-moz-placeholder {
   color: white;
 }
 
-/* line 244, ../../scss/_global.scss */
+/* line 269, ../../scss/_global.scss */
 :-ms-input-placeholder {
   color: white;
 }
@@ -339,13 +355,13 @@ footer .footer-text span {
 /* line 5, ../../scss/_index.scss */
 .block {
   min-height: 550px;
-  padding: 90px 0 90px 0;
+  padding: 120px 0 120px 0;
   width: 100%;
   clear: both;
   position: relative;
   overflow: hidden;
   text-align: center;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #222222;
 }
 /* line 15, ../../scss/_index.scss */
 .block .block-inner {
@@ -371,7 +387,7 @@ footer .footer-text span {
 }
 /* line 35, ../../scss/_index.scss */
 .block p {
-  font-size: 22px;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.66);
   line-height: 1.5;
 }
@@ -459,44 +475,87 @@ footer .footer-text span {
 
 /* line 118, ../../scss/_index.scss */
 .block.head {
-  background-image: url(/wp-content/themes/scrolls/min/img/houghton_scroll7.jpg);
-  background: #222222;
+  background-image: url(/wp-content/themes/hca/img/charlie_flowers.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 650px;
+  min-height: 700px;
 }
-/* line 126, ../../scss/_index.scss */
+/* line 125, ../../scss/_index.scss */
 .block.head .text-overlay {
   text-align: center;
   cursor: default;
-  margin-top: 60px;
 }
-/* line 132, ../../scss/_index.scss */
-.block.head nav {
-  padding: 30px 0;
-}
-/* line 134, ../../scss/_index.scss */
-.block.head nav a {
-  color: white;
-  font-size: 22px;
+/* line 129, ../../scss/_index.scss */
+.block.head h1 {
+  margin: 0px auto 50px;
+  background: rgba(39, 9, 6, 0.8);
+  padding: 20px 40px;
   display: inline-block;
-  padding: 5px 25px;
+  width: auto;
+  font-size: 42px;
 }
-/* line 143, ../../scss/_index.scss */
+/* line 138, ../../scss/_index.scss */
+.block.head nav {
+  display: block;
+  margin: 70px auto;
+}
+/* line 141, ../../scss/_index.scss */
+.block.head nav a {
+  background: rgba(39, 9, 6, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 154, ../../scss/_index.scss */
 .block.head .social-wrap span {
   color: #fff;
+  font-size: 28px;
+  background: rgba(39, 9, 6, 0.8);
+  border-radius: 30px;
+  padding: 20px;
+  display: inline-block;
+  margin: 5px;
+}
+/* line 162, ../../scss/_index.scss */
+.block.head .social-wrap span.fa-facebook {
+  padding: 20px 25px;
+}
+/* line 169, ../../scss/_index.scss */
+.block.head .languages .language {
+  width: 40px;
+  height: 30px;
+  margin: 0 5px;
 }
 
-/* line 152, ../../scss/_index.scss */
+/* line 178, ../../scss/_index.scss */
+.block.intro {
+  /*
+  background:$accent-dark-1;
+  color:$light;
+  p {
+  	color:$light;
+  }
+  */
+}
+/* line 188, ../../scss/_index.scss */
 .block.intro .intro-block-image {
   display: inline-block;
   vertical-align: top;
   width: 40%;
-  background: #222222;
   padding: 10px;
+  height: 400px;
+  overflow: hidden;
 }
-/* line 159, ../../scss/_index.scss */
+/* line 195, ../../scss/_index.scss */
+.block.intro .intro-block-image img {
+  width: 100%;
+}
+/* line 199, ../../scss/_index.scss */
 .block.intro .intro-block-text {
   display: inline-block;
   vertical-align: top;
@@ -505,15 +564,28 @@ footer .footer-text span {
   padding: 0 50px;
 }
 
-/* line 171, ../../scss/_index.scss */
+/* line 209, ../../scss/_index.scss */
+.block.intro-image {
+  background-image: url(/wp-content/themes/hca/img/graffiti4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 218, ../../scss/_index.scss */
 .block.project-description .project-description-image {
   display: inline-block;
   vertical-align: top;
   width: 40%;
-  background: #222222;
   padding: 10px;
+  height: 400px;
+  overflow: hidden;
 }
-/* line 178, ../../scss/_index.scss */
+/* line 225, ../../scss/_index.scss */
+.block.project-description .project-description-image img {
+  width: 100%;
+}
+/* line 229, ../../scss/_index.scss */
 .block.project-description .project-description-text {
   display: inline-block;
   vertical-align: top;
@@ -522,56 +594,74 @@ footer .footer-text span {
   padding: 0 50px;
 }
 
-/* line 188, ../../scss/_index.scss */
+/* line 238, ../../scss/_index.scss */
+.block.how-it-works {
+  background: #270906;
+  color: white;
+}
+/* line 241, ../../scss/_index.scss */
 .block.how-it-works .flowchart-step {
-  background: #666666;
-  padding: 30px 60px;
+  background: white;
+  padding: 50px;
   margin: 20px auto;
   display: block;
 }
-/* line 194, ../../scss/_index.scss */
+/* line 247, ../../scss/_index.scss */
 .block.how-it-works .step-text {
-  color: white;
+  color: #222222;
   font-size: 20px;
 }
-/* line 198, ../../scss/_index.scss */
+/* line 251, ../../scss/_index.scss */
 .block.how-it-works .flowchart-down {
-  color: #666666;
+  color: white;
   font-size: 32px;
   padding: 10px;
 }
-/* line 204, ../../scss/_index.scss */
+/* line 257, ../../scss/_index.scss */
 .block.how-it-works .step-one {
   width: 80%;
 }
-/* line 208, ../../scss/_index.scss */
+/* line 261, ../../scss/_index.scss */
 .block.how-it-works .step-two {
+  width: 70%;
+}
+/* line 266, ../../scss/_index.scss */
+.block.how-it-works .step-three {
   width: 60%;
 }
-/* line 213, ../../scss/_index.scss */
-.block.how-it-works .step-three {
-  width: 40%;
+
+/* line 271, ../../scss/_index.scss */
+.block.submission-image {
+  background-image: url(/wp-content/themes/hca/img/charlie_fabric_mural.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* line 219, ../../scss/_index.scss */
+/* line 279, ../../scss/_index.scss */
 .block.who-we-are .team-member {
   text-align: left;
   margin: 30px 0;
 }
-/* line 223, ../../scss/_index.scss */
+/* line 283, ../../scss/_index.scss */
 .block.who-we-are .team-member-image {
   display: inline-block;
   vertical-align: top;
-  width: 10%;
+  width: 12%;
+  margin: 20px 5% 20px 0;
 }
-/* line 228, ../../scss/_index.scss */
+/* line 288, ../../scss/_index.scss */
+.block.who-we-are .team-member-image img {
+  width: 100%;
+}
+/* line 292, ../../scss/_index.scss */
 .block.who-we-are .team-member-text {
   display: inline-block;
   vertical-align: top;
-  width: 89%;
+  width: 82%;
 }
 
-/* line 237, ../../scss/_index.scss */
+/* line 301, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -579,59 +669,59 @@ footer .footer-text span {
   width: 100%;
   padding: 50px 0;
 }
-/* line 245, ../../scss/_index.scss */
+/* line 309, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 251, ../../scss/_index.scss */
+/* line 315, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 255, ../../scss/_index.scss */
+/* line 319, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 260, ../../scss/_index.scss */
+/* line 324, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 266, ../../scss/_index.scss */
+/* line 330, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 272, ../../scss/_index.scss */
+/* line 336, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 280, ../../scss/_index.scss */
+/* line 344, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 286, ../../scss/_index.scss */
+/* line 350, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 291, ../../scss/_index.scss */
+/* line 355, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 297, ../../scss/_index.scss */
+/* line 361, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -640,7 +730,7 @@ footer .footer-text span {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 308, ../../scss/_index.scss */
+/* line 372, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -648,34 +738,37 @@ footer .footer-text span {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 317, ../../scss/_index.scss */
+/* line 381, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 323, ../../scss/_index.scss */
+/* line 387, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 330, ../../scss/_index.scss */
+/* line 394, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 340, ../../scss/_index.scss */
+/* line 404, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
-  background: white;
-  border: 1px solid #222222;
-  color: #222222;
-  padding: 20px 30px;
-  font-size: 22px;
+  background: #666666;
+  border: 1px solid #666666;
+  color: white;
+  margin-top: 30px;
+  padding: 30px 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /*

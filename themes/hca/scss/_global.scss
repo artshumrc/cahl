@@ -84,24 +84,43 @@ header {
 			color:$dark;
 		}
 	}
-	.site-title-wrap {
-		float:left;
-		margin:7px 0px 0 35px;
-		width:30%;
+
+	.hdr-logo-link {
+		display:inline-block;
+		vertical-align: top;
+
+
 		img {
-			width:22px;
-			float:left;
-			margin-top:18px;
-			margin-right:8px;
+
+			margin:17px 10px 17px 30px;
+			display:inline-block;
+			vertical-align: top;
+			width:26px;
+			
 		}
-		h1.site-title {
-			float:left;
-			font-size:22px;
-			margin:13px 0 0 0;
-			padding:0;
-			@include font-accent;
+
+		h1.hdr-logo {
+			display:inline-block;
+			vertical-align: top;
+			@include font-accent(22px);
+		}
+
+	}
+
+	#nav-main {
+		display:inline-block;
+		vertical-align: top;
+		margin-left:30px;
+		a {
+			display:inline-block;
+			padding:25px 10px;
+			text-transform:uppercase;
+			font-weight:700;
+			font-size:13px;
+			color:rgba(0,0,0,0.7);
 		}
 	}
+
 	.header-dropdown {
 		display:none;
 		.dropdown-head {
@@ -159,7 +178,7 @@ nav.primary {
 footer {
 	height:220px;
 	clear:both;
-	background-color:$dark;
+	background-color:$accent-dark-1;
 	color:$light;
 	padding:50px 0;
 	text-align:center;
@@ -181,13 +200,19 @@ footer {
 	}
 
 	.footer-text {
-		text-align:left;
+		text-align:right;
 		width:50%;
 		h3 {
 			font-size:26px;
 		}
 		span {
 			font-size:14px;
+		}
+	}
+
+	.footer-logo {
+		img {
+			display:none;
 		}
 	}
 

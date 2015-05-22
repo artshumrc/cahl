@@ -46,6 +46,7 @@ $accent-dark-2: rgba( 19,  2,  0,1);
 // General help colors
 $trans-light: rgba(255,255,255,.93);
 $trans-light-8: rgba(255,255,255,.8);
+$trans-accent-dark-1:rgba(39, 9, 6, 0.8);
 $mss: #FFFDF5;
 $mss-dark: #A9947B;
 
@@ -61,9 +62,9 @@ $mss-dark: #A9947B;
 	font-weight:300;
 }
 @mixin font-title( $size : 24px ) {
-	font-family: 'Crimson Text', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: $size;
-	font-weight:100;
+	font-weight:700;
 }
 @mixin font-accent( $size : 24px ) {
 	font-family: 'IM Fell English';

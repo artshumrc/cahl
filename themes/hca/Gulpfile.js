@@ -18,7 +18,7 @@ var 	gulp      = require('gulp')
  
 // JS hint task
 gulp.task('jshint', function() {
-	gulp.src(['./app/*.js', './app/**/*.js'])
+	gulp.src(['./js/*.js', './js/**/*.js'])
     .pipe(plumber())
 		.pipe(jshint())
 		.pipe(jshint.reporter('default'));
@@ -38,7 +38,7 @@ gulp.task('imagemin', function() {
 
 // JS concat, strip debugging and minify
 gulp.task('scripts', function() {
-  gulp.src(['./app/**/*.js', './app/*.js'])
+  gulp.src(['./js/**/*.js', './js/*.js'])
 
     // browserify
     /*
@@ -65,7 +65,7 @@ gulp.task('compass', function() {
   .pipe(plumber())
   .pipe(compass({
     config_file: './config.rb',
-    css: 'min/css_src',
+    css: './min/css_src',
     sass: 'scss'
   }))
   .pipe(gulp.dest('./min/css_src'));
@@ -98,7 +98,7 @@ gulp.task('default', ['imagemin', 'scripts', 'compass', 'styles'], function() {
 
 
   // watch for JS changes
-  gulp.watch(['./app/*.js', './app/**/*.js'], ['scripts']);
+  gulp.watch(['./js/*.js', './js/**/*.js'], ['scripts']);
  
   // watch for CSS changes
   gulp.watch('./scss/*.scss', ['compass']);

@@ -7,16 +7,16 @@
 	<div class="block head">
 
 		<div class="top-left">
-			<div class="harvard-romance-languages-department-logo" alt="Harvard Romance Languages Department">
-				<img src="/wp-content/themes/hca/img/harvard_romance_languages_department_logo.jpg"/>
+			<div class="harvard-romance-languages-department-logo">
+				<img src="/wp-content/themes/hca/img/harvard_romance_languages_and_literatures_department_logo.png"  alt="Harvard Romance Languages Department"/>
 			</div>
 
 		</div>
 
 		<div class="top-right">
 			<div class="languages">
-				<img class="french-flag" src="/wp-content/themes/hca/img/fr_flag.jpg" ng-click="toggle_language($event)" data-language="francais"/>
-				<img class="english-flag" src="/wp-content/themes/hca/img/en_flag.jpg" ng-click="toggle_language($event)" data-language="english"/>
+				<img class="french-flag language" src="/wp-content/themes/hca/img/french_flag.png" ng-click="toggle_language($event)" data-language="francais"/>
+				<img class="english-flag language" src="/wp-content/themes/hca/img/american_flag.png" ng-click="toggle_language($event)" data-language="english"/>
 			</div>
 		</div>
 
@@ -59,7 +59,7 @@
 		<div class="block-inner">
 
 			<div class="intro-block-image">
-				<img class="/wp-content/themes/hca/img/image.jpg">
+				<img src="/wp-content/themes/hca/img/event_soldiers.jpg">
 			</div>
 
 			<div class="intro-block-text">
@@ -82,10 +82,12 @@
 			<div class="project-description-text">
 				<p>Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes caelo quae ducitis annum, liber et alma ceres, vestro si munere tellus, chaoniam pingui glandem mutavit aristra
 				</p>
+				<p>curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes caelo quae ducitis annum, liber et alma ceres, vestro si munere tellus, chaoniam pingui glandem mutavit aristra
+				</p>
 			</div>
 
 			<div class="project-description-image">
-				<img class="/wp-content/themes/hca/img/image.jpg">
+				<img src="/wp-content/themes/hca/img/sign_and_flowers.jpg">
 			</div>
 
 		</div>
@@ -120,7 +122,7 @@
 			<h2>Who We Are</h2>
 			<div class="team-member team-member-head">
 				<div class="team-member-image">
-					<img src="/wp-content/themes/hca/img/image.jpg"/>
+					<img src="/wp-content/themes/hca/img/republique.jpg"/>
 				</div>
 				<div class="team-member-text">
 					<h3>Doctor Virginie Green</h3>
@@ -129,7 +131,7 @@
 			</div>
 			<div class="team-member team-member-primary">
 				<div class="team-member-image">
-					<img src="/wp-content/themes/hca/img/image.jpg"/>
+					<img src="/wp-content/themes/hca/img/republique.jpg"/>
 				</div>
 				<div class="team-member-text">
 					<h3>HCA Team Member</h3>
@@ -152,51 +154,51 @@
 
 					<div class="submission-input-field">
 						<label>First name</label>
-						<input type="text" ng-model="submission_first_name" />
+						<input type="text" ng-model="submission.first_name" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>Last name</label>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.last_name" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>Email</label>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.email" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>Street Address</label>
-						<input type="text" ng-model="submission_street_address" />
+						<input type="text" ng-model="submission.street_address" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>Country</label>
-						<input type="text" ng-model="submission_country" />
+						<input type="text" ng-model="submission.country" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>City</label>
-						<input type="text" ng-model="submission_city" />
+						<input type="text" ng-model="submission.city" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>State/Province</label>
-						<input type="text" ng-model="submission_state_province" />
+						<input type="text" ng-model="submission.state_province" />
 					</div>
 
 					<div class="submission-input-field">
 						<label>Zip Code</label>
-						<input type="text" ng-model="submission_zip_code" />
+						<input type="text" ng-model="submission.zip_code" />
 					</div>
 
 					<div class="send-in-1-input-field half-field">
-						<input type="checkbox" ng-model="submission_by_internet" />
+						<input type="checkbox" ng-model="submission.by_internet" />
 						<span class="field-text">Will you send this material through email or the internet?</span>	
 					</div>
 
 					<div class="send-in-2-input-field half-field">
-						<input type="checkbox" ng-model="submission_by_mail" />
+						<input type="checkbox" ng-model="submission.by_mail" />
 						<span class="field-text">Will you send this material through postal services?</span>	
 					</div>
 
@@ -205,40 +207,40 @@
 					<div class="submission-input-field-wide">
 						<label>Which terms would best describe this material?</label>
 						<span class="help-text">Example: Article, Artwork, Banner, Blog, Book, Cartoon, Comment, Debate, Drawing, Ephemeral, Essay, Fiction, Film, Graffiti, Magazine, Manuscript, Newspaper, Object, Pamphlet, Photograph, Poem, Poster, Song, Text, TV program, Tweet, Website, etc.</span>
-						<textarea ng-model="submission_description" ></textarea>
+						<textarea ng-model="submission.description_terms" ></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Describe in your own words the material you would like to donate</label>
 						<span class="help-text">Maximum 100 words.</span>
-						<textarea ng-model="submission_description" ></textarea>
+						<textarea ng-model="submission.description_text" ></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Location of the material</label>
 						<span class="help-text">Where the material was made, found, used, processed, etc.</span>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.location" />
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Date of the material</label>
 						<span class="help-text">When the material was made, found, used, processed, etc.</span>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.date" />
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Author, maker, source</label>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.author_maker_source" />
 					</div>
 
 					<div class="submission-input-field-wide">
 						<label>Please attach a photo of the material, if possible</label>
 						<span class="help-text">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
-						<input type="text" ng-model="submission_last_name" />
+						<input type="text" ng-model="submission.image" />
 					</div>
 
 					<div class="send-in-2-input-field checkbox-field">
-						<input type="checkbox" ng-model="submission_by_mail" />
+						<input type="checkbox" ng-model="submission.name_included" />
 						<span class="field-text">Would you like your name included in the Archive?</span>	
 					</div>
 
@@ -247,7 +249,7 @@
 					<!-- Last form fields and submit -->	
 
 					<div class="accept-input-field checkbox-field">
-						<input type="checkbox" ng-model="accept_terms" />
+						<input type="checkbox" />
 						<span class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.</span>	
 					</div>
 
