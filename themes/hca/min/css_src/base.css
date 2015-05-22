@@ -95,17 +95,19 @@ li {
 /* line 39, ../../scss/_global.scss */
 ::selection {
   background: #512723;
+  color: white;
 }
 
-/* line 42, ../../scss/_global.scss */
+/* line 43, ../../scss/_global.scss */
 ::-moz-selection {
   background: #512723;
+  color: white;
 }
 
 /*
  * Global structure styles
  */
-/* line 50, ../../scss/_global.scss */
+/* line 52, ../../scss/_global.scss */
 .grid.inner {
   width: 100%;
   max-width: 1200px;
@@ -113,21 +115,21 @@ li {
   margin: 0 auto;
 }
 
-/* line 56, ../../scss/_global.scss */
+/* line 58, ../../scss/_global.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 59, ../../scss/_global.scss */
+/* line 61, ../../scss/_global.scss */
 .social-wrap {
   padding: 5px;
 }
-/* line 61, ../../scss/_global.scss */
+/* line 63, ../../scss/_global.scss */
 .social-wrap span {
   padding: 10px;
 }
 
-/* line 65, ../../scss/_global.scss */
+/* line 67, ../../scss/_global.scss */
 .content.primary {
   min-height: 600px;
 }
@@ -135,7 +137,7 @@ li {
 /*
  * Styles for navigation and header
  */
-/* line 72, ../../scss/_global.scss */
+/* line 74, ../../scss/_global.scss */
 header {
   display: none;
   background: rgba(255, 255, 255, 0.93);
@@ -146,27 +148,27 @@ header {
   width: 100%;
   -webkit-transform: translateZ(0);
 }
-/* line 81, ../../scss/_global.scss */
+/* line 83, ../../scss/_global.scss */
 header a {
   color: #222222;
 }
-/* line 83, ../../scss/_global.scss */
+/* line 85, ../../scss/_global.scss */
 header a:hover {
   color: #222222;
 }
-/* line 88, ../../scss/_global.scss */
+/* line 90, ../../scss/_global.scss */
 header .hdr-logo-link {
   display: inline-block;
   vertical-align: top;
 }
-/* line 93, ../../scss/_global.scss */
+/* line 95, ../../scss/_global.scss */
 header .hdr-logo-link img {
   margin: 20px 10px 17px 30px;
   display: inline-block;
   vertical-align: top;
   width: 26px;
 }
-/* line 102, ../../scss/_global.scss */
+/* line 104, ../../scss/_global.scss */
 header .hdr-logo-link h1.hdr-logo {
   display: inline-block;
   vertical-align: top;
@@ -174,13 +176,13 @@ header .hdr-logo-link h1.hdr-logo {
   font-size: 22px;
   font-weight: 700;
 }
-/* line 110, ../../scss/_global.scss */
+/* line 112, ../../scss/_global.scss */
 header #nav-main {
   display: inline-block;
   vertical-align: top;
   margin-left: 30px;
 }
-/* line 114, ../../scss/_global.scss */
+/* line 116, ../../scss/_global.scss */
 header #nav-main a {
   display: inline-block;
   padding: 25px 10px;
@@ -189,58 +191,58 @@ header #nav-main a {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.7);
 }
-/* line 124, ../../scss/_global.scss */
+/* line 126, ../../scss/_global.scss */
 header .header-dropdown {
   display: none;
 }
-/* line 126, ../../scss/_global.scss */
+/* line 128, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head {
   display: block;
 }
-/* line 128, ../../scss/_global.scss */
+/* line 130, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head span.fa {
   display: block;
   padding: 13px;
   font-size: 20px;
 }
-/* line 134, ../../scss/_global.scss */
+/* line 136, ../../scss/_global.scss */
 header .header-dropdown .dropdown-panel {
   display: none;
   position: relative;
 }
 
-/* line 141, ../../scss/_global.scss */
+/* line 143, ../../scss/_global.scss */
 nav.primary {
   font-size: 15px;
 }
-/* line 144, ../../scss/_global.scss */
+/* line 146, ../../scss/_global.scss */
 nav.primary a:hover {
   color: white;
 }
-/* line 149, ../../scss/_global.scss */
+/* line 151, ../../scss/_global.scss */
 nav.primary ul {
   padding: 0;
   margin: 0;
   float: right;
   position: relative;
 }
-/* line 153, ../../scss/_global.scss */
+/* line 155, ../../scss/_global.scss */
 nav.primary ul li {
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 156, ../../scss/_global.scss */
+/* line 158, ../../scss/_global.scss */
 nav.primary ul li a {
   padding: 25px 25px;
   display: block;
   border-left: 1px solid #3c1612;
 }
-/* line 160, ../../scss/_global.scss */
+/* line 162, ../../scss/_global.scss */
 nav.primary ul li a:hover {
   background: #3c1612;
 }
-/* line 167, ../../scss/_global.scss */
+/* line 169, ../../scss/_global.scss */
 nav.primary ul li:last-child a {
   border-right: 1px solid #222222;
 }
@@ -248,7 +250,7 @@ nav.primary ul li:last-child a {
 /*
  * Footer 
  */
-/* line 178, ../../scss/_global.scss */
+/* line 180, ../../scss/_global.scss */
 footer {
   height: 220px;
   clear: both;
@@ -259,37 +261,37 @@ footer {
   width: 100%;
   position: relative;
 }
-/* line 188, ../../scss/_global.scss */
+/* line 190, ../../scss/_global.scss */
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
   font-family: 'IM Fell English';
   font-size: 30px;
 }
-/* line 193, ../../scss/_global.scss */
+/* line 195, ../../scss/_global.scss */
 footer a {
   color: white;
   text-decoration: underline;
 }
-/* line 196, ../../scss/_global.scss */
+/* line 198, ../../scss/_global.scss */
 footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 202, ../../scss/_global.scss */
+/* line 204, ../../scss/_global.scss */
 footer .footer-text {
   text-align: right;
   width: 50%;
 }
-/* line 205, ../../scss/_global.scss */
+/* line 207, ../../scss/_global.scss */
 footer .footer-text h3 {
   font-size: 26px;
 }
-/* line 208, ../../scss/_global.scss */
+/* line 210, ../../scss/_global.scss */
 footer .footer-text span {
   font-size: 14px;
 }
-/* line 214, ../../scss/_global.scss */
+/* line 216, ../../scss/_global.scss */
 footer .footer-logo img {
   display: none;
 }
@@ -297,55 +299,55 @@ footer .footer-logo img {
 /*
  * Styles for Dropdowns
  */
-/* line 225, ../../scss/_global.scss */
+/* line 227, ../../scss/_global.scss */
 .dropdown {
   cursor: pointer;
 }
-/* line 228, ../../scss/_global.scss */
+/* line 230, ../../scss/_global.scss */
 .dropdown .dropdown-head {
   cursor: pointer;
   display: block;
 }
-/* line 236, ../../scss/_global.scss */
+/* line 238, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered {
   background: #222222;
 }
-/* line 240, ../../scss/_global.scss */
+/* line 242, ../../scss/_global.scss */
 .dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
   cursor: pointer;
 }
-/* line 245, ../../scss/_global.scss */
+/* line 247, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered:hover {
   background: #222222;
 }
-/* line 249, ../../scss/_global.scss */
+/* line 251, ../../scss/_global.scss */
 .dropdown .dropdown-panel {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 256, ../../scss/_global.scss */
+/* line 258, ../../scss/_global.scss */
 .dropdown .dropdown-panel.lowered {
   display: block !important;
 }
 
-/* line 260, ../../scss/_global.scss */
+/* line 262, ../../scss/_global.scss */
 ::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 263, ../../scss/_global.scss */
+/* line 265, ../../scss/_global.scss */
 :-moz-placeholder {
   color: white;
 }
 
-/* line 266, ../../scss/_global.scss */
+/* line 268, ../../scss/_global.scss */
 ::-moz-placeholder {
   color: white;
 }
 
-/* line 269, ../../scss/_global.scss */
+/* line 271, ../../scss/_global.scss */
 :-ms-input-placeholder {
   color: white;
 }
@@ -693,44 +695,44 @@ footer .footer-logo img {
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 333, ../../scss/_index.scss */
+/* line 332, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 339, ../../scss/_index.scss */
+/* line 338, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 345, ../../scss/_index.scss */
+/* line 344, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 353, ../../scss/_index.scss */
+/* line 352, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 359, ../../scss/_index.scss */
+/* line 358, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 364, ../../scss/_index.scss */
+/* line 363, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 370, ../../scss/_index.scss */
+/* line 369, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -739,7 +741,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 381, ../../scss/_index.scss */
+/* line 380, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -747,31 +749,39 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 390, ../../scss/_index.scss */
+/* line 387, ../../scss/_index.scss */
+.block.submission-proposal .half-field label {
+  cursor: pointer;
+}
+/* line 393, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 396, ../../scss/_index.scss */
+/* line 399, ../../scss/_index.scss */
+.block.submission-proposal .checkbox-field label {
+  cursor: pointer;
+}
+/* line 403, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 403, ../../scss/_index.scss */
+/* line 410, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 413, ../../scss/_index.scss */
+/* line 420, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
-  background: #666666;
-  border: 1px solid #666666;
+  background: #3c1612;
+  border: none;
   color: white;
   margin-top: 30px;
   padding: 30px 40px;
@@ -780,7 +790,7 @@ footer .footer-logo img {
   font-weight: 700;
 }
 
-/* line 427, ../../scss/_index.scss */
+/* line 434, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }

@@ -328,7 +328,6 @@
 	textarea {
 		height:180px;
 	}
-	
 
 	.submission-input-field {
 	
@@ -385,6 +384,10 @@
 		margin-right:0.5%;
 		margin-bottom:30px;
 
+		label {
+			cursor:pointer;
+		}
+
 	}
 
 	.checkbox-field {
@@ -392,6 +395,10 @@
 		width:99%;
 		margin-bottom:30px;
 		display:block;
+
+		label {
+			cursor:pointer;
+		}
 
 		input[type="checkbox"] {
 			display:inline-block;
@@ -411,8 +418,8 @@
 	}
 
 	input[type="submit"] {
-		background:$grey;
-		border:1px solid $grey;
+		background:$primary;
+		border:none;
 		color:$light;
 		margin-top:30px;
 		padding:30px 40px;

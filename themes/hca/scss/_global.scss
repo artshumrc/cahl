@@ -38,9 +38,11 @@ li {
 // Set text highlighting to accent colors
 ::selection {
   background: $accent-light-1;
+  color:$light;
 }
 ::-moz-selection {
   background: $accent-light-1; 
+  color:$light;
 }
 
 /*

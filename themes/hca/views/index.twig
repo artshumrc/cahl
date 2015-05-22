@@ -106,7 +106,6 @@
 					<span class="step-text">Step 2: quo sidere terram vertere, Mycenas</span>
 				</div>
 
-				</div>
 				<span class="flowchart-down fa fa-long-arrow-down"></span>
 				<div class="step-three flowchart-step">
 					<span class="step-text">Step 3: ulmisque adiungere vites conveniat</span>
@@ -146,12 +145,17 @@
 	</div>
 
 	<div id="propose-submission" class="block submission-proposal">
-		<div class="block-inner">
+		<div class="block-inner" ng-show="successful_submission">
+			<h2>Proposal Successful</h2>
+			<p>Thank you for proposing a submission!  You will hear from the Harvard Charlie Archive regarding your proposal soon.</p>
+		</div>
+
+		<div class="block-inner" ng-hide="successful_submission">
 			<h2>Propose a Submission</h2>
 			<span class="form-help-text">Please fill out as many values as possible to expedite our response to your proposal for a submission to the Harvard Charlie Archive.  <span class="required">*</span> denotes a required field.</span>
 			<div class="submission-form-wrap">
 
-				<form class="submission-form" ng-submit="check_send($event)" name="submission_form">
+				<form  id="submission_form" class="submission-form"  name="submission_form" ng-submit="submit()">
 
 					<div class="submission-input-field">
 						<label>First name<span class="required">*</span></label>
@@ -251,12 +255,12 @@
 
 					<div class="accept-input-field checkbox-field">
 						<input id="i_accept" type="checkbox" />
-						<label for="i_accept" class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.</label>	
+						<label for="i_accept" class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.<span class="required">*</span></label>	
 					</div>
 
 
 					<div class="submit-input-field checkbox-field">
-						<input type="submit" value="Submit"/>
+						<input type="submit" value="Submit" />
 					</div>
 
 				</form>

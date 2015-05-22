@@ -5,18 +5,31 @@ angular.module('HarvardCharlieApp')
 	window.__Hc__ = window.__Hc__ || {};
 	var Hc = window.__Hc__;
 
-	$scope.submission = {};
+	$scope.successful_submission = false;
 
-	$scope.check_send = function(e){
+	$scope.submission = {
+
+		first_name : "test",
+		last_name : "test",
+		email : "test",
+		description_terms : "test",
+		description_text : "test"
+
+	};
+
+	$scope.update = function(){
+	}
+
+	$scope.submit = function(){
 
 		console.log("Submission:", $scope.submission);
 
 
-
-
+		$scope.successful_submission = true;
 
 	};
 
+	$scope.update();
 
 
 
