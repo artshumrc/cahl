@@ -251,7 +251,7 @@ nav.primary ul li:last-child a {
 footer {
   height: 220px;
   clear: both;
-  background-color: #270906;
+  background-color: #130200;
   color: white;
   padding: 50px 0;
   text-align: center;
@@ -488,8 +488,8 @@ footer .footer-logo img {
 }
 /* line 129, ../../scss/_index.scss */
 .block.head h1 {
+  background: rgba(20, 20, 20, 0.7);
   margin: 0px auto 50px;
-  background: rgba(39, 9, 6, 0.8);
   padding: 20px 40px;
   display: inline-block;
   width: auto;
@@ -498,11 +498,11 @@ footer .footer-logo img {
 /* line 138, ../../scss/_index.scss */
 .block.head nav {
   display: block;
-  margin: 70px auto;
+  margin: 0px auto;
 }
 /* line 141, ../../scss/_index.scss */
 .block.head nav a {
-  background: rgba(39, 9, 6, 0.8);
+  background: rgba(20, 20, 20, 0.7);
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   display: inline-block;
@@ -513,9 +513,9 @@ footer .footer-logo img {
 }
 /* line 154, ../../scss/_index.scss */
 .block.head .social-wrap span {
+  background: rgba(20, 20, 20, 0.7);
   color: #fff;
   font-size: 28px;
-  background: rgba(39, 9, 6, 0.8);
   border-radius: 30px;
   padding: 20px;
   display: inline-block;
@@ -527,8 +527,8 @@ footer .footer-logo img {
 }
 /* line 169, ../../scss/_index.scss */
 .block.head .languages .language {
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   margin: 0 5px;
 }
 
@@ -596,7 +596,7 @@ footer .footer-logo img {
 
 /* line 238, ../../scss/_index.scss */
 .block.how-it-works {
-  background: #270906;
+  background: #130200;
   color: white;
 }
 /* line 241, ../../scss/_index.scss */

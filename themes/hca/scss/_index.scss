@@ -127,8 +127,8 @@
 		cursor:default;
 	}
 	h1 {
+		background:rgba(20,20,20,0.7);
 		margin:0px auto 50px;
-		background:$trans-accent-dark-1;
 		padding:20px 40px;
 		display:inline-block;
 		width:auto;
@@ -137,9 +137,9 @@
 
 	nav {
 		display:block;
-		margin:70px auto;
+		margin:0px auto;
 		a {
-			background:$trans-accent-dark-1;
+			background:rgba(20,20,20,0.7);
 			color:rgba(255,255,255,0.8);
 			font-size:14px;
 			display:inline-block;
@@ -152,9 +152,9 @@
 
 	.social-wrap {
 		span {
+			background:rgba(20,20,20,0.7);
 			color:#fff;
 			font-size:28px;
-			background:$trans-accent-dark-1;
 			border-radius:30px;
 			padding:20px;
 			display:inline-block;
@@ -167,8 +167,8 @@
 
 	.languages {
 		.language {
-			width:40px;
-			height:30px;
+			width:30px;
+			height:20px;
 			margin:0 5px;
 		}
 	}
@@ -236,7 +236,7 @@
 }
 
 .block.how-it-works {
-	background:$accent-dark-1;
+	background:$accent-dark-2;
 	color:$light;
 	.flowchart-step {
 		background:$light;
