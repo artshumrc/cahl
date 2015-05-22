@@ -92,7 +92,7 @@ header {
 
 		img {
 
-			margin:17px 10px 17px 30px;
+			margin:20px 10px 17px 30px;
 			display:inline-block;
 			vertical-align: top;
 			width:26px;
@@ -102,7 +102,7 @@ header {
 		h1.hdr-logo {
 			display:inline-block;
 			vertical-align: top;
-			@include font-accent(22px);
+			@include font-title(22px);
 		}
 
 	}

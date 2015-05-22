@@ -161,7 +161,7 @@ header .hdr-logo-link {
 }
 /* line 93, ../../scss/_global.scss */
 header .hdr-logo-link img {
-  margin: 17px 10px 17px 30px;
+  margin: 20px 10px 17px 30px;
   display: inline-block;
   vertical-align: top;
   width: 26px;
@@ -170,8 +170,9 @@ header .hdr-logo-link img {
 header .hdr-logo-link h1.hdr-logo {
   display: inline-block;
   vertical-align: top;
-  font-family: 'IM Fell English';
+  font-family: 'Open Sans', sans-serif;
   font-size: 22px;
+  font-weight: 700;
 }
 /* line 110, ../../scss/_global.scss */
 header #nav-main {
