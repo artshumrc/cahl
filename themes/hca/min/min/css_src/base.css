@@ -364,7 +364,6 @@ footer .footer-logo img {
   position: relative;
   overflow: hidden;
   text-align: center;
-  border-bottom: 1px solid #222222;
 }
 /* line 15, ../../scss/_index.scss */
 .block .block-inner {
@@ -374,7 +373,7 @@ footer .footer-logo img {
 }
 /* line 21, ../../scss/_index.scss */
 .block.block-image {
-  height: 421px;
+  height: 500px;
   min-height: 0;
   background: #222222;
 }
@@ -390,34 +389,54 @@ footer .footer-logo img {
 }
 /* line 35, ../../scss/_index.scss */
 .block p {
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.66);
-  line-height: 1.5;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.78);
+  line-height: 1.7em;
 }
-/* line 42, ../../scss/_index.scss */
+/* line 40, ../../scss/_index.scss */
+.block p.block-teaser {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6em;
+}
+/* line 47, ../../scss/_index.scss */
+.block p.supplementary {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.62);
+  line-height: 1.4em;
+}
+/* line 55, ../../scss/_index.scss */
 .block .text-content {
   clear: both;
 }
-/* line 44, ../../scss/_index.scss */
+/* line 57, ../../scss/_index.scss */
 .block .text-content .text-column {
   display: inline-block;
 }
-/* line 49, ../../scss/_index.scss */
+/* line 62, ../../scss/_index.scss */
 .block .text-overlay {
   color: white;
   margin: 0 auto;
   display: inline-block;
   padding: 20px 50px;
 }
-/* line 55, ../../scss/_index.scss */
+/* line 68, ../../scss/_index.scss */
 .block .text-overlay h1 {
   padding: 0;
   font-size: 48px;
   line-height: 60px;
   width: 100%;
 }
+/* line 76, ../../scss/_index.scss */
+.block .caption {
+  margin: 10px;
+  display: block;
+  font-size: 14px;
+  word-wrap: wrap;
+  color: rgba(0, 0, 0, 0.6);
+}
 
-/* line 65, ../../scss/_index.scss */
+/* line 85, ../../scss/_index.scss */
 .top-right {
   position: absolute;
   top: 0;
@@ -425,7 +444,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 72, ../../scss/_index.scss */
+/* line 92, ../../scss/_index.scss */
 .top-left {
   position: absolute;
   top: 0;
@@ -433,7 +452,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 78, ../../scss/_index.scss */
+/* line 98, ../../scss/_index.scss */
 .bottom-right {
   position: absolute;
   bottom: 0;
@@ -441,7 +460,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 85, ../../scss/_index.scss */
+/* line 105, ../../scss/_index.scss */
 .bottom-left {
   position: absolute;
   bottom: 0;
@@ -449,7 +468,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 95, ../../scss/_index.scss */
+/* line 115, ../../scss/_index.scss */
 .scroll-indicator {
   position: absolute;
   -webkit-transform: translateZ(0);
@@ -464,11 +483,11 @@ footer .footer-logo img {
   border-radius: 40px;
   z-index: 20;
 }
-/* line 105, ../../scss/_index.scss */
+/* line 125, ../../scss/_index.scss */
 .scroll-indicator:hover {
   top: 572px;
 }
-/* line 109, ../../scss/_index.scss */
+/* line 129, ../../scss/_index.scss */
 .scroll-indicator span.fa {
   padding: 20px;
   color: white;
@@ -476,47 +495,58 @@ footer .footer-logo img {
   font-size: 20px;
 }
 
-/* line 118, ../../scss/_index.scss */
+/* line 138, ../../scss/_index.scss */
 .block.head {
   background-image: url(/wp-content/themes/hca/img/charlie_flowers.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   min-height: 700px;
+  position: relative;
 }
-/* line 125, ../../scss/_index.scss */
+/* line 147, ../../scss/_index.scss */
+.block.head .block-head-background-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(20, 20, 20, 0.4);
+  top: 0;
+  left: 0;
+}
+/* line 156, ../../scss/_index.scss */
 .block.head .text-overlay {
   text-align: center;
   cursor: default;
+  position: relative;
 }
-/* line 129, ../../scss/_index.scss */
+/* line 161, ../../scss/_index.scss */
 .block.head h1 {
-  background: rgba(20, 20, 20, 0.7);
+  color: white;
   margin: 0px auto 50px;
-  padding: 20px 40px;
+  padding: 0;
   display: inline-block;
-  width: auto;
-  font-size: 42px;
+  font-size: 50px;
+  width: 100%;
+  line-height: 1.5em;
 }
-/* line 138, ../../scss/_index.scss */
+/* line 172, ../../scss/_index.scss */
 .block.head nav {
   display: block;
   margin: 0px auto;
 }
-/* line 141, ../../scss/_index.scss */
+/* line 175, ../../scss/_index.scss */
 .block.head nav a {
-  background: rgba(20, 20, 20, 0.7);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  color: white;
+  font-size: 20px;
   display: inline-block;
   padding: 15px 20px;
   margin: 10px;
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 154, ../../scss/_index.scss */
+/* line 189, ../../scss/_index.scss */
 .block.head .social-wrap span {
-  background: rgba(20, 20, 20, 0.7);
   color: #fff;
   font-size: 28px;
   border-radius: 30px;
@@ -524,18 +554,18 @@ footer .footer-logo img {
   display: inline-block;
   margin: 5px;
 }
-/* line 162, ../../scss/_index.scss */
+/* line 197, ../../scss/_index.scss */
 .block.head .social-wrap span.fa-facebook {
   padding: 20px 25px;
 }
-/* line 169, ../../scss/_index.scss */
+/* line 204, ../../scss/_index.scss */
 .block.head .languages .language {
   width: 30px;
   height: 20px;
   margin: 0 5px;
 }
 
-/* line 178, ../../scss/_index.scss */
+/* line 213, ../../scss/_index.scss */
 .block.intro {
   /*
   background:$accent-dark-1;
@@ -545,37 +575,42 @@ footer .footer-logo img {
   }
   */
 }
-/* line 188, ../../scss/_index.scss */
+/* line 223, ../../scss/_index.scss */
 .block.intro .intro-block-image {
   display: inline-block;
   vertical-align: top;
-  width: 40%;
+  width: 33%;
   padding: 10px;
-  height: 400px;
+  margin-top: 70px;
   overflow: hidden;
 }
-/* line 195, ../../scss/_index.scss */
+/* line 230, ../../scss/_index.scss */
 .block.intro .intro-block-image img {
   width: 100%;
 }
-/* line 199, ../../scss/_index.scss */
+/* line 234, ../../scss/_index.scss */
 .block.intro .intro-block-text {
   display: inline-block;
   vertical-align: top;
-  width: 59%;
+  width: 66%;
   text-align: left;
   padding: 0 50px;
 }
 
-/* line 209, ../../scss/_index.scss */
+/* line 244, ../../scss/_index.scss */
 .block.intro-image {
   background-image: url(/wp-content/themes/hca/img/charlie_poster_pencil.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
-/* line 218, ../../scss/_index.scss */
+/* line 252, ../../scss/_index.scss */
+.block.project-description {
+  background: #f6f6f6;
+}
+/* line 256, ../../scss/_index.scss */
 .block.project-description .project-description-image {
   display: inline-block;
   vertical-align: top;
@@ -584,96 +619,127 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 225, ../../scss/_index.scss */
+/* line 263, ../../scss/_index.scss */
 .block.project-description .project-description-image img {
   width: 100%;
 }
-/* line 229, ../../scss/_index.scss */
+/* line 267, ../../scss/_index.scss */
 .block.project-description .project-description-text {
   display: inline-block;
   vertical-align: top;
-  width: 59%;
+  width: 92%;
   text-align: left;
   padding: 0 50px;
 }
 
-/* line 238, ../../scss/_index.scss */
+/* line 279, ../../scss/_index.scss */
+.block.goals .goals-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  padding: 10px;
+  height: 400px;
+  overflow: hidden;
+}
+/* line 286, ../../scss/_index.scss */
+.block.goals .goals-image img {
+  width: 100%;
+}
+/* line 290, ../../scss/_index.scss */
+.block.goals .goals-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 66%;
+  text-align: left;
+  padding: 0 50px;
+}
+
+/* line 302, ../../scss/_index.scss */
 .block.how-it-works {
   background: #3c1612;
   color: white;
 }
-/* line 241, ../../scss/_index.scss */
+/* line 305, ../../scss/_index.scss */
 .block.how-it-works .flowchart-step {
   background: #eee;
   padding: 50px;
   margin: 20px auto;
   display: block;
 }
-/* line 247, ../../scss/_index.scss */
+/* line 311, ../../scss/_index.scss */
 .block.how-it-works .step-text {
   color: #444;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 252, ../../scss/_index.scss */
+/* line 316, ../../scss/_index.scss */
 .block.how-it-works .flowchart-down {
   color: #ddd;
   font-size: 32px;
   padding: 10px;
 }
-/* line 258, ../../scss/_index.scss */
+/* line 322, ../../scss/_index.scss */
 .block.how-it-works .step-one {
   width: 80%;
 }
-/* line 262, ../../scss/_index.scss */
+/* line 326, ../../scss/_index.scss */
 .block.how-it-works .step-two {
   width: 70%;
 }
-/* line 267, ../../scss/_index.scss */
+/* line 331, ../../scss/_index.scss */
 .block.how-it-works .step-three {
   width: 60%;
 }
 
-/* line 272, ../../scss/_index.scss */
+/* line 336, ../../scss/_index.scss */
 .block.submission-image {
   background-image: url(/wp-content/themes/hca/img/charlie_fabric_mural.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
-/* line 280, ../../scss/_index.scss */
+/* line 345, ../../scss/_index.scss */
 .block.who-we-are .team-member {
   text-align: left;
   margin: 30px 0;
 }
-/* line 284, ../../scss/_index.scss */
+/* line 349, ../../scss/_index.scss */
 .block.who-we-are .team-member-image {
   display: inline-block;
   vertical-align: top;
   width: 12%;
   margin: 20px 5% 20px 0;
 }
-/* line 289, ../../scss/_index.scss */
+/* line 354, ../../scss/_index.scss */
 .block.who-we-are .team-member-image img {
   width: 100%;
 }
-/* line 293, ../../scss/_index.scss */
+/* line 358, ../../scss/_index.scss */
 .block.who-we-are .team-member-text {
   display: inline-block;
   vertical-align: top;
   width: 82%;
 }
-/* line 300, ../../scss/_index.scss */
+/* line 363, ../../scss/_index.scss */
+.block.who-we-are .team-member-text.team-member-text-wide {
+  width: 100%;
+}
+/* line 368, ../../scss/_index.scss */
 .block.who-we-are .team-member-head .team-member-image {
   width: 25%;
 }
-/* line 303, ../../scss/_index.scss */
+/* line 371, ../../scss/_index.scss */
 .block.who-we-are .team-member-head .team-member-text {
   width: 69%;
 }
+/* line 373, ../../scss/_index.scss */
+.block.who-we-are .team-member-head .team-member-text.team-member-text-wide {
+  width: 100%;
+}
 
-/* line 311, ../../scss/_index.scss */
+/* line 382, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -681,7 +747,7 @@ footer .footer-logo img {
   width: 100%;
   padding: 50px 0;
 }
-/* line 319, ../../scss/_index.scss */
+/* line 390, ../../scss/_index.scss */
 .block.submission-proposal .form-help-text {
   display: inline-block;
   width: 80%;
@@ -689,59 +755,59 @@ footer .footer-logo img {
   margin: 0 auto 40px;
   font-size: 14px;
 }
-/* line 328, ../../scss/_index.scss */
+/* line 399, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 334, ../../scss/_index.scss */
+/* line 405, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 338, ../../scss/_index.scss */
+/* line 409, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 342, ../../scss/_index.scss */
+/* line 413, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 348, ../../scss/_index.scss */
+/* line 419, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 354, ../../scss/_index.scss */
+/* line 425, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 362, ../../scss/_index.scss */
+/* line 433, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 368, ../../scss/_index.scss */
+/* line 439, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 373, ../../scss/_index.scss */
+/* line 444, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 379, ../../scss/_index.scss */
+/* line 450, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -750,7 +816,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 390, ../../scss/_index.scss */
+/* line 461, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -758,36 +824,36 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 397, ../../scss/_index.scss */
+/* line 468, ../../scss/_index.scss */
 .block.submission-proposal .half-field label {
   cursor: pointer;
 }
-/* line 403, ../../scss/_index.scss */
+/* line 474, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 409, ../../scss/_index.scss */
+/* line 480, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field label {
   cursor: pointer;
 }
-/* line 413, ../../scss/_index.scss */
+/* line 484, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 420, ../../scss/_index.scss */
+/* line 491, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 430, ../../scss/_index.scss */
+/* line 501, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #3c1612;
   border: none;
@@ -799,7 +865,7 @@ footer .footer-logo img {
   font-weight: 700;
 }
 
-/* line 444, ../../scss/_index.scss */
+/* line 515, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }
