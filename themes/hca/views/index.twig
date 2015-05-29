@@ -76,6 +76,7 @@
 	</div>
 
 	<div class="block block-image intro-image">
+		<div class="image-screen"></div>	
 	</div>
 
 	<div class="block goals">
@@ -190,6 +191,7 @@
 	</div>
 
 	<div class="block block-image submission-image">
+		<div class="image-screen"></div>	
 	</div>
 
 	<div id="propose-submission" class="block submission-proposal">
@@ -216,16 +218,17 @@
 					</div>
 
 					<div class="submission-input-field">
+						<label>Home Address</label>
+						<textarea ng-model="submission.street_address" ng-maxlength="200"></textarea>
+					</div>
+
+					<div class="submission-input-field">
 						<label>Email<span class="required">*</span></label>
 						<input type="text" ng-model="submission.email" ng-maxlength="100" required/>
 					</div>
 
-					<div class="submission-input-field">
-						<label>Street Address</label>
-						<input type="text" ng-model="submission.street_address" ng-maxlength="200"/>
-					</div>
 
-					<div class="submission-input-field">
+					<!--div class="submission-input-field">
 						<label>Country</label>
 						<input type="text" ng-model="submission.country" ng-maxlength="100"/>
 					</div>
@@ -243,19 +246,30 @@
 					<div class="submission-input-field">
 						<label>Zip Code</label>
 						<input type="text" ng-model="submission.zip_code" ng-maxlength="12"/>
-					</div>
-
-					<div class="send-in-1-input-field half-field">
-						<input id="send_in_1" type="checkbox" ng-model="submission.by_internet" />
-						<label for="send_in_1" class="field-text">Will you send this material through email or the internet?</label>	
-					</div>
-
-					<div class="send-in-2-input-field half-field">
-						<input id="send_in_2" type="checkbox" ng-model="submission.by_mail" />
-						<label for="send_in_2" class="field-text">Will you send this material through postal services?</label>	
-					</div>
+					</div-->
 
 					<h4>Type of material</h4>
+
+					<div class="send-in-1-input-field send-in-input-field">
+						<span class="field-label">Will you send this material through email or the internet?</span>	
+						<label for="send_in_1_1" class="field-text">
+						<input id="send_in_1_1" type="radio" ng-model="submission.by_internet" value="yes"/>
+						Yes</label>
+						<label for="send_in_1_2" class="field-text">
+						<input id="send_in_1_2" type="radio" ng-model="submission.by_internet" value="no"/>
+						No</label>
+					</div>
+
+					<div class="send-in-2-input-field send-in-input-field">
+						<span class="field-label">Will you send this material through postal services?</span>	
+						<label for="send_in_2_1" class="field-text">
+						<input id="send_in_2_1" type="radio" ng-model="submission.by_mail" value="yes"/>
+						Yes</label>
+						<label for="send_in_2_2" class="field-text">
+						<input id="send_in_2_2" type="radio" ng-model="submission.by_mail" value="no"/>
+						No</label>
+					</div>
+
 
 					<div class="submission-input-field-wide">
 						<label>Which terms would best describe this material?<span class="required">*</span></label>
@@ -289,12 +303,20 @@
 					<div class="submission-input-field-wide">
 						<label>Please attach a photo of the material, if possible</label>
 						<span class="help-text">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
-						<input type="text" ng-model="submission.image" />
+						<input type="file" ng-model="submission.image" />
 					</div>
 
-					<div class="include-name-input-field checkbox-field">
-						<input id="include_name" type="checkbox" ng-model="submission.name_included" ng-maxlength="100"/>
-						<label for="include_name" class="field-text">Would you like your name included in the Archive?</label>	
+					<div class="include-name-input-field send-in-input-field">
+
+
+						<span class="field-label">Would you like your name included in the Archive?</span>	
+						<label for="include_name_1" class="field-text">
+						<input id="include_name_1" type="radio" ng-model="submission.name_included" value="yes"/>
+						Yes</label>
+						<label for="include_name_2" class="field-text">
+						<input id="include_name_2" type="radio" ng-model="submission.name_included" value="no"/>
+						No</label>
+
 					</div>
 
 
