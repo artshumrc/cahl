@@ -808,9 +808,9 @@ footer .footer-logo img {
 .block.submission-proposal .form-help-text {
   display: inline-block;
   width: 80%;
-  color: #666666;
+  color: rgba(0, 0, 0, 0.8);
   margin: 0 auto 40px;
-  font-size: 14px;
+  font-size: 16px;
 }
 /* line 418, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
@@ -869,9 +869,9 @@ footer .footer-logo img {
   width: 98%;
   margin: 10px auto;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   word-wrap: wrap;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 /* line 480, ../../scss/_index.scss */
 .block.submission-proposal .half-field {

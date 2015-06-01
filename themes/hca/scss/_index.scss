@@ -409,9 +409,9 @@
 	.form-help-text {
 		display:inline-block;
 		width:80%;
-		color:$grey;
+		color:rgba(0,0,0,0.8);
 		margin:0 auto 40px;
-		font-size:14px;
+		font-size:16px;
 
 	}
 
@@ -470,9 +470,9 @@
 			width:98%;
 			margin:10px auto;
 			display:block;
-			font-size:14px;
+			font-size:16px;
 			word-wrap:wrap;
-			color:rgba(0,0,0,0.6);
+			color:rgba(0,0,0,0.8);
 		}
 
 	}
