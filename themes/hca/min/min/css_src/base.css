@@ -192,57 +192,86 @@ header #nav-main a {
   color: rgba(0, 0, 0, 0.7);
 }
 /* line 126, ../../scss/_global.scss */
+header .primary-header-content {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 132, ../../scss/_global.scss */
+header .languages {
+  float: right;
+  margin-right: 20px;
+}
+/* line 136, ../../scss/_global.scss */
+header .languages .language {
+  width: 30px;
+  height: 25px;
+  margin: 20px 5px;
+  padding: 0 0 5px 0;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+/* line 144, ../../scss/_global.scss */
+header .languages .language:hover {
+  border-bottom: 1px solid #ddd;
+}
+/* line 147, ../../scss/_global.scss */
+header .languages .language.selected-language {
+  border-bottom: 1px solid #aaa;
+}
+/* line 153, ../../scss/_global.scss */
 header .header-dropdown {
   display: none;
 }
-/* line 128, ../../scss/_global.scss */
+/* line 155, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head {
   display: block;
 }
-/* line 130, ../../scss/_global.scss */
+/* line 157, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head span.fa {
   display: block;
   padding: 13px;
   font-size: 20px;
 }
-/* line 136, ../../scss/_global.scss */
+/* line 163, ../../scss/_global.scss */
 header .header-dropdown .dropdown-panel {
   display: none;
   position: relative;
 }
 
-/* line 143, ../../scss/_global.scss */
+/* line 170, ../../scss/_global.scss */
 nav.primary {
   font-size: 15px;
 }
-/* line 146, ../../scss/_global.scss */
+/* line 173, ../../scss/_global.scss */
 nav.primary a:hover {
   color: white;
 }
-/* line 151, ../../scss/_global.scss */
+/* line 178, ../../scss/_global.scss */
 nav.primary ul {
   padding: 0;
   margin: 0;
   float: right;
   position: relative;
 }
-/* line 155, ../../scss/_global.scss */
+/* line 182, ../../scss/_global.scss */
 nav.primary ul li {
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 158, ../../scss/_global.scss */
+/* line 185, ../../scss/_global.scss */
 nav.primary ul li a {
   padding: 25px 25px;
   display: block;
   border-left: 1px solid #3c1612;
 }
-/* line 162, ../../scss/_global.scss */
+/* line 189, ../../scss/_global.scss */
 nav.primary ul li a:hover {
   background: #3c1612;
 }
-/* line 169, ../../scss/_global.scss */
+/* line 196, ../../scss/_global.scss */
 nav.primary ul li:last-child a {
   border-right: 1px solid #222222;
 }
@@ -250,7 +279,7 @@ nav.primary ul li:last-child a {
 /*
  * Footer 
  */
-/* line 180, ../../scss/_global.scss */
+/* line 207, ../../scss/_global.scss */
 footer {
   height: 220px;
   clear: both;
@@ -261,37 +290,37 @@ footer {
   width: 100%;
   position: relative;
 }
-/* line 190, ../../scss/_global.scss */
+/* line 217, ../../scss/_global.scss */
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
   font-family: 'IM Fell English';
   font-size: 30px;
 }
-/* line 195, ../../scss/_global.scss */
+/* line 222, ../../scss/_global.scss */
 footer a {
   color: white;
   text-decoration: underline;
 }
-/* line 198, ../../scss/_global.scss */
+/* line 225, ../../scss/_global.scss */
 footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 204, ../../scss/_global.scss */
+/* line 231, ../../scss/_global.scss */
 footer .footer-text {
   text-align: right;
   width: 50%;
 }
-/* line 207, ../../scss/_global.scss */
+/* line 234, ../../scss/_global.scss */
 footer .footer-text h3 {
   font-size: 26px;
 }
-/* line 210, ../../scss/_global.scss */
+/* line 237, ../../scss/_global.scss */
 footer .footer-text span {
   font-size: 14px;
 }
-/* line 216, ../../scss/_global.scss */
+/* line 243, ../../scss/_global.scss */
 footer .footer-logo img {
   display: none;
 }
@@ -299,55 +328,55 @@ footer .footer-logo img {
 /*
  * Styles for Dropdowns
  */
-/* line 227, ../../scss/_global.scss */
+/* line 254, ../../scss/_global.scss */
 .dropdown {
   cursor: pointer;
 }
-/* line 230, ../../scss/_global.scss */
+/* line 257, ../../scss/_global.scss */
 .dropdown .dropdown-head {
   cursor: pointer;
   display: block;
 }
-/* line 238, ../../scss/_global.scss */
+/* line 265, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered {
   background: #222222;
 }
-/* line 242, ../../scss/_global.scss */
+/* line 269, ../../scss/_global.scss */
 .dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
   cursor: pointer;
 }
-/* line 247, ../../scss/_global.scss */
+/* line 274, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered:hover {
   background: #222222;
 }
-/* line 251, ../../scss/_global.scss */
+/* line 278, ../../scss/_global.scss */
 .dropdown .dropdown-panel {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 258, ../../scss/_global.scss */
+/* line 285, ../../scss/_global.scss */
 .dropdown .dropdown-panel.lowered {
   display: block !important;
 }
 
-/* line 262, ../../scss/_global.scss */
+/* line 289, ../../scss/_global.scss */
 ::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 265, ../../scss/_global.scss */
+/* line 292, ../../scss/_global.scss */
 :-moz-placeholder {
   color: white;
 }
 
-/* line 268, ../../scss/_global.scss */
+/* line 295, ../../scss/_global.scss */
 ::-moz-placeholder {
   color: white;
 }
 
-/* line 271, ../../scss/_global.scss */
+/* line 298, ../../scss/_global.scss */
 :-ms-input-placeholder {
   color: white;
 }
@@ -573,12 +602,23 @@ footer .footer-logo img {
 }
 /* line 213, ../../scss/_index.scss */
 .block.head .languages .language {
-  width: 30px;
-  height: 20px;
+  width: 40px;
+  height: 35px;
   margin: 0 5px;
+  cursor: pointer;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+/* line 220, ../../scss/_index.scss */
+.block.head .languages .language:hover {
+  border-bottom: 1px solid #aaa;
+}
+/* line 223, ../../scss/_index.scss */
+.block.head .languages .language.selected-language {
+  border-bottom: 1px solid #f6f6f6;
 }
 
-/* line 222, ../../scss/_index.scss */
+/* line 231, ../../scss/_index.scss */
 .block.intro {
   /*
   background:$accent-dark-1;
@@ -588,7 +628,7 @@ footer .footer-logo img {
   }
   */
 }
-/* line 232, ../../scss/_index.scss */
+/* line 241, ../../scss/_index.scss */
 .block.intro .intro-block-image {
   display: inline-block;
   vertical-align: top;
@@ -597,11 +637,11 @@ footer .footer-logo img {
   margin-top: 70px;
   overflow: hidden;
 }
-/* line 239, ../../scss/_index.scss */
+/* line 248, ../../scss/_index.scss */
 .block.intro .intro-block-image img {
   width: 100%;
 }
-/* line 243, ../../scss/_index.scss */
+/* line 252, ../../scss/_index.scss */
 .block.intro .intro-block-text {
   display: inline-block;
   vertical-align: top;
@@ -610,7 +650,7 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 253, ../../scss/_index.scss */
+/* line 262, ../../scss/_index.scss */
 .block.intro-image {
   background-image: url(/wp-content/themes/hca/img/charlie_poster_pencil.jpg);
   background-size: 100% auto;
@@ -619,7 +659,7 @@ footer .footer-logo img {
   background-attachment: fixed;
 }
 
-/* line 261, ../../scss/_index.scss */
+/* line 270, ../../scss/_index.scss */
 .block.project-description {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(5%, #f6f6f6), color-stop(95%, #efefef));
   background-image: -webkit-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
@@ -627,7 +667,7 @@ footer .footer-logo img {
   background-image: -o-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
   background-image: linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
 }
-/* line 266, ../../scss/_index.scss */
+/* line 275, ../../scss/_index.scss */
 .block.project-description .project-description-image {
   display: inline-block;
   vertical-align: top;
@@ -636,11 +676,11 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 273, ../../scss/_index.scss */
+/* line 282, ../../scss/_index.scss */
 .block.project-description .project-description-image img {
   width: 100%;
 }
-/* line 277, ../../scss/_index.scss */
+/* line 286, ../../scss/_index.scss */
 .block.project-description .project-description-text {
   display: inline-block;
   vertical-align: top;
@@ -649,7 +689,7 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 289, ../../scss/_index.scss */
+/* line 298, ../../scss/_index.scss */
 .block.goals .goals-image {
   display: inline-block;
   vertical-align: top;
@@ -658,11 +698,11 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 296, ../../scss/_index.scss */
+/* line 305, ../../scss/_index.scss */
 .block.goals .goals-image img {
   width: 100%;
 }
-/* line 300, ../../scss/_index.scss */
+/* line 309, ../../scss/_index.scss */
 .block.goals .goals-text {
   display: inline-block;
   vertical-align: top;
@@ -671,44 +711,44 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 312, ../../scss/_index.scss */
+/* line 321, ../../scss/_index.scss */
 .block.how-it-works {
   background: #3c1612;
   color: white;
 }
-/* line 315, ../../scss/_index.scss */
+/* line 324, ../../scss/_index.scss */
 .block.how-it-works .flowchart-step {
   background: #eee;
   padding: 50px;
   margin: 20px auto;
   display: block;
 }
-/* line 321, ../../scss/_index.scss */
+/* line 330, ../../scss/_index.scss */
 .block.how-it-works .step-text {
   color: #444;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 326, ../../scss/_index.scss */
+/* line 335, ../../scss/_index.scss */
 .block.how-it-works .flowchart-down {
   color: #ddd;
   font-size: 32px;
   padding: 10px;
 }
-/* line 332, ../../scss/_index.scss */
+/* line 341, ../../scss/_index.scss */
 .block.how-it-works .step-one {
   width: 80%;
 }
-/* line 336, ../../scss/_index.scss */
+/* line 345, ../../scss/_index.scss */
 .block.how-it-works .step-two {
   width: 70%;
 }
-/* line 341, ../../scss/_index.scss */
+/* line 350, ../../scss/_index.scss */
 .block.how-it-works .step-three {
   width: 60%;
 }
 
-/* line 346, ../../scss/_index.scss */
+/* line 355, ../../scss/_index.scss */
 .block.submission-image {
   background-image: url(/wp-content/themes/hca/img/charlie_fabric_mural.jpg);
   background-size: cover;
@@ -717,46 +757,46 @@ footer .footer-logo img {
   background-attachment: fixed;
 }
 
-/* line 355, ../../scss/_index.scss */
+/* line 364, ../../scss/_index.scss */
 .block.who-we-are .team-member {
   text-align: left;
   margin: 30px 0;
 }
-/* line 359, ../../scss/_index.scss */
+/* line 368, ../../scss/_index.scss */
 .block.who-we-are .team-member-image {
   display: inline-block;
   vertical-align: top;
   width: 12%;
   margin: 20px 5% 20px 0;
 }
-/* line 364, ../../scss/_index.scss */
+/* line 373, ../../scss/_index.scss */
 .block.who-we-are .team-member-image img {
   width: 100%;
 }
-/* line 368, ../../scss/_index.scss */
+/* line 377, ../../scss/_index.scss */
 .block.who-we-are .team-member-text {
   display: inline-block;
   vertical-align: top;
   width: 82%;
 }
-/* line 373, ../../scss/_index.scss */
+/* line 382, ../../scss/_index.scss */
 .block.who-we-are .team-member-text.team-member-text-wide {
   width: 100%;
 }
-/* line 378, ../../scss/_index.scss */
+/* line 387, ../../scss/_index.scss */
 .block.who-we-are .team-member-head .team-member-image {
   width: 25%;
 }
-/* line 381, ../../scss/_index.scss */
+/* line 390, ../../scss/_index.scss */
 .block.who-we-are .team-member-head .team-member-text {
   width: 69%;
 }
-/* line 383, ../../scss/_index.scss */
+/* line 392, ../../scss/_index.scss */
 .block.who-we-are .team-member-head .team-member-text.team-member-text-wide {
   width: 100%;
 }
 
-/* line 392, ../../scss/_index.scss */
+/* line 401, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -764,7 +804,7 @@ footer .footer-logo img {
   width: 100%;
   padding: 50px 0;
 }
-/* line 400, ../../scss/_index.scss */
+/* line 409, ../../scss/_index.scss */
 .block.submission-proposal .form-help-text {
   display: inline-block;
   width: 80%;
@@ -772,59 +812,59 @@ footer .footer-logo img {
   margin: 0 auto 40px;
   font-size: 14px;
 }
-/* line 409, ../../scss/_index.scss */
+/* line 418, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 415, ../../scss/_index.scss */
+/* line 424, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 419, ../../scss/_index.scss */
+/* line 428, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 423, ../../scss/_index.scss */
+/* line 432, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 429, ../../scss/_index.scss */
+/* line 438, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 435, ../../scss/_index.scss */
+/* line 444, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 443, ../../scss/_index.scss */
+/* line 452, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 40px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 449, ../../scss/_index.scss */
+/* line 458, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 454, ../../scss/_index.scss */
+/* line 463, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 460, ../../scss/_index.scss */
+/* line 469, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -833,7 +873,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.6);
 }
-/* line 471, ../../scss/_index.scss */
+/* line 480, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -841,57 +881,57 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 478, ../../scss/_index.scss */
+/* line 487, ../../scss/_index.scss */
 .block.submission-proposal .half-field label {
   cursor: pointer;
 }
-/* line 484, ../../scss/_index.scss */
+/* line 493, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field {
   clear: both;
   margin: 10px 0;
 }
-/* line 488, ../../scss/_index.scss */
+/* line 497, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field span {
   display: inline-block;
 }
-/* line 492, ../../scss/_index.scss */
+/* line 501, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field label {
   cursor: pointer;
   display: inline-block;
   padding: 10px;
 }
-/* line 500, ../../scss/_index.scss */
+/* line 509, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 506, ../../scss/_index.scss */
+/* line 515, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field label {
   cursor: pointer;
 }
-/* line 510, ../../scss/_index.scss */
+/* line 519, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 517, ../../scss/_index.scss */
+/* line 526, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 527, ../../scss/_index.scss */
+/* line 536, ../../scss/_index.scss */
 .block.submission-proposal input[type="file"] {
   background: white;
   font-size: 16px;
   margin-left: 8px;
 }
-/* line 533, ../../scss/_index.scss */
+/* line 542, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #3c1612;
   border: none;
@@ -903,7 +943,7 @@ footer .footer-logo img {
   font-weight: 700;
 }
 
-/* line 547, ../../scss/_index.scss */
+/* line 556, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }

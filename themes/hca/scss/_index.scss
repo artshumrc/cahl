@@ -211,9 +211,18 @@
 
 	.languages {
 		.language {
-			width:30px;
-			height:20px;
+			width:40px;
+			height:35px;
 			margin:0 5px;
+			cursor:pointer;
+			padding:0 0 5px 0;
+			border-bottom:1px solid rgba(0,0,0,0);
+			&:hover {
+				border-bottom:1px solid #aaa;
+			}
+			&.selected-language {
+				border-bottom:1px solid #f6f6f6;
+			}
 		}
 	}
 

@@ -123,6 +123,33 @@ header {
 		}
 	}
 
+	.primary-header-content {
+		float:left;
+		margin:0;
+		padding:0;
+	}
+
+	.languages {
+		float:right;
+		margin-right:20px;
+
+		.language {
+			width:30px;
+			height:25px;
+			margin:20px 5px;
+			padding:0 0 5px 0;
+			cursor:pointer;
+			display:inline-block;
+			border-bottom:1px solid rgba(0,0,0,0);
+			&:hover {
+				border-bottom:1px solid #ddd;
+			}
+			&.selected-language {
+				border-bottom:1px solid #aaa;
+			}
+		}	
+	}
+
 	.header-dropdown {
 		display:none;
 		.dropdown-head {

@@ -6,32 +6,42 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig" ng-cloak >
+	<body class="{{body_class}}" data-template="base.twig" data-ng-controller="HCAController as hca_controller" ng-cloak >
 
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
-					<a class="hdr-logo-link" href="/" rel="home">
-						<img src="/wp-content/themes/hca/img/harvard_logo.png">
-						<h1 class="hdr-logo" role="banner">
-							{{site.name}}
-						</h1>
+					<div class="primary-header-content">
+						<a class="hdr-logo-link" href="/" rel="home">
+							<img src="/wp-content/themes/hca/img/harvard_logo.png">
+							<h1 class="hdr-logo" role="banner" ng-show="language=='english'">
+								The Charlie Archive at the Harvard Library
+							</h1>
+							<h1 class="hdr-logo" role="banner" ng-show="language=='francais'">
+								Archives Charlie à Harvard
+							</h1>
 
-					</a>
-
-					<nav id="nav-main" class="nav-main" role="navigation">
-
-						<a href="#project" data-link_id="project">	
-							Project
-						</a>
-						<a href="#who-we-are" data-link_id="who-we-are">
-							Who We Are
-						</a>
-						<a href="#propose-submission" data-link_id="propose-submission">
-							Submission Proposal
 						</a>
 
-					</nav><!-- #nav -->
+						<nav id="nav-main" class="nav-main" role="navigation">
+
+							<a href="#project" data-link_id="project">	
+								Project
+							</a>
+							<a href="#who-we-are" data-link_id="who-we-are">
+								Who We Are
+							</a>
+							<a href="#propose-submission" data-link_id="propose-submission">
+								Submission Proposal
+							</a>
+
+						</nav><!-- #nav -->
+					</div>
+
+					<div class="languages">
+						<img class="french-flag language" src="/wp-content/themes/hca/min/img/french_flag.png" ng-click="toggle_language($event)" data-language="francais"/>
+						<img class="english-flag language selected-language" src="/wp-content/themes/hca/min/img/american_flag.png" ng-click="toggle_language($event)" data-language="english"/>
+					</div>
 
 				</div>
 			{% endblock %}
@@ -55,6 +65,7 @@
 
 
         <script src="/wp-content/themes/hca/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="/wp-content/themes/hca/min/js/jquery.cookie.js" type="text/javascript"></script>
         <script src="/wp-content/themes/hca/min/js/angular.min.js" type="text/javascript"></script>
         <script src="/wp-content/themes/hca/min/js/main.js" type="text/javascript"></script>
 

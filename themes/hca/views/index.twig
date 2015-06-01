@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="blocks" data-ng-controller="HCAController as hca_controller">
+<div class="blocks" >
 
 	<div class="block head">
 
@@ -19,7 +19,7 @@
 		<div class="top-right">
 			<div class="languages">
 				<img class="french-flag language" src="/wp-content/themes/hca/min/img/french_flag.png" ng-click="toggle_language($event)" data-language="francais"/>
-				<img class="english-flag language" src="/wp-content/themes/hca/min/img/american_flag.png" ng-click="toggle_language($event)" data-language="english"/>
+				<img class="english-flag language selected-language" src="/wp-content/themes/hca/min/img/american_flag.png" ng-click="toggle_language($event)" data-language="english"/>
 			</div>
 		</div>
 
@@ -36,8 +36,11 @@
 
 		<div class="center-wrap text-overlay">
 		
-			<h1 class="site-title">
+			<h1 class="site-title" ng-show="language=='english'">
 			The Charlie Archive <br>at the Harvard Library
+			</h1>
+			<h1 class="site-title" ng-show="language=='francais'">
+			Archives Charlie à Harvard
 			</h1>
 
 			<nav role="main" class="primary head-nav">
@@ -201,29 +204,36 @@
 		</div>
 
 		<div class="block-inner" ng-hide="successful_submission">
-			<h2>Propose a Submission</h2>
+
+			<h2 ng-show="language=='english'">Propose a Submission</h2>
+			<h2 ng-show="language=='francais'">Formulaire de contribution</h2>
+
 			<span class="form-help-text">Please fill out as many values as possible to expedite our response to your proposal for a submission to the Harvard Charlie Archive.  <span class="required">*</span> denotes a required field.</span>
 			<div class="submission-form-wrap">
 
 				<form  id="submission_form" class="submission-form"  name="submission_form" ng-submit="submit()">
 
 					<div class="submission-input-field">
-						<label>First name<span class="required">*</span></label>
+						<label ng-show="language=='english'">First name<span class="required">*</span></label>
+						<label ng-show="language=='francais'">Prénom<span class="required">*</span></label>
 						<input type="text" ng-model="submission.first_name" ng-maxlength="100" required/>
 					</div>
 
 					<div class="submission-input-field">
-						<label>Last name<span class="required">*</span></label>
+						<label ng-show="language=='english'">Last name<span class="required">*</span></label>
+						<label ng-show="language=='francais'">Nom de famille<span class="required">*</span></label>
 						<input type="text" ng-model="submission.last_name" ng-maxlength="100" required/>
 					</div>
 
 					<div class="submission-input-field">
-						<label>Home Address</label>
+						<label ng-show="language=='english'">Home Address</label>
+						<label ng-show="language=='francais'">Adresse domiciliaire</label>
 						<textarea ng-model="submission.street_address" ng-maxlength="200"></textarea>
 					</div>
 
 					<div class="submission-input-field">
-						<label>Email<span class="required">*</span></label>
+						<label ng-show="language=='english'">Email<span class="required">*</span></label>
+						<label ng-show="language=='francais'">Email<span class="required">*</span></label>
 						<input type="text" ng-model="submission.email" ng-maxlength="100" required/>
 					</div>
 
@@ -248,74 +258,101 @@
 						<input type="text" ng-model="submission.zip_code" ng-maxlength="12"/>
 					</div-->
 
-					<h4>Type of material</h4>
+					<h4 ng-show="language=='english'">Type of material</h4>
+					<h4 ng-show="language=='francais'">Type de document</h4>
 
 					<div class="send-in-1-input-field send-in-input-field">
-						<span class="field-label">Will you send this material through email or the internet?</span>	
-						<label for="send_in_1_1" class="field-text">
+						<span class="field-label" ng-show="language=='english'">Will you send this material through email or the internet?</span>	
+						<span class="field-label" ng-show="language=='francais'">Pensez-vous envoyer ce document par mail ou internet?</span>	
+						<label for="send_in_1_1" class="field-text" >
 						<input id="send_in_1_1" type="radio" ng-model="submission.by_internet" value="yes"/>
-						Yes</label>
+							<span ng-show="language=='english'">Yes</span>
+							<span ng-show="language=='francais'">Oui</span>
+						</label>
 						<label for="send_in_1_2" class="field-text">
 						<input id="send_in_1_2" type="radio" ng-model="submission.by_internet" value="no"/>
-						No</label>
+							<span ng-show="language=='english'">No</span>
+							<span ng-show="language=='francais'">Non</span>
+						</label>
 					</div>
 
 					<div class="send-in-2-input-field send-in-input-field">
-						<span class="field-label">Will you send this material through postal services?</span>	
+						<span class="field-label" ng-show="language=='english'">Will you send this material through postal services?</span>	
+						<span class="field-label" ng-show="language=='francais'">Pensez-vous envoyer ce document par la poste?</span>	
 						<label for="send_in_2_1" class="field-text">
 						<input id="send_in_2_1" type="radio" ng-model="submission.by_mail" value="yes"/>
-						Yes</label>
+							<span ng-show="language=='english'">Yes</span>
+							<span ng-show="language=='francais'">Oui</span>
+						</label>
 						<label for="send_in_2_2" class="field-text">
 						<input id="send_in_2_2" type="radio" ng-model="submission.by_mail" value="no"/>
-						No</label>
+							<span ng-show="language=='english'">No</span>
+							<span ng-show="language=='francais'">Non</span>
+						</label>
 					</div>
 
 
 					<div class="submission-input-field-wide">
-						<label>Which terms would best describe this material?<span class="required">*</span></label>
-						<span class="help-text">Example: Article, Artwork, Banner, Blog, Book, Cartoon, Comment, Debate, Drawing, Ephemeral, Essay, Fiction, Film, Graffiti, Magazine, Manuscript, Newspaper, Object, Pamphlet, Photograph, Poem, Poster, Song, Text, TV program, Tweet, Website, etc.</span>
+						<label ng-show="language=='english'">Which terms would best describe this material?<span class="required">*</span></label>
+						<label ng-show="language=='francais'">Quel(s) terme(s) décri(ven)t le mieux ce document?<span class="required">*</span></label>
+						<span class="help-text" ng-show="language=='english'">Example: Article, Artwork, Banner, Blog, Book, Cartoon, Comment, Debate, Drawing, Ephemeral, Essay, Fiction, Film, Graffiti, Magazine, Manuscript, Newspaper, Object, Pamphlet, Photograph, Poem, Poster, Song, Text, TV program, Tweet, Website, etc.</span>
+						<span class="help-text" ng-show="language=='francais'">Exemple: Affiche, Article, Bannière, Blog, Caricature, Chanson, Commentaire, Débat, Dessin, Émission de télévision, Éphémère, Essai, Fiction, Film, Graffiti, Journal, Magazine, Manuscrit, Livre, Objet, Œuvre d’art, Pamphlet, Photographie, Poème, Site web, Texte, Tweet, etc</span>
 						<textarea ng-model="submission.description_terms" ng-maxlength="1000" required></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Describe in your own words the material you would like to donate<span class="required">*</span></label>
-						<span class="help-text">Maximum 100 words.</span>
+						<label ng-show="language=='english'">Describe in your own words the material you would like to donate<span class="required">*</span></label>
+						<label ng-show="language=='francais'">Décrivez en vos propres mots le document que vous voudriez donner<span class="required">*</span></label>
+						<span class="help-text" ng-show="language=='english'">Maximum 100 words.</span>
+						<span class="help-text" ng-show="language=='francais'">Maximum 100 words.</span>
 						<textarea ng-model="submission.description_text" ng-maxlength="1000" required></textarea>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Location of the material</label>
-						<span class="help-text">Where the material was made, found, used, processed, etc.</span>
+						<label ng-show="language=='english'">Location of the material</label>
+						<label ng-show="language=='francais'">Emplacement du document</label>
+						<span class="help-text" ng-show="language=='english'">Where the material was made, found, used, processed, etc.</span>
+						<span class="help-text" ng-show="language=='francais'">où il a été fait, trouvé, utilisé ou traité</span>
 						<input type="text" ng-model="submission.location" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Date of the material</label>
-						<span class="help-text">When the material was made, found, used, processed, etc.</span>
+						<label ng-show="language=='english'">Date of the material</label>
+						<label ng-show="language=='francais'">Date du document</label>
+						<span class="help-text" ng-show="language=='english'">When the material was made, found, used, processed, etc.</span>
+						<span class="help-text" ng-show="language=='francais'">quand il a été fait, trouvé, utilisé ou traité</span>
 						<input type="text" ng-model="submission.date" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Author, maker, source</label>
+						<label ng-show="language=='english'">Author, maker, source</label>
+						<label ng-show="language=='francais'">Auteur, fabricant, source</label>
 						<input type="text" ng-model="submission.author_maker_source" ng-maxlength="100"/>
 					</div>
 
 					<div class="submission-input-field-wide">
-						<label>Please attach a photo of the material, if possible</label>
-						<span class="help-text">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
+						<label ng-show="language=='english'">Please attach a photo of the material, if possible</label>
+						<label ng-show="language=='francais'">Veuillez joindre une photo du document, si possible</label>
+						<span class="help-text" ng-show="language=='english'">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
+						<span class="help-text" ng-show="language=='francais'">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
 						<input type="file" ng-model="submission.image" />
 					</div>
 
 					<div class="include-name-input-field send-in-input-field">
 
 
-						<span class="field-label">Would you like your name included in the Archive?</span>	
+						<span class="field-label" ng-show="language=='english'">Would you like your name included in the Archive?</span>	
+						<span class="field-label" ng-show="language=='francais'">Est-ce que vous voulez inclure votre nom dans les archives?</span>	
 						<label for="include_name_1" class="field-text">
-						<input id="include_name_1" type="radio" ng-model="submission.name_included" value="yes"/>
-						Yes</label>
+							<input id="include_name_1" type="radio" ng-model="submission.name_included" value="yes"/>
+							<span ng-show="language=='english'">Yes</span>
+							<span ng-show="language=='francais'">Oui</span>
+						</label>
 						<label for="include_name_2" class="field-text">
-						<input id="include_name_2" type="radio" ng-model="submission.name_included" value="no"/>
-						No</label>
+							<input id="include_name_2" type="radio" ng-model="submission.name_included" value="no"/>
+							<span ng-show="language=='english'">No</span>
+							<span ng-show="language=='francais'">Non</span>
+						</label>
 
 					</div>
 
@@ -325,7 +362,8 @@
 
 					<div class="accept-input-field checkbox-field">
 						<input id="i_accept" type="checkbox" />
-						<label for="i_accept" class="field-text">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.<span class="required">*</span></label>	
+						<label for="i_accept" class="field-text" ng-show="language=='english'">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.<span class="required">*</span></label>	
+						<label for="i_accept" class="field-text" ng-show="language=='francais'">Si ma contribution est acceptée, je m’engage à donner ce document aux archives Charlie de la Harvard University Library, où il sera préservé et distribué à des fins pédagogiques et des fins de recherche.<span class="required">*</span></label>	
 					</div>
 
 
