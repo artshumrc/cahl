@@ -48,7 +48,7 @@
  */
 /* line 5, ../../scss/_global.scss */
 html, body, input, p, span, label {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima N W01 Thin Reg', sans-serif;
   font-size: 17px;
   font-weight: 300;
 }
@@ -61,7 +61,7 @@ body {
 /* line 12, ../../scss/_global.scss */
 h1, h2, h3, h4, h5, h6 {
   weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima N W01 At Bold', sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
@@ -172,7 +172,7 @@ header .hdr-logo-link img {
 header .hdr-logo-link h1.hdr-logo {
   display: inline-block;
   vertical-align: top;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima N W01 At Bold', sans-serif;
   font-size: 22px;
   font-weight: 700;
 }
@@ -294,7 +294,7 @@ footer {
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
-  font-family: 'IM Fell English';
+  font-family: 'Proxima N W01 At Bold';
   font-size: 30px;
 }
 /* line 222, ../../scss/_global.scss */

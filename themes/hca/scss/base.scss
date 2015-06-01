@@ -58,17 +58,17 @@ $required: #A33D31;
  */
 
 @mixin font-body( $size : 17px ) {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Proxima N W01 Thin Reg', sans-serif;
 	font-size: $size;
 	font-weight:300;
 }
 @mixin font-title( $size : 24px ) {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Proxima N W01 At Bold', sans-serif;
 	font-size: $size;
 	font-weight:700;
 }
 @mixin font-accent( $size : 24px ) {
-	font-family: 'IM Fell English';
+	font-family: 'Proxima N W01 At Bold';
 	font-size: $size;
 }
 	 
