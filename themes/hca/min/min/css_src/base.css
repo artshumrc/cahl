@@ -76,29 +76,34 @@ a:hover {
   color: #222222;
   text-decoration: none;
 }
+/* line 24, ../../scss/_global.scss */
+a:focus {
+  color: #222222;
+  text-decoration: none;
+}
 
-/* line 25, ../../scss/_global.scss */
+/* line 30, ../../scss/_global.scss */
 p {
   line-height: 1.6em;
 }
 
-/* line 29, ../../scss/_global.scss */
+/* line 34, ../../scss/_global.scss */
 li {
   list-style: none;
 }
 
-/* line 33, ../../scss/_global.scss */
+/* line 38, ../../scss/_global.scss */
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
 
-/* line 39, ../../scss/_global.scss */
+/* line 44, ../../scss/_global.scss */
 ::selection {
   background: #512723;
   color: white;
 }
 
-/* line 43, ../../scss/_global.scss */
+/* line 48, ../../scss/_global.scss */
 ::-moz-selection {
   background: #512723;
   color: white;
@@ -107,7 +112,7 @@ li {
 /*
  * Global structure styles
  */
-/* line 52, ../../scss/_global.scss */
+/* line 57, ../../scss/_global.scss */
 .grid.inner {
   width: 100%;
   max-width: 1200px;
@@ -115,21 +120,21 @@ li {
   margin: 0 auto;
 }
 
-/* line 58, ../../scss/_global.scss */
+/* line 63, ../../scss/_global.scss */
 .fixed {
   position: fixed;
 }
 
-/* line 61, ../../scss/_global.scss */
+/* line 66, ../../scss/_global.scss */
 .social-wrap {
   padding: 5px;
 }
-/* line 63, ../../scss/_global.scss */
+/* line 68, ../../scss/_global.scss */
 .social-wrap span {
   padding: 10px;
 }
 
-/* line 67, ../../scss/_global.scss */
+/* line 72, ../../scss/_global.scss */
 .content.primary {
   min-height: 600px;
 }
@@ -137,7 +142,7 @@ li {
 /*
  * Styles for navigation and header
  */
-/* line 74, ../../scss/_global.scss */
+/* line 79, ../../scss/_global.scss */
 header {
   display: none;
   background: rgba(255, 255, 255, 0.93);
@@ -148,27 +153,27 @@ header {
   width: 100%;
   -webkit-transform: translateZ(0);
 }
-/* line 83, ../../scss/_global.scss */
+/* line 88, ../../scss/_global.scss */
 header a {
   color: #222222;
 }
-/* line 85, ../../scss/_global.scss */
+/* line 90, ../../scss/_global.scss */
 header a:hover {
   color: #222222;
 }
-/* line 90, ../../scss/_global.scss */
+/* line 95, ../../scss/_global.scss */
 header .hdr-logo-link {
   display: inline-block;
   vertical-align: top;
 }
-/* line 95, ../../scss/_global.scss */
+/* line 100, ../../scss/_global.scss */
 header .hdr-logo-link img {
   margin: 20px 10px 17px 30px;
   display: inline-block;
   vertical-align: top;
   width: 26px;
 }
-/* line 104, ../../scss/_global.scss */
+/* line 109, ../../scss/_global.scss */
 header .hdr-logo-link h1.hdr-logo {
   display: inline-block;
   vertical-align: top;
@@ -176,13 +181,13 @@ header .hdr-logo-link h1.hdr-logo {
   font-size: 22px;
   font-weight: 700;
 }
-/* line 112, ../../scss/_global.scss */
+/* line 117, ../../scss/_global.scss */
 header #nav-main {
   display: inline-block;
   vertical-align: top;
   margin-left: 30px;
 }
-/* line 116, ../../scss/_global.scss */
+/* line 121, ../../scss/_global.scss */
 header #nav-main a {
   display: inline-block;
   padding: 25px 10px;
@@ -191,18 +196,18 @@ header #nav-main a {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.7);
 }
-/* line 126, ../../scss/_global.scss */
+/* line 131, ../../scss/_global.scss */
 header .primary-header-content {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 132, ../../scss/_global.scss */
+/* line 137, ../../scss/_global.scss */
 header .languages {
   float: right;
   margin-right: 20px;
 }
-/* line 136, ../../scss/_global.scss */
+/* line 141, ../../scss/_global.scss */
 header .languages .language {
   width: 30px;
   height: 25px;
@@ -212,66 +217,66 @@ header .languages .language {
   display: inline-block;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-/* line 144, ../../scss/_global.scss */
+/* line 149, ../../scss/_global.scss */
 header .languages .language:hover {
   border-bottom: 1px solid #ddd;
 }
-/* line 147, ../../scss/_global.scss */
+/* line 152, ../../scss/_global.scss */
 header .languages .language.selected-language {
   border-bottom: 1px solid #aaa;
 }
-/* line 153, ../../scss/_global.scss */
+/* line 158, ../../scss/_global.scss */
 header .header-dropdown {
   display: none;
 }
-/* line 155, ../../scss/_global.scss */
+/* line 160, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head {
   display: block;
 }
-/* line 157, ../../scss/_global.scss */
+/* line 162, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head span.fa {
   display: block;
   padding: 13px;
   font-size: 20px;
 }
-/* line 163, ../../scss/_global.scss */
+/* line 168, ../../scss/_global.scss */
 header .header-dropdown .dropdown-panel {
   display: none;
   position: relative;
 }
 
-/* line 170, ../../scss/_global.scss */
+/* line 175, ../../scss/_global.scss */
 nav.primary {
   font-size: 15px;
 }
-/* line 173, ../../scss/_global.scss */
+/* line 178, ../../scss/_global.scss */
 nav.primary a:hover {
   color: white;
 }
-/* line 178, ../../scss/_global.scss */
+/* line 183, ../../scss/_global.scss */
 nav.primary ul {
   padding: 0;
   margin: 0;
   float: right;
   position: relative;
 }
-/* line 182, ../../scss/_global.scss */
+/* line 187, ../../scss/_global.scss */
 nav.primary ul li {
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 185, ../../scss/_global.scss */
+/* line 190, ../../scss/_global.scss */
 nav.primary ul li a {
   padding: 25px 25px;
   display: block;
   border-left: 1px solid #3c1612;
 }
-/* line 189, ../../scss/_global.scss */
+/* line 194, ../../scss/_global.scss */
 nav.primary ul li a:hover {
   background: #3c1612;
 }
-/* line 196, ../../scss/_global.scss */
+/* line 201, ../../scss/_global.scss */
 nav.primary ul li:last-child a {
   border-right: 1px solid #222222;
 }
@@ -279,7 +284,7 @@ nav.primary ul li:last-child a {
 /*
  * Footer 
  */
-/* line 207, ../../scss/_global.scss */
+/* line 212, ../../scss/_global.scss */
 footer {
   height: 220px;
   clear: both;
@@ -290,37 +295,37 @@ footer {
   width: 100%;
   position: relative;
 }
-/* line 217, ../../scss/_global.scss */
+/* line 222, ../../scss/_global.scss */
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
   font-family: 'Proxima N W01 At Bold';
   font-size: 30px;
 }
-/* line 222, ../../scss/_global.scss */
+/* line 227, ../../scss/_global.scss */
 footer a {
   color: white;
   text-decoration: underline;
 }
-/* line 225, ../../scss/_global.scss */
+/* line 230, ../../scss/_global.scss */
 footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 231, ../../scss/_global.scss */
+/* line 236, ../../scss/_global.scss */
 footer .footer-text {
   text-align: right;
   width: 50%;
 }
-/* line 234, ../../scss/_global.scss */
+/* line 239, ../../scss/_global.scss */
 footer .footer-text h3 {
   font-size: 26px;
 }
-/* line 237, ../../scss/_global.scss */
+/* line 242, ../../scss/_global.scss */
 footer .footer-text span {
   font-size: 14px;
 }
-/* line 243, ../../scss/_global.scss */
+/* line 248, ../../scss/_global.scss */
 footer .footer-logo img {
   display: none;
 }
@@ -328,55 +333,55 @@ footer .footer-logo img {
 /*
  * Styles for Dropdowns
  */
-/* line 254, ../../scss/_global.scss */
+/* line 259, ../../scss/_global.scss */
 .dropdown {
   cursor: pointer;
 }
-/* line 257, ../../scss/_global.scss */
+/* line 262, ../../scss/_global.scss */
 .dropdown .dropdown-head {
   cursor: pointer;
   display: block;
 }
-/* line 265, ../../scss/_global.scss */
+/* line 270, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered {
   background: #222222;
 }
-/* line 269, ../../scss/_global.scss */
+/* line 274, ../../scss/_global.scss */
 .dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
   cursor: pointer;
 }
-/* line 274, ../../scss/_global.scss */
+/* line 279, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered:hover {
   background: #222222;
 }
-/* line 278, ../../scss/_global.scss */
+/* line 283, ../../scss/_global.scss */
 .dropdown .dropdown-panel {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 285, ../../scss/_global.scss */
+/* line 290, ../../scss/_global.scss */
 .dropdown .dropdown-panel.lowered {
   display: block !important;
 }
 
-/* line 289, ../../scss/_global.scss */
+/* line 294, ../../scss/_global.scss */
 ::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 292, ../../scss/_global.scss */
+/* line 297, ../../scss/_global.scss */
 :-moz-placeholder {
   color: white;
 }
 
-/* line 295, ../../scss/_global.scss */
+/* line 300, ../../scss/_global.scss */
 ::-moz-placeholder {
   color: white;
 }
 
-/* line 298, ../../scss/_global.scss */
+/* line 303, ../../scss/_global.scss */
 :-ms-input-placeholder {
   color: white;
 }
@@ -1100,3 +1105,230 @@ article.single .article-content a:hover {
 /*
  * Responsive styles
  */
+@media (max-width: 1100px) {
+  /* line 8, ../../scss/_responsive.scss */
+  header .hdr-logo-link h1.hdr-logo {
+    font-size: 14px;
+    margin-top: 26px;
+  }
+
+  /* line 12, ../../scss/_responsive.scss */
+  header #nav-main a {
+    font-size: 11px;
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+
+  /* line 17, ../../scss/_responsive.scss */
+  .block .block-inner {
+    width: 98%;
+  }
+
+  /* line 20, ../../scss/_responsive.scss */
+  .block.goals .goals-text, .block.intro .intro-block-text {
+    width: 100%;
+    padding: 30px 0;
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  /* line 26, ../../scss/_responsive.scss */
+  .block.goals .goals-text p, .block.intro .intro-block-text p {
+    text-align: left;
+  }
+
+  /* line 30, ../../scss/_responsive.scss */
+  .block.intro .intro-block-image {
+    display: none;
+  }
+
+  /* line 33, ../../scss/_responsive.scss */
+  .block.goals .goals-image {
+    width: 50%;
+    padding: 0 30px 30px;
+    float: none;
+    display: block;
+    margin: 0px auto 20px;
+  }
+
+  /* line 40, ../../scss/_responsive.scss */
+  .block.project-description .project-description-text {
+    width: 98%;
+  }
+
+  /* line 43, ../../scss/_responsive.scss */
+  .block.submission-proposal .form-help-text {
+    width: 98%;
+  }
+
+  /* line 46, ../../scss/_responsive.scss */
+  .block.submission-proposal .submission-form {
+    width: 98%;
+  }
+
+  /* line 49, ../../scss/_responsive.scss */
+  .block p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6em;
+  }
+
+  /* line 55, ../../scss/_responsive.scss */
+  .block h3 {
+    margin: 10px auto 20px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  /* line 61, ../../scss/_responsive.scss */
+  .block.project-description .project-description-text {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 900px) {
+  /* line 68, ../../scss/_responsive.scss */
+  header #nav-main {
+    display: none;
+  }
+
+  /* line 71, ../../scss/_responsive.scss */
+  header .languages .language {
+    width: 20px;
+    height: 20px;
+    margin: 25px 5px;
+  }
+
+  /* line 76, ../../scss/_responsive.scss */
+  .bottom-right {
+    display: none;
+  }
+
+  /* line 79, ../../scss/_responsive.scss */
+  footer .footer-text {
+    display: block;
+    width: 98%;
+    text-align: center;
+  }
+
+  /* line 84, ../../scss/_responsive.scss */
+  .block.goals .goals-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 89, ../../scss/_responsive.scss */
+  .block.project-description .project-description-text {
+    padding: 0;
+  }
+
+  /* line 92, ../../scss/_responsive.scss */
+  .block.who-we-are .team-member-text {
+    width: 100%;
+  }
+
+  /* line 95, ../../scss/_responsive.scss */
+  .block.who-we-are .team-member-image {
+    display: block;
+    margin: 20px auto;
+    width: 33%;
+  }
+
+  /* line 100, ../../scss/_responsive.scss */
+  .block.submission-proposal .submission-input-field input[type=text], .block.submission-proposal .submission-input-field textarea {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* line 105, ../../scss/_responsive.scss */
+  .block.submission-proposal .submission-input-field label {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  /* line 111, ../../scss/_responsive.scss */
+  .harvard-romance-languages-department-logo {
+    width: 60%;
+  }
+  /* line 113, ../../scss/_responsive.scss */
+  .harvard-romance-languages-department-logo img {
+    width: 100%;
+  }
+
+  /* line 117, ../../scss/_responsive.scss */
+  .block.head h1 {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  /* line 121, ../../scss/_responsive.scss */
+  .block.head nav a {
+    font-size: 14px;
+  }
+
+  /* line 124, ../../scss/_responsive.scss */
+  .block .block-inner {
+    width: 88%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 132, ../../scss/_responsive.scss */
+  header .hdr-logo-link img {
+    margin: 22px 5px 22px 10px;
+    width: 20px;
+  }
+
+  /* line 136, ../../scss/_responsive.scss */
+  header .hdr-logo-link h1.hdr-logo {
+    text-overflow: ellipsis;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  /* line 142, ../../scss/_responsive.scss */
+  .block.head .languages .language {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* line 146, ../../scss/_responsive.scss */
+  .block {
+    padding: 30px 0;
+  }
+
+  /* line 149, ../../scss/_responsive.scss */
+  .block.intro-image, .block.submission-image {
+    background-size: cover;
+  }
+
+  /* line 152, ../../scss/_responsive.scss */
+  .block.block-image {
+    height: 300px;
+  }
+
+  /* line 155, ../../scss/_responsive.scss */
+  .block.submission-proposal input[type=submit] {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  /* line 160, ../../scss/_responsive.scss */
+  header .languages {
+    margin-right: 0;
+    width: 19%;
+  }
+
+  /* line 164, ../../scss/_responsive.scss */
+  header .hdr-logo-link h1.hdr-logo {
+    max-width: 80%;
+  }
+
+  /* line 167, ../../scss/_responsive.scss */
+  header .primary-header-content {
+    width: 80%;
+  }
+}
