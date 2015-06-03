@@ -44,13 +44,22 @@
 			</h1>
 
 			<nav role="main" class="primary head-nav">
-				<a href="#project" data-link_id="project">	
+				<a href="#project" data-link_id="project" ng-show="language=='english'">	
 					Project
 				</a>
-				<a href="#who-we-are" data-link_id="who-we-are">
+				<a href="#who-we-are" data-link_id="who-we-are" ng-show="language=='english'">
 					Who We Are
 				</a>
-				<a href="#propose-submission" data-link_id="propose-submission">
+				<a href="#propose-submission" data-link_id="propose-submission" ng-show="language=='english'">
+					Submission Proposal
+				</a>
+				<a href="#project" data-link_id="project" ng-show="language=='francais'">	
+					Project
+				</a>
+				<a href="#who-we-are" data-link_id="who-we-are" ng-show="language=='francais'">
+					Who We Are
+				</a>
+				<a href="#propose-submission" data-link_id="propose-submission" ng-show="language=='francais'">
 					Submission Proposal
 				</a>
 
@@ -69,9 +78,13 @@
 			</div>
 
 			<div class="intro-block-text">
-				<h3>Introduction</h3>
-				<p class="block-teaser">
+				<h3 ng-show="language=='english'">Introduction</h3>
+				<p class="block-teaser" ng-show="language=='english'">
 				The attacks of January 7, 8 and 9 against Charlie Hebdo and a kosher supermarket in Paris have started a vigorous political debate on fundamental issues such as freedom of expression and its limits, state and religion, religions and societies, respect for beliefs and perspectives other than our own, inequalities, and the disenfranchisement of individuals and communities. Participants in this debate represent a large sample of political positions and social backgrounds. They are diverse in age, gender, and ethnicity. If the main reactions occurred in France, the media coverage turned these events into global news for a while, and the debate extended outside of France. “Je suis Charlie” or “Je ne suis pas Charlie” became international expressions of adhesion to or distance from the stance attributed to Charlie Hebdo with regard to religion in general and to Islam in particular.
+				</p>
+				<h3 ng-show="language=='francais'">Introduction</h3>
+				<p class="block-teaser" ng-show="language=='francais'">
+				Les attaques du 7, 8 et 9 janvier contre Charlie Hebdo et un supermarché casher à Paris ont lancé un débat politique vigoureux sur des problématiques fondamentales telles que la liberté d’expression et ses limites, le rapport entre état et religion, les religions et les sociétés, le respect pour les croyances et les perspectives qui diffèrent des nôtres, les inégalités, et la privation des droits civiques des individus et des communautés. Les participants de ce débat représentent un large éventail de positions politiques et de milieux sociaux. Leur âge, sexe et origine ethnique varient. Même si les réactions principales ont eu lieu en France, la couverture médiatique a transformé ces événements en actualités globales pour un long moment, et le débat s’est étendu au-delà des frontières de l’Hexagone. «Je suis Charlie» et «Je ne suis pas Charlie» sont devenues des expressions internationales d’attachement ou de distanciation par rapport à la position attribuée à Charlie Hebdo sur la religion en général et l’islam surtout. 
 				</p>
 			</div>
 
@@ -84,12 +97,14 @@
 
 	<div class="block goals">
 		<div class="block-inner">
-			<h2>Goals</h2>
-
-
+			<h2 ng-show="language=='english'">Goals</h2>
+			<h2 ng-show="language=='francais'">Buts</h2>
 			<div class="goals-text">
-				<p class="block-teaser">
+				<p class="block-teaser" ng-show="language=='english'">
 				The main goal of the Charlie Archive at the Harvard Library project is to preserve manuscript, printed, digital, and ephemeral materials produced in the aftermath of these events. These materials will be archived by Harvard Library, and made available for research and education to scholars, teachers, and students. For scholars, the archive will be used as a resource for research in various fields and disciplines. For teachers and students, the archive will serve as a database and resource for the development of teaching materials. For all future users of the library, it will document a peculiar moment in the early twenty-first century, when the word “Charlie” all of a sudden took on tragic significance, and became charged with conflicting emotions, opinions, and agendas.
+				</p>
+				<p class="block-teaser" ng-show="language=='francais'">
+				Le but principal du projet des Archives Charlie à la Bibliothèque de Harvard est de préserver des documents manuscrits, imprimés, digitaux et éphémères produits à la suite de ces événements. Ces documents seront archivés par la Bibliothèque de Harvard, et nous les rendrons disponibles pour la recherche et l’éducation. Pour les spécialistes, les archives seront utiles en tant que ressource pour des recherches en différents domaines et disciplines. Pour les enseignants et les élèves, les archives serviront de banque de données et de ressource pour le développement de matériel pédagogique. Pour tous les utilisateurs futurs de la bibliothèque, ces archives documenteront un moment particulier du début du 21ème siècle, où le mot Charlie acquiert soudainement un sens tragique, et devient lourd d’émotions ambivalentes, d’opinions et d’intentions ouvertes ou cachées.
 				</p>
 			</div>
 
@@ -102,14 +117,15 @@
 
 	<div id="project" class="block project-description">
 		<div class="block-inner">
-			<h2>Project Description</h2>
+			<h2 ng-show="language=='english'">Project Description</h2>
+			<h2 ng-show="language=='francais'">Description de projet</h2>
 
 			<!-- div class="intro-block-image">
 				<img src="/wp-content/themes/hca/min/img/event_soldiers.jpg">
 			</div-->
 
-			<div class="project-description-text">
-				<p>
+			<div class="project-description-text" ng-show="language=='english'">
+				<p >
 				We seek to collect, organize, and archive a wide array of print and digital materials that represent a diversity of perspectives through different media responding to the events themselves or contributing to the debates around the events. Materials could include articles, art, badges, banners, blogs, books, bulletins, cartoons, comments, debates, drawings, essays, fiction, films, flyers, graffiti, information sheets, leaflets, magazines, manuscripts, minutes of meetings, newsletters, newspapers, objects, oral history narratives, pamphlets, photographs, podcasts, poems, posters, songs, texts, TV programs, tweets, websites, and any other ephemeral material produced by individuals or community organizations.  We are especially interested in the ephemeral materials that might not otherwise be captured in a library collection but are crucial to making sense of these events and conversations.
 				</p>
 				<p>
@@ -117,9 +133,16 @@
 				<p>
 				Future developments may include curating virtual or real exhibitions, connecting with other archives, or documenting the evolution of the debate on political and religious satire or on other related topics. The most exciting aspect of this project is that we don’t know where it can lead us and how it will evolve.
 				</p>
+			</div>
+			<div class="project-description-text" ng-show="language=='francais'">
+				<p >
+				Nous cherchons à rassembler, organiser et archiver une grande variété de documents imprimés et digitaux qui représentent un large éventail de perspectives différentes par le biais de différents médias qui réagissent aux événements eux-mêmes, ou qui contribuent aux débats autour de ces événements. Ces documents peuvent inclure des affiches, de l’art, des articles, des banderoles, des blogs, des brochures, des bulletins d’information, des caricatures, des chansons,  des commentaires, des communiqués, des comptes rendus de réunions, des débats, des dépliants, des dessins, des émissions de télévision, des essais, des fiches d’information, de la fiction, des films, des graffitis, des insignes, des journaux, des livres, des magazines, des manuscrits, des objets, des récits oraux d’histoire, des photographies, des podcasts, des poèmes, des sites web, des textes, des tweets, et d’autres documents éphémères produits par des individus ou des organismes communautaires. Nous sommes surtout intéressés par des documents éphémères qui ne seraient autrement pas inclus dans des collections de bibliothèques mais qui demeurent essentielles à une compréhension de ces événements et une conversation éclairée.   
+				</p>
 				<p>
-				Thank you for your interest. We are looking forward to hearing your comments on our project, or, even better, to hearing about your contribution to the archive.
-
+				Pour la première phase du projet, nous invitons les membres intéressés du public, en France et ailleurs, à contribuer des documents. 
+				</p>
+				<p>
+				Les développements futurs pourraient inclure l’organisation d’expositions virtuelles ou réelles, la communication avec d’autres archives ou la collecte de données sur l’évolution du débat sur la satire religieuse et politique ou d’autres sujets reliés. L’aspect le plus passionnant de ce projet est que nous ne savons pas où il peut nous mener et comment il évoluera. 
 				</p>
 			</div>
 
@@ -152,14 +175,16 @@
 
 	<div id="who-we-are" class="block who-we-are">
 		<div class="block-inner">
-			<h2>Who We Are</h2>
+			<h2 ng-show="language=='english'">Who We Are</h2>
+			<h2 ng-show="language=='francais'">Who We Are</h2>
 			<div class="team-member team-member-head">
 				<!--div class="team-member-image">
 					<img src="/wp-content/themes/hca/min/img/harvard_doctor_virginie_greene.jpg" alt="Virginie Greene" title="Virginie Greene"/>
 				</div-->
 				<div class="team-member-text team-member-text-wide">
-					<h3>Virginie Green</h3>
-					<p class="supplementary">Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes</p>
+					<h3>Virginie Greene</h3>
+					<p class="supplementary" ng-show="language=='english'">Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes</p>
+					<p class="supplementary" ng-show="language=='francais'">Quid faciat laetas segetes quo sidere terram vertere, Mycenas, ulmisque adiungere vites conveniat quae curum boum qui cultus habendo sit pecori apibus quanta experientia parcis, hinc canere incipiam; vos, o clarissima mundi, lumina, labentes</p>
 				</div>
 			</div>
 			<div class="team-member team-member-primary">
@@ -199,8 +224,10 @@
 
 	<div id="propose-submission" class="block submission-proposal">
 		<div class="block-inner" ng-show="successful_submission">
-			<h2>Proposal Successful</h2>
-			<p>Thank you for proposing a submission!  You will hear from the Harvard Charlie Archive regarding your proposal soon.</p>
+			<h2 ng-show="language=='english'">Proposal Successful</h2>
+			<p ng-show="language=='english'">Thank you for proposing a submission!  You will hear from the Harvard Charlie Archive regarding your proposal soon.</p>
+			<h2 ng-show="language=='francais'">Proposal Successful</h2>
+			<p ng-show="language=='francais'">Thank you for proposing a submission!  You will hear from the Harvard Charlie Archive regarding your proposal soon.</p>
 		</div>
 
 		<div class="block-inner" ng-hide="successful_submission">
