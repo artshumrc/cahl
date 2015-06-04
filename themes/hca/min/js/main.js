@@ -2,7 +2,7 @@ var app = angular.module('HarvardCharlieApp', []);
 
 angular.module('HarvardCharlieApp')
 // primary controller
-.controller('HCAController', ['$scope', function($scope) {
+.controller('HCAController', ['$scope', '$http', function($scope, $http) {
 
 	window.__Hc__ = window.__Hc__ || {};
 	var Hc = window.__Hc__;
@@ -43,8 +43,34 @@ angular.module('HarvardCharlieApp')
 
 		console.log("Submission:", $scope.submission);
 
+		$http({
+				method : 'GET',
+				url : '/wp-admin/admin-ajax.php',
+				headers: {'Content-Type': 'application/json'},
+				params : {
+					language : $scope.language,
+					submission : JSON.stringify($scope.submission),
+					action : 'hca_send_mail'
+				}
+			})
+			.success( function ( data ) {
+				console.log("Submission success:", data);
+				if ( typeof callback !== 'undefined' ) {
+					callback( data );
+				}
+				return false;
+			})
+			.error( function ( e, a ) {
+				console.log( 'Error retrieving posts:', e, a );
+			});
+
+
 
 		$scope.successful_submission = true;
+
+		$('html, body').animate({
+			scrollTop: $( "#propose-submission" ).offset().top 
+		}, 300);
 
 	};
 
