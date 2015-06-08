@@ -8,9 +8,11 @@
  */
 
 // hca get_post
-add_action( "wp_ajax_hca_get_posts", "hca_get_posts_callback" );
-add_action( "wp_ajax_nopriv_hca_get_posts", "hca_get_posts_callback" );
-add_action( "wp_ajax_hca_merge_posts", "hca_merge_posts_callback" );
+//add_action( "wp_ajax_hca_get_posts", "hca_get_posts_callback" );
+//add_action( "wp_ajax_nopriv_hca_get_posts", "hca_get_posts_callback" );
+
+add_action( "wp_ajax_hca_send_mail", "hca_send_mail_callback" );
+add_action( "wp_ajax_nopriv_hca_send_mail", "hca_send_mail_callback" );
 
 // Referenced in Hc.Media.get_post() for AJAX callback
 function hca_get_posts_callback () {
@@ -146,3 +148,43 @@ function hca_strip_nonalphanum($string){
 	return preg_replace("/[^A-Za-z0-9 ]/", '', $string);
 }
 
+
+function hca_send_mail_callback(){
+
+	$to = "lukehollis@gmail.com";
+	$submission_message = "";
+	$user_response_email = "";
+	$headers = 'From: The Charlie Archive at the Harvard Library (No Reply) <noreply@charlie.harvard.edu>' . "\r\n";
+	$submission = json_decode( stripslashes( $_REQUEST['submission'] ), $assoc=true );
+	$language = $_REQUEST['language'];
+
+	error_log("Submission: " . var_export( $submission, true ) );
+	error_log("Language: " . var_export( $language, true ) );
+	error_log("Email: " . var_export( $submission['email'], true ) );
+
+
+
+
+	$submission_message = "";
+
+
+	error_log("Message: " . var_export( $submission_message, true ) );
+
+
+	$was_sent_submission = wp_mail( "lukehollis@gmail.com", "New Submission Proposal to the Charlie Archive", $submission_message, $headers );
+	error_log("wp_mail response (submission): " . var_export($was_sent_submission,true));
+
+
+	if( $language == "english" ){
+		$user_response_email = "Thank you for considering donating material to the Harvard Charlie Archive. We appreciate your interest in contributing to our collection. We will be in contact within two weeks.";
+
+	} else if ( $language == "french" ){
+		$user_response_email = "Merci pour votre intérêt. Nous attendons avec impatience vos commentaires sur notre projet, ou mieux encore, vos contributions aux archives.";
+
+	}
+
+	$was_sent_thankyou = wp_mail( $submission['email'], "Thank You for Your Submission Propsal", $user_response_email, $headers );
+	error_log("wp_mail response (thank you): " . var_export($was_sent_thankyou,true));
+
+	return True;
+}
