@@ -26,7 +26,6 @@
 			width:100%;
 			height:100%;
 			position:absolute;
-			//background:rgba(20,20,20,0.2);
 			top:0;
 			left:0;
 			@include background-image(linear-gradient(rgba(20,20,20,0.3), rgba(20,20,20,0.5)));
@@ -304,6 +303,7 @@
 		overflow:hidden;
 		img {
 			width:100%;
+			padding-bottom:24px;
 		}
 	}
 	.goals-text {

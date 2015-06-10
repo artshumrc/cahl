@@ -424,57 +424,57 @@ footer .footer-logo img {
   background-image: -o-linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.5));
   background-image: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.5));
 }
-/* line 36, ../../scss/_index.scss */
+/* line 35, ../../scss/_index.scss */
 .block h2 {
   font-size: 38px;
   padding-bottom: 60px;
 }
-/* line 40, ../../scss/_index.scss */
+/* line 39, ../../scss/_index.scss */
 .block h3 {
   font-size: 28px;
   padding-bottom: 10px;
 }
-/* line 44, ../../scss/_index.scss */
+/* line 43, ../../scss/_index.scss */
 .block p {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.78);
   line-height: 1.7em;
 }
-/* line 49, ../../scss/_index.scss */
+/* line 48, ../../scss/_index.scss */
 .block p.block-teaser {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.7);
   line-height: 1.6em;
 }
-/* line 56, ../../scss/_index.scss */
+/* line 55, ../../scss/_index.scss */
 .block p.supplementary {
   font-size: 19px;
   color: rgba(0, 0, 0, 0.62);
   line-height: 1.4em;
 }
-/* line 64, ../../scss/_index.scss */
+/* line 63, ../../scss/_index.scss */
 .block .text-content {
   clear: both;
 }
-/* line 66, ../../scss/_index.scss */
+/* line 65, ../../scss/_index.scss */
 .block .text-content .text-column {
   display: inline-block;
 }
-/* line 71, ../../scss/_index.scss */
+/* line 70, ../../scss/_index.scss */
 .block .text-overlay {
   color: white;
   margin: 0 auto;
   display: inline-block;
   padding: 20px 50px;
 }
-/* line 77, ../../scss/_index.scss */
+/* line 76, ../../scss/_index.scss */
 .block .text-overlay h1 {
   padding: 0;
   font-size: 48px;
   line-height: 60px;
   width: 100%;
 }
-/* line 85, ../../scss/_index.scss */
+/* line 84, ../../scss/_index.scss */
 .block .caption {
   margin: 10px;
   display: block;
@@ -483,7 +483,7 @@ footer .footer-logo img {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 94, ../../scss/_index.scss */
+/* line 93, ../../scss/_index.scss */
 .top-right {
   position: absolute;
   top: 0;
@@ -491,7 +491,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 101, ../../scss/_index.scss */
+/* line 100, ../../scss/_index.scss */
 .top-left {
   position: absolute;
   top: 0;
@@ -499,7 +499,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 107, ../../scss/_index.scss */
+/* line 106, ../../scss/_index.scss */
 .bottom-right {
   position: absolute;
   bottom: 0;
@@ -507,7 +507,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 114, ../../scss/_index.scss */
+/* line 113, ../../scss/_index.scss */
 .bottom-left {
   position: absolute;
   bottom: 0;
@@ -515,7 +515,7 @@ footer .footer-logo img {
   padding: 20px;
 }
 
-/* line 124, ../../scss/_index.scss */
+/* line 123, ../../scss/_index.scss */
 .scroll-indicator {
   position: absolute;
   -webkit-transform: translateZ(0);
@@ -530,11 +530,11 @@ footer .footer-logo img {
   border-radius: 40px;
   z-index: 20;
 }
-/* line 134, ../../scss/_index.scss */
+/* line 133, ../../scss/_index.scss */
 .scroll-indicator:hover {
   top: 572px;
 }
-/* line 138, ../../scss/_index.scss */
+/* line 137, ../../scss/_index.scss */
 .scroll-indicator span.fa {
   padding: 20px;
   color: white;
@@ -542,7 +542,7 @@ footer .footer-logo img {
   font-size: 20px;
 }
 
-/* line 147, ../../scss/_index.scss */
+/* line 146, ../../scss/_index.scss */
 .block.head {
   background-image: url(/wp-content/themes/hca/img/charlie_flowers.jpg);
   background-size: cover;
@@ -552,7 +552,7 @@ footer .footer-logo img {
   min-height: 700px;
   position: relative;
 }
-/* line 156, ../../scss/_index.scss */
+/* line 155, ../../scss/_index.scss */
 .block.head .block-head-background-screen {
   width: 100%;
   height: 100%;
@@ -561,13 +561,13 @@ footer .footer-logo img {
   top: 0;
   left: 0;
 }
-/* line 165, ../../scss/_index.scss */
+/* line 164, ../../scss/_index.scss */
 .block.head .text-overlay {
   text-align: center;
   cursor: default;
   position: relative;
 }
-/* line 170, ../../scss/_index.scss */
+/* line 169, ../../scss/_index.scss */
 .block.head h1 {
   color: white;
   margin: 0px auto 50px;
@@ -577,12 +577,12 @@ footer .footer-logo img {
   width: 100%;
   line-height: 1.5em;
 }
-/* line 181, ../../scss/_index.scss */
+/* line 180, ../../scss/_index.scss */
 .block.head nav {
   display: block;
   margin: 0px auto;
 }
-/* line 184, ../../scss/_index.scss */
+/* line 183, ../../scss/_index.scss */
 .block.head nav a {
   color: white;
   font-size: 20px;
@@ -592,7 +592,7 @@ footer .footer-logo img {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 198, ../../scss/_index.scss */
+/* line 197, ../../scss/_index.scss */
 .block.head .social-wrap span {
   color: #fff;
   font-size: 28px;
@@ -601,11 +601,11 @@ footer .footer-logo img {
   display: inline-block;
   margin: 5px;
 }
-/* line 206, ../../scss/_index.scss */
+/* line 205, ../../scss/_index.scss */
 .block.head .social-wrap span.fa-facebook {
   padding: 20px 25px;
 }
-/* line 213, ../../scss/_index.scss */
+/* line 212, ../../scss/_index.scss */
 .block.head .languages .language {
   width: 40px;
   height: 35px;
@@ -614,16 +614,16 @@ footer .footer-logo img {
   padding: 0 0 5px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-/* line 220, ../../scss/_index.scss */
+/* line 219, ../../scss/_index.scss */
 .block.head .languages .language:hover {
   border-bottom: 1px solid #aaa;
 }
-/* line 223, ../../scss/_index.scss */
+/* line 222, ../../scss/_index.scss */
 .block.head .languages .language.selected-language {
   border-bottom: 1px solid #f6f6f6;
 }
 
-/* line 231, ../../scss/_index.scss */
+/* line 230, ../../scss/_index.scss */
 .block.intro {
   /*
   background:$accent-dark-1;
@@ -633,7 +633,7 @@ footer .footer-logo img {
   }
   */
 }
-/* line 241, ../../scss/_index.scss */
+/* line 240, ../../scss/_index.scss */
 .block.intro .intro-block-image {
   display: inline-block;
   vertical-align: top;
@@ -642,11 +642,11 @@ footer .footer-logo img {
   margin-top: 70px;
   overflow: hidden;
 }
-/* line 248, ../../scss/_index.scss */
+/* line 247, ../../scss/_index.scss */
 .block.intro .intro-block-image img {
   width: 100%;
 }
-/* line 252, ../../scss/_index.scss */
+/* line 251, ../../scss/_index.scss */
 .block.intro .intro-block-text {
   display: inline-block;
   vertical-align: top;
@@ -655,7 +655,7 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 262, ../../scss/_index.scss */
+/* line 261, ../../scss/_index.scss */
 .block.intro-image {
   background-image: url(/wp-content/themes/hca/img/charlie_poster_pencil.jpg);
   background-size: 100% auto;
@@ -664,7 +664,7 @@ footer .footer-logo img {
   background-attachment: fixed;
 }
 
-/* line 270, ../../scss/_index.scss */
+/* line 269, ../../scss/_index.scss */
 .block.project-description {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(5%, #f6f6f6), color-stop(95%, #efefef));
   background-image: -webkit-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
@@ -672,7 +672,7 @@ footer .footer-logo img {
   background-image: -o-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
   background-image: linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
 }
-/* line 275, ../../scss/_index.scss */
+/* line 274, ../../scss/_index.scss */
 .block.project-description .project-description-image {
   display: inline-block;
   vertical-align: top;
@@ -681,11 +681,11 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 282, ../../scss/_index.scss */
+/* line 281, ../../scss/_index.scss */
 .block.project-description .project-description-image img {
   width: 100%;
 }
-/* line 286, ../../scss/_index.scss */
+/* line 285, ../../scss/_index.scss */
 .block.project-description .project-description-text {
   display: inline-block;
   vertical-align: top;
@@ -694,7 +694,7 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 298, ../../scss/_index.scss */
+/* line 297, ../../scss/_index.scss */
 .block.goals .goals-image {
   display: inline-block;
   vertical-align: top;
@@ -703,9 +703,10 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 305, ../../scss/_index.scss */
+/* line 304, ../../scss/_index.scss */
 .block.goals .goals-image img {
   width: 100%;
+  padding-bottom: 24px;
 }
 /* line 309, ../../scss/_index.scss */
 .block.goals .goals-text {
