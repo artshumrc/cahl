@@ -72,6 +72,15 @@ li {
 .content.primary {
 	min-height: 600px;
 }
+.bg-gray {
+	@include background-image(linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%));
+}
+.full-width {
+	width:100%;
+}
+.two-thirds-width {
+	width:66%;
+}
 
 /*
  * Styles for navigation and header

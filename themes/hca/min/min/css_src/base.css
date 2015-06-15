@@ -139,10 +139,29 @@ li {
   min-height: 600px;
 }
 
+/* line 75, ../../scss/_global.scss */
+.bg-gray {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(5%, #f6f6f6), color-stop(95%, #efefef));
+  background-image: -webkit-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
+  background-image: -moz-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
+  background-image: -o-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
+  background-image: linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
+}
+
+/* line 78, ../../scss/_global.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 81, ../../scss/_global.scss */
+.two-thirds-width {
+  width: 66%;
+}
+
 /*
  * Styles for navigation and header
  */
-/* line 79, ../../scss/_global.scss */
+/* line 88, ../../scss/_global.scss */
 header {
   display: none;
   background: rgba(255, 255, 255, 0.93);
@@ -153,27 +172,27 @@ header {
   width: 100%;
   -webkit-transform: translateZ(0);
 }
-/* line 88, ../../scss/_global.scss */
+/* line 97, ../../scss/_global.scss */
 header a {
   color: #222222;
 }
-/* line 90, ../../scss/_global.scss */
+/* line 99, ../../scss/_global.scss */
 header a:hover {
   color: #222222;
 }
-/* line 95, ../../scss/_global.scss */
+/* line 104, ../../scss/_global.scss */
 header .hdr-logo-link {
   display: inline-block;
   vertical-align: top;
 }
-/* line 100, ../../scss/_global.scss */
+/* line 109, ../../scss/_global.scss */
 header .hdr-logo-link img {
   margin: 20px 10px 17px 30px;
   display: inline-block;
   vertical-align: top;
   width: 26px;
 }
-/* line 109, ../../scss/_global.scss */
+/* line 118, ../../scss/_global.scss */
 header .hdr-logo-link h1.hdr-logo {
   display: inline-block;
   vertical-align: top;
@@ -181,13 +200,13 @@ header .hdr-logo-link h1.hdr-logo {
   font-size: 22px;
   font-weight: 700;
 }
-/* line 117, ../../scss/_global.scss */
+/* line 126, ../../scss/_global.scss */
 header #nav-main {
   display: inline-block;
   vertical-align: top;
   margin-left: 30px;
 }
-/* line 121, ../../scss/_global.scss */
+/* line 130, ../../scss/_global.scss */
 header #nav-main a {
   display: inline-block;
   padding: 25px 10px;
@@ -196,18 +215,18 @@ header #nav-main a {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.7);
 }
-/* line 131, ../../scss/_global.scss */
+/* line 140, ../../scss/_global.scss */
 header .primary-header-content {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 137, ../../scss/_global.scss */
+/* line 146, ../../scss/_global.scss */
 header .languages {
   float: right;
   margin-right: 20px;
 }
-/* line 141, ../../scss/_global.scss */
+/* line 150, ../../scss/_global.scss */
 header .languages .language {
   width: 30px;
   height: 25px;
@@ -217,66 +236,66 @@ header .languages .language {
   display: inline-block;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-/* line 149, ../../scss/_global.scss */
+/* line 158, ../../scss/_global.scss */
 header .languages .language:hover {
   border-bottom: 1px solid #ddd;
 }
-/* line 152, ../../scss/_global.scss */
+/* line 161, ../../scss/_global.scss */
 header .languages .language.selected-language {
   border-bottom: 1px solid #aaa;
 }
-/* line 158, ../../scss/_global.scss */
+/* line 167, ../../scss/_global.scss */
 header .header-dropdown {
   display: none;
 }
-/* line 160, ../../scss/_global.scss */
+/* line 169, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head {
   display: block;
 }
-/* line 162, ../../scss/_global.scss */
+/* line 171, ../../scss/_global.scss */
 header .header-dropdown .dropdown-head span.fa {
   display: block;
   padding: 13px;
   font-size: 20px;
 }
-/* line 168, ../../scss/_global.scss */
+/* line 177, ../../scss/_global.scss */
 header .header-dropdown .dropdown-panel {
   display: none;
   position: relative;
 }
 
-/* line 175, ../../scss/_global.scss */
+/* line 184, ../../scss/_global.scss */
 nav.primary {
   font-size: 15px;
 }
-/* line 178, ../../scss/_global.scss */
+/* line 187, ../../scss/_global.scss */
 nav.primary a:hover {
   color: white;
 }
-/* line 183, ../../scss/_global.scss */
+/* line 192, ../../scss/_global.scss */
 nav.primary ul {
   padding: 0;
   margin: 0;
   float: right;
   position: relative;
 }
-/* line 187, ../../scss/_global.scss */
+/* line 196, ../../scss/_global.scss */
 nav.primary ul li {
   float: left;
   padding: 0;
   margin: 0;
 }
-/* line 190, ../../scss/_global.scss */
+/* line 199, ../../scss/_global.scss */
 nav.primary ul li a {
   padding: 25px 25px;
   display: block;
   border-left: 1px solid #3c1612;
 }
-/* line 194, ../../scss/_global.scss */
+/* line 203, ../../scss/_global.scss */
 nav.primary ul li a:hover {
   background: #3c1612;
 }
-/* line 201, ../../scss/_global.scss */
+/* line 210, ../../scss/_global.scss */
 nav.primary ul li:last-child a {
   border-right: 1px solid #222222;
 }
@@ -284,7 +303,7 @@ nav.primary ul li:last-child a {
 /*
  * Footer 
  */
-/* line 212, ../../scss/_global.scss */
+/* line 221, ../../scss/_global.scss */
 footer {
   height: 220px;
   clear: both;
@@ -295,37 +314,37 @@ footer {
   width: 100%;
   position: relative;
 }
-/* line 222, ../../scss/_global.scss */
+/* line 231, ../../scss/_global.scss */
 footer h1 {
   margin: 20px 0 50px 0;
   padding: 0;
   font-family: 'Proxima N W01 At Bold';
   font-size: 30px;
 }
-/* line 227, ../../scss/_global.scss */
+/* line 236, ../../scss/_global.scss */
 footer a {
   color: white;
   text-decoration: underline;
 }
-/* line 230, ../../scss/_global.scss */
+/* line 239, ../../scss/_global.scss */
 footer a:hover {
   color: white;
   text-decoration: none;
 }
-/* line 236, ../../scss/_global.scss */
+/* line 245, ../../scss/_global.scss */
 footer .footer-text {
   text-align: right;
   width: 50%;
 }
-/* line 239, ../../scss/_global.scss */
+/* line 248, ../../scss/_global.scss */
 footer .footer-text h3 {
   font-size: 26px;
 }
-/* line 242, ../../scss/_global.scss */
+/* line 251, ../../scss/_global.scss */
 footer .footer-text span {
   font-size: 14px;
 }
-/* line 248, ../../scss/_global.scss */
+/* line 257, ../../scss/_global.scss */
 footer .footer-logo img {
   display: none;
 }
@@ -333,55 +352,55 @@ footer .footer-logo img {
 /*
  * Styles for Dropdowns
  */
-/* line 259, ../../scss/_global.scss */
+/* line 268, ../../scss/_global.scss */
 .dropdown {
   cursor: pointer;
 }
-/* line 262, ../../scss/_global.scss */
+/* line 271, ../../scss/_global.scss */
 .dropdown .dropdown-head {
   cursor: pointer;
   display: block;
 }
-/* line 270, ../../scss/_global.scss */
+/* line 279, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered {
   background: #222222;
 }
-/* line 274, ../../scss/_global.scss */
+/* line 283, ../../scss/_global.scss */
 .dropdown .dropdown-head label, .dropdown .dropdown-head .dropdown-arrow {
   cursor: pointer;
 }
-/* line 279, ../../scss/_global.scss */
+/* line 288, ../../scss/_global.scss */
 .dropdown .dropdown-head.lowered:hover {
   background: #222222;
 }
-/* line 283, ../../scss/_global.scss */
+/* line 292, ../../scss/_global.scss */
 .dropdown .dropdown-panel {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 290, ../../scss/_global.scss */
+/* line 299, ../../scss/_global.scss */
 .dropdown .dropdown-panel.lowered {
   display: block !important;
 }
 
-/* line 294, ../../scss/_global.scss */
+/* line 303, ../../scss/_global.scss */
 ::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 297, ../../scss/_global.scss */
+/* line 306, ../../scss/_global.scss */
 :-moz-placeholder {
   color: white;
 }
 
-/* line 300, ../../scss/_global.scss */
+/* line 309, ../../scss/_global.scss */
 ::-moz-placeholder {
   color: white;
 }
 
-/* line 303, ../../scss/_global.scss */
+/* line 312, ../../scss/_global.scss */
 :-ms-input-placeholder {
   color: white;
 }
@@ -544,7 +563,7 @@ footer .footer-logo img {
 
 /* line 146, ../../scss/_index.scss */
 .block.head {
-  background-image: url(/wp-content/themes/hca/img/charlie_flowers.jpg);
+  background-image: url(/wp-content/themes/hca/img/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -557,7 +576,7 @@ footer .footer-logo img {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgba(20, 20, 20, 0.4);
+  background: rgba(20, 20, 20, 0.8);
   top: 0;
   left: 0;
 }
@@ -664,15 +683,7 @@ footer .footer-logo img {
   background-attachment: fixed;
 }
 
-/* line 269, ../../scss/_index.scss */
-.block.project-description {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(5%, #f6f6f6), color-stop(95%, #efefef));
-  background-image: -webkit-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
-  background-image: -moz-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
-  background-image: -o-linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
-  background-image: linear-gradient(#efefef, #f6f6f6 5%, #efefef 95%);
-}
-/* line 274, ../../scss/_index.scss */
+/* line 273, ../../scss/_index.scss */
 .block.project-description .project-description-image {
   display: inline-block;
   vertical-align: top;
@@ -681,11 +692,11 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 281, ../../scss/_index.scss */
+/* line 280, ../../scss/_index.scss */
 .block.project-description .project-description-image img {
   width: 100%;
 }
-/* line 285, ../../scss/_index.scss */
+/* line 284, ../../scss/_index.scss */
 .block.project-description .project-description-text {
   display: inline-block;
   vertical-align: top;
@@ -694,7 +705,7 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 297, ../../scss/_index.scss */
+/* line 296, ../../scss/_index.scss */
 .block.goals .goals-image {
   display: inline-block;
   vertical-align: top;
@@ -703,12 +714,12 @@ footer .footer-logo img {
   height: 400px;
   overflow: hidden;
 }
-/* line 304, ../../scss/_index.scss */
+/* line 303, ../../scss/_index.scss */
 .block.goals .goals-image img {
   width: 100%;
   padding-bottom: 24px;
 }
-/* line 309, ../../scss/_index.scss */
+/* line 308, ../../scss/_index.scss */
 .block.goals .goals-text {
   display: inline-block;
   vertical-align: top;
@@ -717,44 +728,44 @@ footer .footer-logo img {
   padding: 0 50px;
 }
 
-/* line 321, ../../scss/_index.scss */
+/* line 320, ../../scss/_index.scss */
 .block.how-it-works {
   background: #3c1612;
   color: white;
 }
-/* line 324, ../../scss/_index.scss */
+/* line 323, ../../scss/_index.scss */
 .block.how-it-works .flowchart-step {
   background: #eee;
   padding: 50px;
   margin: 20px auto;
   display: block;
 }
-/* line 330, ../../scss/_index.scss */
+/* line 329, ../../scss/_index.scss */
 .block.how-it-works .step-text {
   color: #444;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 335, ../../scss/_index.scss */
+/* line 334, ../../scss/_index.scss */
 .block.how-it-works .flowchart-down {
   color: #ddd;
   font-size: 32px;
   padding: 10px;
 }
-/* line 341, ../../scss/_index.scss */
+/* line 340, ../../scss/_index.scss */
 .block.how-it-works .step-one {
   width: 80%;
 }
-/* line 345, ../../scss/_index.scss */
+/* line 344, ../../scss/_index.scss */
 .block.how-it-works .step-two {
   width: 70%;
 }
-/* line 350, ../../scss/_index.scss */
+/* line 349, ../../scss/_index.scss */
 .block.how-it-works .step-three {
   width: 60%;
 }
 
-/* line 355, ../../scss/_index.scss */
+/* line 354, ../../scss/_index.scss */
 .block.submission-image {
   background-image: url(/wp-content/themes/hca/img/charlie_fabric_mural.jpg);
   background-size: cover;
@@ -763,46 +774,50 @@ footer .footer-logo img {
   background-attachment: fixed;
 }
 
-/* line 364, ../../scss/_index.scss */
-.block.who-we-are .team-member {
+/* line 363, ../../scss/_index.scss */
+.block.contacts p.contacts-subtitle-text {
+  margin: 10px auto;
+}
+/* line 367, ../../scss/_index.scss */
+.block.contacts .team-member {
   text-align: left;
   margin: 30px 0;
 }
-/* line 368, ../../scss/_index.scss */
-.block.who-we-are .team-member-image {
+/* line 371, ../../scss/_index.scss */
+.block.contacts .team-member-image {
   display: inline-block;
   vertical-align: top;
   width: 12%;
   margin: 20px 5% 20px 0;
 }
-/* line 373, ../../scss/_index.scss */
-.block.who-we-are .team-member-image img {
+/* line 376, ../../scss/_index.scss */
+.block.contacts .team-member-image img {
   width: 100%;
 }
-/* line 377, ../../scss/_index.scss */
-.block.who-we-are .team-member-text {
+/* line 380, ../../scss/_index.scss */
+.block.contacts .team-member-text {
   display: inline-block;
   vertical-align: top;
   width: 82%;
 }
-/* line 382, ../../scss/_index.scss */
-.block.who-we-are .team-member-text.team-member-text-wide {
+/* line 385, ../../scss/_index.scss */
+.block.contacts .team-member-text.team-member-text-wide {
   width: 100%;
 }
-/* line 387, ../../scss/_index.scss */
-.block.who-we-are .team-member-head .team-member-image {
+/* line 390, ../../scss/_index.scss */
+.block.contacts .team-member-head .team-member-image {
   width: 25%;
 }
-/* line 390, ../../scss/_index.scss */
-.block.who-we-are .team-member-head .team-member-text {
+/* line 393, ../../scss/_index.scss */
+.block.contacts .team-member-head .team-member-text {
   width: 69%;
 }
-/* line 392, ../../scss/_index.scss */
-.block.who-we-are .team-member-head .team-member-text.team-member-text-wide {
+/* line 395, ../../scss/_index.scss */
+.block.contacts .team-member-head .team-member-text.team-member-text-wide {
   width: 100%;
 }
 
-/* line 401, ../../scss/_index.scss */
+/* line 404, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -810,7 +825,7 @@ footer .footer-logo img {
   width: 100%;
   padding: 50px 0;
 }
-/* line 409, ../../scss/_index.scss */
+/* line 412, ../../scss/_index.scss */
 .block.submission-proposal .form-help-text {
   display: inline-block;
   width: 80%;
@@ -818,59 +833,59 @@ footer .footer-logo img {
   margin: 0 auto 40px;
   font-size: 16px;
 }
-/* line 418, ../../scss/_index.scss */
+/* line 421, ../../scss/_index.scss */
 .block.submission-proposal .submission-form {
   text-align: left;
   width: 90%;
   margin: 0 auto;
 }
-/* line 424, ../../scss/_index.scss */
+/* line 427, ../../scss/_index.scss */
 .block.submission-proposal input[type="text"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 428, ../../scss/_index.scss */
+/* line 431, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 432, ../../scss/_index.scss */
+/* line 435, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 438, ../../scss/_index.scss */
+/* line 441, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 444, ../../scss/_index.scss */
+/* line 447, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 452, ../../scss/_index.scss */
+/* line 455, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 40px 0 40px 0;
   clear: both;
   display: block;
 }
-/* line 458, ../../scss/_index.scss */
+/* line 461, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 463, ../../scss/_index.scss */
+/* line 466, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 469, ../../scss/_index.scss */
+/* line 472, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
@@ -879,7 +894,7 @@ footer .footer-logo img {
   word-wrap: wrap;
   color: rgba(0, 0, 0, 0.8);
 }
-/* line 480, ../../scss/_index.scss */
+/* line 483, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
@@ -887,57 +902,57 @@ footer .footer-logo img {
   margin-right: 0.5%;
   margin-bottom: 30px;
 }
-/* line 487, ../../scss/_index.scss */
+/* line 490, ../../scss/_index.scss */
 .block.submission-proposal .half-field label {
   cursor: pointer;
 }
-/* line 493, ../../scss/_index.scss */
+/* line 496, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field {
   clear: both;
   margin: 10px 0;
 }
-/* line 497, ../../scss/_index.scss */
+/* line 500, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field span {
   display: inline-block;
 }
-/* line 501, ../../scss/_index.scss */
+/* line 504, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field label {
   cursor: pointer;
   display: inline-block;
   padding: 10px;
 }
-/* line 509, ../../scss/_index.scss */
+/* line 512, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
 }
-/* line 515, ../../scss/_index.scss */
+/* line 518, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field label {
   cursor: pointer;
 }
-/* line 519, ../../scss/_index.scss */
+/* line 522, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 526, ../../scss/_index.scss */
+/* line 529, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 536, ../../scss/_index.scss */
+/* line 539, ../../scss/_index.scss */
 .block.submission-proposal input[type="file"] {
   background: white;
   font-size: 16px;
   margin-left: 8px;
 }
-/* line 542, ../../scss/_index.scss */
+/* line 545, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #3c1612;
   border: none;
@@ -949,7 +964,7 @@ footer .footer-logo img {
   font-weight: 700;
 }
 
-/* line 556, ../../scss/_index.scss */
+/* line 559, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }
