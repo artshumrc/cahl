@@ -127,13 +127,40 @@ header {
 		display:inline-block;
 		vertical-align: top;
 		margin-left:30px;
-		a {
+		.nav-item {
 			display:inline-block;
-			padding:25px 10px;
 			text-transform:uppercase;
 			font-weight:700;
 			font-size:13px;
-			color:rgba(0,0,0,0.7);
+			position:relative;
+
+			&:hover {
+				> a {
+					background:rgba(255,255,255,1);
+					border-bottom:1px solid rgba(150,150,150,1);
+
+				}
+			}
+
+			a {
+				display:block;
+				color:rgba(0,0,0,0.7);
+
+				padding:25px 10px;
+				border-bottom:1px solid rgba(240,240,240,0);
+			}
+			.dropdown-panel {
+				position:absolute;
+				background:rgba(240,240,240,0.9);
+				top:69px;
+				a {
+
+					padding:20px;
+					&:hover {
+						background:rgba(230,230,230,0.95);
+					}
+				}
+			}
 		}
 	}
 
@@ -164,21 +191,6 @@ header {
 		}	
 	}
 
-	.header-dropdown {
-		display:none;
-		.dropdown-head {
-			display:block;
-			span.fa {
-				display:block;
-				padding:13px;
-				font-size:20px;
-			}
-		}
-		.dropdown-panel {
-			display:none;
-			position:relative;
-		}
-	}
 }
 // general navigation rules (when not fixed)
 nav.primary {
@@ -188,29 +200,18 @@ nav.primary {
 			color:$light;
 		}
 	}
-
-	ul {
-		padding:0; margin:0;
-		float:right;
-		position:relative;
-		li {
-			float:left;
-			padding:0; margin:0;
-			a {
-				padding:25px 25px;
-				display:block;
-				border-left:1px solid $primary;
-				&:hover {
-					background: $primary;	
-				}
-			}
-
-		}
-		li:last-child {
-			a {
-				border-right:1px solid $dark;
-			}
-		}
+}
+.has-children {
+	position:relative;
+}
+.dropdown-panel {
+	overflow:hidden;
+	position:absolute;
+	&.raised {
+		display:none;
+	}
+	&.lowered {
+		display:block;
 	}
 }
 

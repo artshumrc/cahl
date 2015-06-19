@@ -54,6 +54,22 @@ $(document).ready(function($) {
 
 	});
 
+	$(".has-children").bind("mouseover",function(e){
+		var $target = $(e.target);
+		if (!$target.hasClass("has-children")){
+			$target = $target.parents(".has-children");	
+		}
+
+		$target.children(".dropdown-panel").removeClass("raised").addClass("lowered");
+	});
+	$(".has-children").bind("mouseout",function(e){
+		var $target = $(e.target);
+		if (!$target.hasClass("has-children")){
+			$target = $target.parents(".has-children");	
+		}
+		$target.children(".dropdown-panel").removeClass("lowered").addClass("raised");
+	});
+
 
 
 });
