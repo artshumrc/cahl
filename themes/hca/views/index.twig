@@ -410,7 +410,7 @@
 						<label ng-show="language=='francais'">Veuillez joindre une photo du document, si possible</label>
 						<span class="help-text" ng-show="language=='english'">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
 						<span class="help-text" ng-show="language=='francais'">Accepted image formats include jpg, png, and tiff.  File size must not exceed 1 MB.</span>
-						<input type="file" ng-model="submission.image" />
+						<input type="file" ng-model="submission.image" fileread="read_file" onchange="angular.element(this).scope().setFiles(this)"/>
 					</div>
 
 					<div class="include-name-input-field send-in-input-field">
@@ -440,6 +440,8 @@
 						<label for="i_accept" class="field-text" ng-show="language=='english'">If my proposal is accepted, I agree to donate this material to the Charlie Archive at Harvard University Library for preservation and distribution for research and educational purposes. I understand that I will not receive financial compensation.<span class="required">*</span></label>	
 						<label for="i_accept" class="field-text" ng-show="language=='francais'">Si ma contribution est acceptée, je m’engage à donner ce document aux archives Charlie de la Harvard University Library, où il sera préservé et distribué à des fins pédagogiques et des fins de recherche.<span class="required">*</span></label>	
 					</div>
+
+					<div class="g-recaptcha" data-sitekey="6Lf6lwgTAAAAAJ9LY73X3hDqKHQZLBO7Wj1h19_b"></div>
 
 
 					<div class="submit-input-field checkbox-field">
