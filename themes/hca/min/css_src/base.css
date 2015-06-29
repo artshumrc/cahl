@@ -1013,17 +1013,22 @@ footer .footer-logo img {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
+  opacity: 1;
 }
-/* line 608, ../../scss/_index.scss */
+/* line 606, ../../scss/_index.scss */
+.block.submission-proposal input[type="submit"][disabled="disabled"] {
+  opacity: 0.5;
+}
+/* line 612, ../../scss/_index.scss */
 .block.submission-proposal #acceptance-391 {
   margin: 7px 10px;
 }
-/* line 612, ../../scss/_index.scss */
+/* line 616, ../../scss/_index.scss */
 .block.submission-proposal .ajax-loader {
   padding: 50px;
 }
 
-/* line 617, ../../scss/_index.scss */
+/* line 621, ../../scss/_index.scss */
 form.sent .submission-input-field, form.sent input, form.sent label, form.sent p, form.sent textarea, form.sent h4, form.sent .field-label, form.sent span, form.sent .send-in-input-field, form.sent .submission-input-field-wide, form.sent .checkbox-field {
   display: none !important;
   margin: 0;
@@ -1032,7 +1037,7 @@ form.sent .submission-input-field, form.sent input, form.sent label, form.sent p
   overflow: hidden;
   visibility: none;
 }
-/* line 625, ../../scss/_index.scss */
+/* line 629, ../../scss/_index.scss */
 form.sent .wpcf7-response-output {
   margin: 0;
   width: 100%;
@@ -1043,7 +1048,7 @@ form.sent .wpcf7-response-output {
   color: rgba(0, 0, 0, 0.9);
 }
 
-/* line 637, ../../scss/_index.scss */
+/* line 641, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }
