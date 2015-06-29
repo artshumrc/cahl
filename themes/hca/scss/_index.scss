@@ -442,6 +442,8 @@
 
 .block.submission-proposal {
 
+	color:#000;
+
 	h4 {
 		margin:0 auto;
 		text-align:center;
@@ -450,14 +452,25 @@
 		padding:50px 0;	
 	}
 
+	p {
+		text-align:left;
+	}
 
-	.submission-form {
+	p.form-entry {
+		width:90%;
+		margin:0px auto;
+		padding:15px 0;
+	}
+
+
+	.submission-form, .wpcf7-form {
 		text-align:left;
 		width:90%;
 		margin:20px auto;
+		padding-top:10px;
 	}
 
-	input[type="text"], textarea {
+	input[type="text"], input[type="email"], textarea {
 		font-size:20px;
 		padding:10px;
 	}
@@ -470,6 +483,7 @@
 		margin:0px 0 40px 0;
 		clear:both;
 		display:block;
+		text-align:left;
 
 		label {
 			display:inline-block;
@@ -477,7 +491,7 @@
 			width:20%;
 			font-size:18px;
 		}	
-		input[type="text"], textarea {
+		input[type="text"], input[type="email"], textarea {
 			width:74%;
 			margin-left:5%;
 			display:inline-block;
@@ -490,6 +504,7 @@
 		margin:40px 0 40px 0;
 		clear:both;
 		display:block;
+		text-align:left;
 
 		label {
 			display:block;
@@ -508,7 +523,7 @@
 			display:block;
 			font-size:16px;
 			word-wrap:wrap;
-			color:rgba(0,0,0,0.8);
+			color:rgba(0,0,0,0.9);
 		}
 
 	}
@@ -519,6 +534,7 @@
 		width:74%;
 		margin-right:0.5%;
 		margin-bottom:30px;
+		text-align:left;
 
 		label {
 			cursor:pointer;
@@ -529,6 +545,7 @@
 	.send-in-input-field {
 		clear:both;
 		margin:10px 0;
+		text-align:left;
 
 		span {
 			display:inline-block;
@@ -547,6 +564,7 @@
 		width:99%;
 		margin-bottom:30px;
 		display:block;
+		text-align:left;
 
 		label {
 			cursor:pointer;
@@ -587,8 +605,35 @@
 
 	}
 
+	#acceptance-391 {
+		margin:7px 10px;
+	}
 
+	.ajax-loader {
+		padding:50px;
+	}
 }
+form.sent {
+	.submission-input-field, input, label, p, textarea, h4, .field-label, span, .send-in-input-field, .submission-input-field-wide, .checkbox-field {
+		display:none !important;
+		margin:0;
+		padding:0;
+		height:0;
+		overflow:hidden;
+		visibility: none;
+	}
+	.wpcf7-response-output {
+		margin:0;
+		width:100%;
+		padding:50px 0;
+		border:none;
+		border-top:3px solid $primary;
+		font-size:20px; 
+		color:rgba(0,0,0,0.9);
+	}
+}
+
+
 .required {
 	color:$required;
 }

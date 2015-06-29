@@ -856,7 +856,11 @@ footer .footer-logo img {
   text-align: left;
 }
 
-/* line 445, ../../scss/_index.scss */
+/* line 443, ../../scss/_index.scss */
+.block.submission-proposal {
+  color: #000;
+}
+/* line 447, ../../scss/_index.scss */
 .block.submission-proposal h4 {
   margin: 0 auto;
   text-align: center;
@@ -864,126 +868,142 @@ footer .footer-logo img {
   width: 100%;
   padding: 50px 0;
 }
-/* line 454, ../../scss/_index.scss */
-.block.submission-proposal .submission-form {
+/* line 455, ../../scss/_index.scss */
+.block.submission-proposal p {
+  text-align: left;
+}
+/* line 459, ../../scss/_index.scss */
+.block.submission-proposal p.form-entry {
+  width: 90%;
+  margin: 0px auto;
+  padding: 15px 0;
+}
+/* line 466, ../../scss/_index.scss */
+.block.submission-proposal .submission-form, .block.submission-proposal .wpcf7-form {
   text-align: left;
   width: 90%;
   margin: 20px auto;
+  padding-top: 10px;
 }
-/* line 460, ../../scss/_index.scss */
-.block.submission-proposal input[type="text"], .block.submission-proposal textarea {
+/* line 473, ../../scss/_index.scss */
+.block.submission-proposal input[type="text"], .block.submission-proposal input[type="email"], .block.submission-proposal textarea {
   font-size: 20px;
   padding: 10px;
 }
-/* line 464, ../../scss/_index.scss */
+/* line 477, ../../scss/_index.scss */
 .block.submission-proposal textarea {
   height: 180px;
 }
-/* line 468, ../../scss/_index.scss */
+/* line 481, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field {
   margin: 0px 0 40px 0;
   clear: both;
   display: block;
+  text-align: left;
 }
-/* line 474, ../../scss/_index.scss */
+/* line 488, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
   font-size: 18px;
 }
-/* line 480, ../../scss/_index.scss */
-.block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field textarea {
+/* line 494, ../../scss/_index.scss */
+.block.submission-proposal .submission-input-field input[type="text"], .block.submission-proposal .submission-input-field input[type="email"], .block.submission-proposal .submission-input-field textarea {
   width: 74%;
   margin-left: 5%;
   display: inline-block;
 }
-/* line 488, ../../scss/_index.scss */
+/* line 502, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide {
   margin: 40px 0 40px 0;
   clear: both;
   display: block;
+  text-align: left;
 }
-/* line 494, ../../scss/_index.scss */
+/* line 509, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide label {
   display: block;
   width: 70%;
   font-size: 18px;
 }
-/* line 499, ../../scss/_index.scss */
+/* line 514, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide input[type="text"], .block.submission-proposal .submission-input-field-wide textarea {
   display: block;
   width: 98%;
   margin: 10px auto;
 }
-/* line 505, ../../scss/_index.scss */
+/* line 520, ../../scss/_index.scss */
 .block.submission-proposal .submission-input-field-wide .help-text {
   width: 98%;
   margin: 10px auto;
   display: block;
   font-size: 16px;
   word-wrap: wrap;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
 }
-/* line 516, ../../scss/_index.scss */
+/* line 531, ../../scss/_index.scss */
 .block.submission-proposal .half-field {
   float: right;
   clear: both;
   width: 74%;
   margin-right: 0.5%;
   margin-bottom: 30px;
+  text-align: left;
 }
-/* line 523, ../../scss/_index.scss */
+/* line 539, ../../scss/_index.scss */
 .block.submission-proposal .half-field label {
   cursor: pointer;
 }
-/* line 529, ../../scss/_index.scss */
+/* line 545, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field {
   clear: both;
   margin: 10px 0;
+  text-align: left;
 }
-/* line 533, ../../scss/_index.scss */
+/* line 550, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field span {
   display: inline-block;
 }
-/* line 537, ../../scss/_index.scss */
+/* line 554, ../../scss/_index.scss */
 .block.submission-proposal .send-in-input-field label {
   cursor: pointer;
   display: inline-block;
   padding: 10px;
 }
-/* line 545, ../../scss/_index.scss */
+/* line 562, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field {
   clear: both;
   width: 99%;
   margin-bottom: 30px;
   display: block;
+  text-align: left;
 }
-/* line 551, ../../scss/_index.scss */
+/* line 569, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field label {
   cursor: pointer;
 }
-/* line 555, ../../scss/_index.scss */
+/* line 573, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field input[type="checkbox"] {
   display: inline-block;
   padding: 10px;
   border: 1px solid #222222;
   background: white;
 }
-/* line 562, ../../scss/_index.scss */
+/* line 580, ../../scss/_index.scss */
 .block.submission-proposal .checkbox-field .field-text {
   display: inline-block;
   width: 90%;
   vertical-align: top;
   margin-left: 10px;
 }
-/* line 572, ../../scss/_index.scss */
+/* line 590, ../../scss/_index.scss */
 .block.submission-proposal input[type="file"] {
   background: white;
   font-size: 16px;
   margin-left: 8px;
 }
-/* line 578, ../../scss/_index.scss */
+/* line 596, ../../scss/_index.scss */
 .block.submission-proposal input[type="submit"] {
   background: #3c1612;
   border: none;
@@ -994,8 +1014,36 @@ footer .footer-logo img {
   text-transform: uppercase;
   font-weight: 700;
 }
+/* line 608, ../../scss/_index.scss */
+.block.submission-proposal #acceptance-391 {
+  margin: 7px 10px;
+}
+/* line 612, ../../scss/_index.scss */
+.block.submission-proposal .ajax-loader {
+  padding: 50px;
+}
 
-/* line 592, ../../scss/_index.scss */
+/* line 617, ../../scss/_index.scss */
+form.sent .submission-input-field, form.sent input, form.sent label, form.sent p, form.sent textarea, form.sent h4, form.sent .field-label, form.sent span, form.sent .send-in-input-field, form.sent .submission-input-field-wide, form.sent .checkbox-field {
+  display: none !important;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: none;
+}
+/* line 625, ../../scss/_index.scss */
+form.sent .wpcf7-response-output {
+  margin: 0;
+  width: 100%;
+  padding: 50px 0;
+  border: none;
+  border-top: 3px solid #3c1612;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* line 637, ../../scss/_index.scss */
 .required {
   color: #a33d31;
 }
