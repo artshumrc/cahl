@@ -454,19 +454,19 @@ footer .footer-logo img {
 /* line 43, ../../scss/_index.scss */
 .block p {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.78);
+  color: rgba(0, 0, 0, 0.9);
   line-height: 1.7em;
 }
 /* line 48, ../../scss/_index.scss */
 .block p.block-teaser {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.9);
   line-height: 1.6em;
 }
 /* line 55, ../../scss/_index.scss */
 .block p.supplementary {
   font-size: 19px;
-  color: rgba(0, 0, 0, 0.62);
+  color: rgba(0, 0, 0, 0.8);
   line-height: 1.4em;
 }
 /* line 63, ../../scss/_index.scss */
@@ -497,7 +497,7 @@ footer .footer-logo img {
   display: block;
   font-size: 14px;
   word-wrap: wrap;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 93, ../../scss/_index.scss */
