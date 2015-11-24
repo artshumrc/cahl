@@ -1,7 +1,7 @@
 
 # Theme files
 themes/*/node_modules
-themes/*/bower_components
+#themes/*/bower_components
 themes/*/.sass-cache
 
 # Development
