@@ -1,1 +1,1 @@
-var app = angular.module('HarvardCharlieApp', []);
+var app = angular.module( 'cahl', [ 'ngMaterial', 'ngMdIcons', 'headroom' ]);

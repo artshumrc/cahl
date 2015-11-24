@@ -3,15 +3,15 @@
  */
 
 html, body, input, p, span, label {
-	@include font-body; 
+	@include font-body;
 }
 body {
 	background:$light;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	weight:300;
-	@include font-title; 
+	font-weight:300;
+	@include font-title;
 }
 
 a {
@@ -46,7 +46,7 @@ li {
   color:$light;
 }
 ::-moz-selection {
-  background: $accent-light-1; 
+  background: $accent-light-1;
   color:$light;
 }
 
@@ -112,13 +112,15 @@ header {
 			display:inline-block;
 			vertical-align: top;
 			width:26px;
-			
+
 		}
 
 		h1.hdr-logo {
 			display:inline-block;
 			vertical-align: top;
-			@include font-title(22px);
+			@include font-title(18px);
+			padding:0;
+			margin:0;
 		}
 
 	}
@@ -127,17 +129,19 @@ header {
 		display:inline-block;
 		vertical-align: top;
 		margin-left:30px;
+		background:transparent;
+		height:65px;
+
 		.nav-item {
 			display:inline-block;
 			text-transform:uppercase;
-			font-weight:700;
-			font-size:13px;
 			position:relative;
+			margin-left:-4px;
 
 			&:hover {
 				> a {
-					background:rgba(255,255,255,1);
-					border-bottom:1px solid rgba(150,150,150,1);
+					background:$primary;
+					color:$light;
 
 				}
 			}
@@ -146,20 +150,34 @@ header {
 				display:block;
 				color:rgba(0,0,0,0.7);
 
-				padding:25px 10px;
-				border-bottom:1px solid rgba(240,240,240,0);
+				padding:15px 15px;
+
+				span {
+					font-weight:700;
+					font-size:12px;
+
+				}
+
 			}
 			.dropdown-panel {
 				position:absolute;
 				background:rgba(240,240,240,0.9);
-				top:69px;
+				top:65px;
+				border-left:#222;
+				border-bottom:#222;
+				border-right:#222;
+
 				a {
 
-					padding:20px;
+					padding:13px 20px 7px;
+					text-align:left;
+
 					&:hover {
 						background:rgba(230,230,230,0.95);
 					}
+
 				}
+
 			}
 		}
 	}
@@ -168,11 +186,16 @@ header {
 		float:left;
 		margin:0;
 		padding:0;
+
 	}
 
 	.languages {
 		float:right;
 		margin-right:20px;
+
+		&:focus {
+			outline:1px solid transparent;
+		}
 
 		.language {
 			width:30px;
@@ -182,19 +205,27 @@ header {
 			cursor:pointer;
 			display:inline-block;
 			border-bottom:1px solid rgba(0,0,0,0);
+
 			&:hover {
 				border-bottom:1px solid #ddd;
 			}
+
 			&.selected-language {
 				border-bottom:1px solid #aaa;
 			}
-		}	
+
+			&:focus {
+				outline:1px solid transparent;
+			}
+
+		}
 	}
 
 }
 // general navigation rules (when not fixed)
 nav.primary {
 	font-size:15px;
+	background:transparent;
 	a {
 		&:hover {
 			color:$light;
@@ -215,56 +246,88 @@ nav.primary {
 	}
 }
 
+
+header.headroom--top {
+	background:transparent;
+	box-shadow:none;
+	border-bottom:1px solid rgba(255,255,255,0.3);
+
+	nav.bg-dark {
+		background:transparent;
+	}
+
+	nav.primary a {
+		color:$light;
+
+		&:hover {
+			background:$accent-dark-1;
+			color:$light;
+		}
+
+	}
+
+
+	.site-title-wrap {
+		&:hover{
+			background:$accent-dark-1;
+		}
+
+	}
+
+}
+
+.headroom {
+	transition: transform 00ms linear, background 300ms ease-out;
+}
+.headroom--pinned {
+	transition: transform 200ms linear, background 300ms ease-out;
+	transform: translateY(0%) translateZ(0);
+}
+.headroom--unpinned {
+	//transform: translateY(-100%) translateZ(0);
+}
+
+
 /*
- * Footer 
+ * Footer
  */
 
 footer {
-	height:220px;
 	clear:both;
-	background-color:$primary;
+	background-color:$accent-dark-1;
 	color:$light;
 	padding:50px 0;
 	text-align:center;
 	width:100%;
 	position:relative;
 
-	h1 {
-		margin: 20px 0 50px 0;
-		padding:0;
-		@include font-accent(30px);
-	}
-	a {
+	h1, p, a {
 		color:$light;
-		text-decoration: underline;
-		&:hover {
-			color:$light;
-			text-decoration: none;
-		}
 	}
 
-	.footer-text {
-		text-align:right;
-		width:50%;
-		h3 {
-			font-size:26px;
-		}
-		span {
-			font-size:14px;
-		}
+	h1 {
+		@include font-accent( 33px );
+		line-height:1.5em;
+
 	}
 
-	.footer-logo {
-		img {
-			display:none;
-		}
+	p.lead {
+		text-align:left;
+		padding-top:9px;
 	}
+
+	.col-md-2 {
+		padding-top:35px;
+
+	}
+
+
 
 }
 
 /*
  * Styles for Dropdowns
- */ 
+ */
 
 .dropdown {
 	cursor:pointer;
@@ -304,12 +367,87 @@ footer {
 ::-webkit-input-placeholder {
    color: $light;
 }
-:-moz-placeholder { 
-   color: $light;  
+:-moz-placeholder {
+   color: $light;
 }
 ::-moz-placeholder {
-   color: $light;  
+   color: $light;
 }
-:-ms-input-placeholder {  
-   color: $light;  
+:-ms-input-placeholder {
+   color: $light;
+}
+
+.paper-shadow {
+ box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12),0 3px 1px -2px rgba(0, 0, 0, 0.2);
+ border-radius:2px;
+
+}
+.dropdown-shadow {
+ box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),0 1px 5px 0 rgba(0, 0, 0, 0.1),0 3px 1px -2px rgba(0, 0, 0, 0.01);
+
+}
+
+
+
+.more-blur {
+	@include filter( blur(8px) );
+
+}
+.less-blur {
+	@include filter( blur(1px) );
+
+}
+.more-blur--persistent {
+	@include filter(blur(8px) );
+
+}
+.background-screen {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+	@include background-image( linear-gradient(
+			rgba(25, 25, 25, 0.7),
+			rgba(25, 25, 25, 0.5) 20%,
+			rgba(25, 25, 25, 0.5) 80%,
+			rgba(25, 25, 25, 0.8)
+		) );
+
+
+}
+
+.md-button {
+	border-radius:0;
+	margin:0;
+	min-width:0;
+
+	span {
+	}
+
+}
+
+.modal-strip.bg-white {
+	background:rgba(255,255,255,0.95);
+	padding:14px 0;
+	.ti-new-window {
+		font-size:22px;
+		padding-left:20px;
+	}
+	p {
+		font-size:16px;
+		margin:0;
+		
+	}
+	a {
+		color:$accent-light-2;
+		padding-bottom:2px;
+		line-height:14px;
+		display:inline-block;
+		border-bottom:1px solid rgba(101, 66, 62, 0.7);
+	}
+	i {
+		color:$accent-light-2 !important;
+	}
 }

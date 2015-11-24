@@ -1,6 +1,6 @@
-angular.module('HarvardCharlieApp')
+angular.module('cahl')
 // primary controller
-.controller('HCAController', ['$scope', '$http', function($scope, $http) {
+.controller('CAHLController', ['$scope', '$http', function($scope, $http) {
 
 	window.__Hc__ = window.__Hc__ || {};
 	var Hc = window.__Hc__;
@@ -62,7 +62,7 @@ angular.module('HarvardCharlieApp')
 				$scope.successful_submission = true;
 
 				$('html, body').animate({
-					scrollTop: $( "#propose-submission" ).offset().top 
+					scrollTop: $( "#propose-submission" ).offset().top
 				}, 300);
 
 				return false;

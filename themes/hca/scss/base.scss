@@ -1,7 +1,7 @@
 /*
  *
  *
- *   ___ ___ ___| |_|_|_____ ___ _| |___ ___ 
+ *   ___ ___ ___| |_|_|_____ ___ _| |___ ___
  *  | .'|  _|  _|   | |     | -_| . | -_|_ -|
  *  |__,|_| |___|_|_|_|_|_|_|___|___|___|___|
  *
@@ -10,13 +10,13 @@
  *
  *
  * Base theme SCSS for Compass, containing pertinent
- * site variables for HCA web application
+ * site variables for Charlie Archive web application
  *
  */
 
 
 
-// Import Libraries  
+// Import Libraries
 @import "compass";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
@@ -26,7 +26,7 @@
 
 
 /*
- * Color palette 
+ * Color palette
  *
  */
 
@@ -35,11 +35,11 @@ $dark: #222;
 $grey: #666;
 $light: #fff;
 
-// Theme colors 
+// Theme colors
 $accent-light-2: rgba(101, 66, 62,1);
 $accent-light-1: rgba( 81, 39, 35,1);
 $primary: rgba( 60, 22, 18,1);
-$off-primary: rgba(51, 19, 16, 1); 
+$off-primary: rgba(51, 19, 16, 1);
 $accent-dark-1: rgba( 39,  9,  6,1);
 $accent-dark-2: rgba( 19,  2,  0,1);
 
@@ -52,7 +52,7 @@ $mss-dark: #A9947B;
 $required: #A33D31;
 
 /*
- * Fonts  
+ * Fonts
  *
  * Title, body, accent
  */
@@ -71,28 +71,19 @@ $required: #A33D31;
 	font-family: 'Proxima N W01 At Bold';
 	font-size: $size;
 }
-	 
-// Load Glyphicons fonts
-@font-face {
-  font-family: 'Glyphicons';
-  src: url('/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
-  src: url('/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+@mixin font-label( $size : 24px ) {
+	font-family: 'Open Sans';
+	font-weight:700;
+	text-transform:uppercase;
+	font-size: $size;
 }
 
 
 /*
- * Util Mixins 
+ * Util Mixins
  *
- *  - a library of mixins customized for this project 
+ *  - a library of mixins customized for this project
  */
-
-// Easy cross browser transition 
-@mixin transition( $property: all, $duration: 1s, $effect: linear, $delay: 0 ) {
-	-webkit-transition: $property $duration $effect $delay;
-	-moz-transition: $property $duration $effect $delay;
-	-o-transition: $property $duration $effect $delay;
-	transition: $property $duration $effect $delay;
-}
 
 // Easy cross browser opacity
 @mixin opacity( $value: 0.5 ) {
@@ -103,27 +94,16 @@ $required: #A33D31;
  	  opacity: $value;
 }
 
-// Project border
-@mixin project-border {
-	border: 5px solid $border-primary;
-}
-
-
 /*
- * Project Bootstrap Defaults import
- *
- */
-@import "/bower_components/bootstrap/dist/css/bootstrap.css";
-
-
-
-/* 
  * Project Imports
  *
  *
  */
 
 // project styles
+@import "_themify-icons.scss";
+@import "_bootstrap.scss";
+@import "_foundry.scss";
 @import "_global.scss";
 @import "_index.scss";
 @import "_page.scss";

@@ -1,6 +1,6 @@
 // include gulp
-var 	gulp      = require('gulp') 
- 
+var 	gulp      = require('gulp')
+
 // include plug-ins
 ,	jshint      = require('gulp-jshint')
 ,	changed     = require('gulp-changed')
@@ -15,7 +15,7 @@ var 	gulp      = require('gulp')
 ,	plumber     = require('gulp-plumber')
 ,	livereload  = require('gulp-livereload')
 ;
- 
+
 // JS hint task
 gulp.task('jshint', function() {
 	gulp.src(['./js/*.js', './js/**/*.js'])
@@ -28,7 +28,7 @@ gulp.task('jshint', function() {
 gulp.task('imagemin', function() {
   var imgSrc = './img/*',
       imgDst = './min/img';
- 
+
   gulp.src(imgSrc)
     .pipe(plumber())
     .pipe(changed(imgDst))
@@ -44,7 +44,7 @@ gulp.task('scripts', function() {
     /*
     .pipe(browserify({
       insertGlobals: true,
-      debug: true 
+      debug: true
     }))
     */
 
@@ -73,7 +73,10 @@ gulp.task('compass', function() {
 
 // CSS concat, auto-prefix and minify
 gulp.task('styles', function() {
-  gulp.src(['./bower_components/html5-boilerplate/css/normalize.css', './bower_components/html5-boilerplate/css/main.css', './min/css_src/base.css'])
+  gulp.src([
+    './node_modules/angular-material/angular-material.css',
+    './node_modules/angular-material-icons/angular-material-icons.css',
+    './min/css_src/base.css'])
     .pipe(plumber())
     .pipe(concat('styles.css'))
     .pipe(autoprefix('last 2 versions'))
@@ -99,7 +102,7 @@ gulp.task('default', ['imagemin', 'scripts', 'compass', 'styles'], function() {
 
   // watch for JS changes
   gulp.watch(['./js/*.js', './js/**/*.js'], ['scripts']);
- 
+
   // watch for CSS changes
   gulp.watch('./scss/*.scss', ['compass']);
   gulp.watch('./min/css_src/base.css', ['styles']);

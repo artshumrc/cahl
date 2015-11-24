@@ -9,9 +9,9 @@
   "license": "MIT",
   "homepage": "hca.dev",
   "private": true,
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "jquery": "*"
+    "jquery": "*",
+    "headroom.js": "~0.7.0"
   }
 }

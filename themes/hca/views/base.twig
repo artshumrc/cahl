@@ -6,13 +6,13 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig" data-ng-controller="HCAController as hca_controller" ng-cloak >
+	<body class="{{body_class}}" data-template="base.twig" data-ng-controller="CAHLController as hca_controller" ng-cloak >
 
-		<header class="header" >
+		<header class="header paper-shadow" headroom >
 			{% block header %}
 				<div class="wrapper">
 					<div class="primary-header-content">
-						<a class="hdr-logo-link" href="/" rel="home">
+						<md-button class="hdr-logo-link" href="/" rel="home">
 							<img src="/wp-content/themes/hca/img/harvard_logo.png">
 							<h1 class="hdr-logo" role="banner" ng-show="language=='english'">
 								The Charlie Archive at the Harvard Library
@@ -21,51 +21,51 @@
 								Archives Charlie à Harvard
 							</h1>
 
-						</a>
+						</md-button>
 
 						<nav id="nav-main" class="nav-main" role="navigation">
 
 							<div class="nav-item dropdown has-children">
-								<a href="#project" data-link_id="project" ng-show="language=='english'">	
+								<md-button href="#project" data-link_id="project" ng-show="language=='english'">
 									About the Archive
-								</a>
+								</md-button>
 								<div class="dropdown-panel raised">
-									<a href="#context" data-link_id="context" ng-show="language=='english'">Context</a>
-									<a href="#project" data-link_id="project" ng-show="language=='english'">Project Description</a>
-									<a href="#goals" data-link_id="goals" ng-show="language=='english'">Goals</a>
+									<md-button href="#context" data-link_id="context" ng-show="language=='english'">Context</md-button>
+									<md-button href="#project" data-link_id="project" ng-show="language=='english'">Project Description</md-button>
+									<md-button href="#goals" data-link_id="goals" ng-show="language=='english'">Goals</md-button>
 
 								</div>
 							</div>
 							<div class="nav-item">
-								<a href="#propose-submission" data-link_id="propose-submission" ng-show="language=='english'">
-									How to contribute to the Archive
-								</a>
+								<md-button href="#propose-submission" data-link_id="propose-submission" ng-show="language=='english'">
+									Contribute to the Archive
+								</md-button>
 							</div>
 							<div class="nav-item">
-								<a href="#contacts" data-link_id="contacts" ng-show="language=='english'">
+								<md-button href="#contacts" data-link_id="contacts" ng-show="language=='english'">
 									Contacts
-								</a>
+								</md-button>
 							</div>
 							<div class="nav-item dropdown has-children">
-								<a href="#project" data-link_id="project" ng-show="language=='francais'">	
+								<md-button href="#project" data-link_id="project" ng-show="language=='francais'">
 									Description de projet
-								</a>
+								</md-button>
 								<div class="dropdown-panel raised">
-									<a href="#context" data-link_id="context" ng-show="language=='francais'">Context</a>
-									<a href="#project" data-link_id="project" ng-show="language=='francais'">Description de projet</a>
-									<a href="#goals" data-link_id="goals" ng-show="language=='francais'">Goals</a>
-									
+									<md-button href="#context" data-link_id="context" ng-show="language=='francais'">Context</md-button>
+									<md-button href="#project" data-link_id="project" ng-show="language=='francais'">Description de projet</md-button>
+									<md-button href="#goals" data-link_id="goals" ng-show="language=='francais'">Goals</md-button>
+
 								</div>
 							</div>
 							<div class="nav-item">
-								<a href="#propose-submission" data-link_id="propose-submission" ng-show="language=='francais'">
+								<md-button href="#propose-submission" data-link_id="propose-submission" ng-show="language=='francais'">
 									Formulaire de contribution
-								</a>
+								</md-button>
 							</div>
 							<div class="nav-item">
-								<a href="#contacts" data-link_id="contacts" ng-show="language=='francais'">
+								<md-button href="#contacts" data-link_id="contacts" ng-show="language=='francais'">
 									Contacts
-								</a>
+								</md-button>
 							</div>
 
 						</nav><!-- #nav -->
@@ -73,34 +73,48 @@
 
 					<div class="languages">
 						<img class="french-flag language" src="/wp-content/themes/hca/min/img/french_flag.png" ng-click="toggle_language($event)" data-language="francais"/>
+
 						<img class="english-flag language selected-language" src="/wp-content/themes/hca/min/img/american_flag.png" ng-click="toggle_language($event)" data-language="english"/>
+
 					</div>
 
 				</div>
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<div id="content" role="main" class="content-wrapper">
 			{% block content %}
 				Sorry, no content
 			{% endblock %}
-		</section>
+		</div>
 
 		{% block footer %}
-			<footer id="footer">
 				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
 		{% endblock %}
+		
+		{{ function('wp_footer') }}
 
-        <!--script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script-->
-        <!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script-->
+		<div class="modal-strip bg-white">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12 overflow-hidden">
+    				<i class="ti ti-new-window icon icon-sm pull-left color-primary"></i>
+    				<p class="mb0 pull-left">Learn more about the Charlie Archive at <a href="http://pioneers.darthcrimson.org/projects/charlie-archive/">DARTH Crimson's article and data visualizations</a></p>
+    			</div>
+    		</div><!--end of row-->
+    	</div><!--end of container-->
+    </div><!--end modal strip-->
 
-
-        <script src="/wp-content/themes/hca/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/hca/min/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/hca/min/js/angular.min.js" type="text/javascript"></script>
-        <script src="/wp-content/themes/hca/min/js/main.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/min/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/bower_components/headroom.js/dist/headroom.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/node_modules/angular/angular.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/node_modules/angular-animate/angular-animate.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/node_modules/angular-aria/angular-aria.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/node_modules/angular-material/angular-material.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/node_modules/angular-material-icons/angular-material-icons.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/bower_components/headroom.js/dist/angular.headroom.js" type="text/javascript"></script>
+    <script src="/wp-content/themes/hca/min/js/main.js" type="text/javascript"></script>
 
 
 	</body>

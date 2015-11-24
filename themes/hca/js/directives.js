@@ -1,4 +1,4 @@
-angular.module('HarvardCharlieApp')
+angular.module('cahl')
 .directive("fileread", [function () {
     return {
         scope: {
