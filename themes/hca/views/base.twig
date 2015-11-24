@@ -33,6 +33,7 @@
 									<md-button href="#context" data-link_id="context" ng-show="language=='english'">Context</md-button>
 									<md-button href="#project" data-link_id="project" ng-show="language=='english'">Project Description</md-button>
 									<md-button href="#goals" data-link_id="goals" ng-show="language=='english'">Goals</md-button>
+									<md-button href="#recent-submissions" data-link_id="recent-submissions" ng-show="language=='english'">Recent Submissions</md-button>
 
 								</div>
 							</div>
@@ -54,6 +55,7 @@
 									<md-button href="#context" data-link_id="context" ng-show="language=='francais'">Context</md-button>
 									<md-button href="#project" data-link_id="project" ng-show="language=='francais'">Description de projet</md-button>
 									<md-button href="#goals" data-link_id="goals" ng-show="language=='francais'">Goals</md-button>
+									<md-button href="#recent-submissions" data-link_id="recent-submissions" ng-show="language=='francais'">Recent Submissions</md-button>
 
 								</div>
 							</div>
@@ -91,7 +93,7 @@
 		{% block footer %}
 				{% include 'footer.twig' %}
 		{% endblock %}
-		
+
 		{{ function('wp_footer') }}
 
 		<div class="modal-strip bg-white">

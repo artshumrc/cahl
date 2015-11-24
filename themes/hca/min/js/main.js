@@ -1,6 +1,16 @@
 var app = angular.module( 'cahl', [ 'ngMaterial', 'ngMdIcons', 'headroom' ]);
 
 angular.module('cahl')
+
+	.config( function( $interpolateProvider ){
+		'use strict';
+
+		// configure angular templating denotation to play nice with Twig
+		$interpolateProvider.startSymbol('{[').endSymbol(']}');
+
+	});
+
+angular.module('cahl')
 // primary controller
 .controller('CAHLController', ['$scope', '$http', function($scope, $http) {
 
@@ -12,6 +22,43 @@ angular.module('cahl')
 	$scope.submission = {
 
 	};
+	$scope.search_results = [{
+				thumbnail : "/wp-content/themes/hca/min/img/submission5.jpg",
+				title : "Example Submission 1",
+				author : "Example Submitter",
+				date : "Feb 23, 2015",
+				location : "Paris, FR"
+			},{
+				thumbnail : "/wp-content/themes/hca/min/img/submission2.jpg",
+				title : "Example Submission 2",
+				author : "Example Submitter",
+				date : "Jul 7, 2015",
+				location : "Boston, MA, USA"
+			},{
+				thumbnail : "/wp-content/themes/hca/min/img/submission4.jpg",
+				title : "Example Submission 3",
+				author : "Example Submitter",
+				date : "Jan 30, 2015",
+				location : "Berlin, DE"
+			},{
+				thumbnail : "/wp-content/themes/hca/min/img/event_soldiers.jpg",
+				title : "Example Submission 4",
+				author : "Example Submitter",
+				date : "Feb 2, 2015",
+				location : "Paris, FR"
+			},{
+				thumbnail : "/wp-content/themes/hca/min/img/submission3.jpg",
+				title : "Example Submission 5",
+				author : "Example Submitter",
+				date : "Mar 19, 2015",
+				location : "Boston, MA, USA"
+			},{
+				thumbnail : "/wp-content/themes/hca/min/img/submission6.jpg",
+				title : "Example Submission 6",
+				author : "Example Submitter",
+				date : "Jun 6, 2015",
+				location : "Paris, FR"
+		}];
 
 	$scope.start = function(){
 
@@ -129,6 +176,12 @@ angular.module('cahl')
 
 
 
+
+	};
+
+	$scope.toggle_search_term = function ( term ){
+
+		$(".search-type-" + term).toggleClass("selected");
 
 	};
 

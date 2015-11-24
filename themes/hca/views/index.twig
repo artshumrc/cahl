@@ -57,11 +57,11 @@
 
 				<nav role="main" class="primary head-nav">
 
-					<md-button class="btn btn-sm " href="#recent-submissions" data-link_id="propose-submission" ng-show="language=='english'">
+					<md-button class="btn btn-sm " href="#recent-submissions" data-link_id="recent-submissions" ng-show="language=='english'">
 						Recent Submissions
 					</md-button>
 
-					<md-button class="btn btn-sm " href="#propose-submission" data-link_id="propose-submission" ng-show="language=='francais'">
+					<md-button class="btn btn-sm " href="#recent-submissions" data-link_id="recent-submissions" ng-show="language=='francais'">
 						Recent Submissions
 					</md-button>
 
@@ -163,21 +163,81 @@
 <section id="recent-submissions" class="recent-submission">
 
 		<h2 ng-show="language=='english'">Recent Submissions</h2>
-		<h2 ng-show="language=='francais'">Recent Submission</h2>
+		<h2 ng-show="language=='francais'">Recent Submissions</h2>
+
+		<div class="search-tools">
+			<div class="search-tool text-search">
+				<i class="material-icons">search</i>
+				<input type="text" placeholder="Search"/>
+			</div>
+			<md-button class="search-tool search-type search-type-photograph" ng-click="toggle_search_term( 'photograph' )">
+					Photographs
+					<i class="material-icons unchecked">check_box_outline_blank</i>
+					<i class="material-icons checked">check_box</i>
+			</md-button>
+			<md-button class="search-tool search-type search-type-news" ng-click="toggle_search_term( 'news' )">
+					News & Articles
+					<i class="material-icons unchecked">check_box_outline_blank</i>
+					<i class="material-icons checked">check_box</i>
+			</md-button>
+			<md-button class="search-tool search-type search-type-internet" ng-click="toggle_search_term( 'internet' )">
+					Internet
+					<i class="material-icons unchecked">check_box_outline_blank</i>
+					<i class="material-icons checked">check_box</i>
+			</md-button>
+		</div>
+
+		<div class="results">
+			<md-card class="submission-teaser paper-card" ng-repeat="result in search_results">
+				<div class="image-wrap">
+					<div class="interaction-icons">
+						<i class="material-icons interaction-icon fullscreen paper-shadow">fullscreen</i>
+						<i class="material-icons interaction-icon download paper-shadow">file_download</i>
+
+					</div>
+					<img class="submission-image" ng-src="{[result.thumbnail]}" />
+				</div>
+				<md-card-content>
+					<a href="#">
+						<h4 class="md-title">{[result.title]}</h4>
+						<div class="submission-author-wrap">
+						By&nbsp;<span class="submission-author">{[result.author]}</span>
+						</div>
+					</a>
+					<div class="card-meta">
+						<div class="card-meta-item card-meta-location">
+							<i class="material-icons">map</i>
+							<span class="submission-location">{[result.location]}</span>
+						</div>
+						<div class="card-meta-item card-meta-date">
+							<i class="material-icons">date_range</i>
+							<span class="submission-date">{[result.date]}</span>
+						</div>
+					</div>
+				</md-card-content>
+			</md-card>
+
+		</div>
+
+		<div class="show-more-wrap">
+			<md-button class="btn show-more">
+				Show More
+			</md-button>
+		</div>
 
 </section>
 
 
-<section id="contacts" class="block contacts bg-gray">
+<section id="contacts" class="contacts bg-gray">
 	<div class="block-inner">
 		<h2 ng-show="language=='english'">Contacts</h2>
 		<h2 ng-show="language=='francais'">Contacts</h2>
-		<span class="two-thirds-width contacts-subtitle-text page-help-text" ng-show="language=='english'">
-		The Charlie Archive at Harvard Library is an evolving collaborative project that includes Harvard librarians, faculty members, and students. If you have any questions about the Charlie Archive, please contact the project manager at <a href="mailto:charliearchive@fas.harvard.edu">charliearchive@fas.harvard.edu</a>.
-		</span>
-		<span class="two-thirds-width contacts-subtitle-text page-help-text" ng-show="language=='francais'">
-		Les Archives Charlie à la Bibliothèque de Harvard est un projet collaboratif auquel collaborent bibliothécaires, membres de la faculté et étudiants. Si vous avez des questions concernant ces Archives, veuillez contacter le coordinateur de projet, Tuo Liu: <a href="mailto:charliearchive@fas.harvard.edu">charliearchive@fas.harvard.edu</a>.
-		</span>
+		<p ng-show="language=='english'">
+			The Charlie Archive at Harvard Library is an evolving collaborative project that includes Harvard librarians, faculty members, and students. If you have any questions about the Charlie Archive, please contact the project manager at <a href="mailto:charliearchive@fas.harvard.edu">charliearchive@fas.harvard.edu</a>.
+		</p>
+		<p ng-show="language=='francais'">
+			Les Archives Charlie à la Bibliothèque de Harvard est un projet collaboratif auquel collaborent bibliothécaires, membres de la faculté et étudiants. Si vous avez des questions concernant ces Archives, veuillez contacter le coordinateur de projet, Tuo Liu: <a href="mailto:charliearchive@fas.harvard.edu">charliearchive@fas.harvard.edu</a>.
+		</p>
 		<div class="team-member team-member-head">
 			<div class="team-member-text team-member-text-wide">
 				<h3>Virginie Greene</h3>
@@ -225,7 +285,7 @@
 </section>
 
 
-<section id="propose-submission" class="block submission-proposal">
+<section id="propose-submission" class="submission-proposal">
 
 	<div class="block-inner" ng-show="successful_submission">
 
