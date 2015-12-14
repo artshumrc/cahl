@@ -20618,6 +20618,93 @@ article.single .article-content a:hover {
   color: #222;
 }
 
+/* line 224, ../../scss/_archive.scss */
+.selected-result {
+  position: relative;
+}
+/* line 227, ../../scss/_archive.scss */
+.selected-result .close-selected {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 30px;
+  padding: 7px 13px;
+  z-index: 1;
+}
+/* line 236, ../../scss/_archive.scss */
+.selected-result .close-selected i {
+  padding-top: 5px;
+}
+/* line 243, ../../scss/_archive.scss */
+.selected-result .image-wrap {
+  position: relative;
+}
+/* line 245, ../../scss/_archive.scss */
+.selected-result .image-wrap .interaction-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/* line 251, ../../scss/_archive.scss */
+.selected-result .image-wrap .interaction-icons i {
+  background: #fff;
+  border-radius: 30px;
+  padding: 13px;
+  z-index: 1;
+  margin-right: 5px;
+}
+/* line 258, ../../scss/_archive.scss */
+.selected-result .image-wrap .interaction-icons i:hover {
+  background: #3c1612;
+  color: #fff;
+}
+/* line 271, ../../scss/_archive.scss */
+.selected-result .selected-meta {
+  text-align: left;
+  padding: 50px 0;
+  max-width: 730px;
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 278, ../../scss/_archive.scss */
+.selected-result .selected-meta h4 {
+  font-size: 42px;
+}
+/* line 282, ../../scss/_archive.scss */
+.selected-result .selected-meta .submission-author-wrap, .selected-result .selected-meta .submission-author {
+  font-size: 24px;
+}
+/* line 287, ../../scss/_archive.scss */
+.selected-result .selected-meta .card-meta {
+  padding: 20px 0;
+}
+/* line 290, ../../scss/_archive.scss */
+.selected-result .selected-meta .card-meta .card-meta-item {
+  padding: 10px 0;
+}
+/* line 293, ../../scss/_archive.scss */
+.selected-result .selected-meta .card-meta .card-meta-item .card-tag {
+  background: #512723;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* line 306, ../../scss/_archive.scss */
+.selected-result .selected-meta .card-meta .card-meta-item i {
+  padding-top: 0px;
+  vertical-align: top;
+}
+/* line 311, ../../scss/_archive.scss */
+.selected-result .selected-meta .card-meta .card-meta-item span {
+  font-size: 18px;
+}
+
 /*
  * Responsive styles
  */
