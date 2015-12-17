@@ -17,7 +17,7 @@ angular.module('cahl')
 	window.__Hc__ = window.__Hc__ || {};
 	var Hc = window.__Hc__;
 
-	$scope.language = "english";
+	$scope.language = "francais";
 	$scope.successful_submission = false;
 	$scope.submission = {
 
@@ -80,8 +80,8 @@ angular.module('cahl')
 			$(".language[data-language='" + $scope.language + "']").addClass("selected-language");
 
 		}else{
-			$.cookie("harvard_charlie_language", "english");
-			$scope.language = "english";
+			$.cookie("harvard_charlie_language", "francais");
+			$scope.language = "francais";
 
 		}
 		$scope.update();
