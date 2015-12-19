@@ -20895,21 +20895,41 @@ article.single .article-content a:hover {
   .block .block-inner {
     width: 88%;
   }
+
+  /* line 139, ../../scss/_responsive.scss */
+  .harvard-fas-logo {
+    width: 200px;
+  }
+  /* line 141, ../../scss/_responsive.scss */
+  .harvard-fas-logo img {
+    width: 100%;
+  }
+
+  /* line 145, ../../scss/_responsive.scss */
+  section#head h1 {
+    font-size: 42px;
+  }
+
+  /* line 148, ../../scss/_responsive.scss */
+  section#head nav .md-button {
+    font-size: 11px;
+    padding: 8px 15px;
+  }
 }
 @media (max-width: 767px) {
-  /* line 141, ../../scss/_responsive.scss */
+  /* line 156, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     margin-top: 16px;
   }
 }
 @media (max-width: 500px) {
-  /* line 150, ../../scss/_responsive.scss */
+  /* line 165, ../../scss/_responsive.scss */
   header .hdr-logo-link img {
     margin: 22px 5px 22px 10px;
     width: 20px;
   }
 
-  /* line 154, ../../scss/_responsive.scss */
+  /* line 169, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     text-overflow: ellipsis;
     max-width: 80%;
@@ -20917,45 +20937,45 @@ article.single .article-content a:hover {
     white-space: nowrap;
   }
 
-  /* line 160, ../../scss/_responsive.scss */
+  /* line 175, ../../scss/_responsive.scss */
   .block.head .languages .language {
     width: 20px;
     height: 20px;
   }
 
-  /* line 164, ../../scss/_responsive.scss */
+  /* line 179, ../../scss/_responsive.scss */
   .block {
     padding: 30px 0;
   }
 
-  /* line 167, ../../scss/_responsive.scss */
+  /* line 182, ../../scss/_responsive.scss */
   .block.intro-image, .block.submission-image {
     background-size: cover;
   }
 
-  /* line 170, ../../scss/_responsive.scss */
+  /* line 185, ../../scss/_responsive.scss */
   .block.block-image {
     height: 300px;
   }
 
-  /* line 173, ../../scss/_responsive.scss */
+  /* line 188, ../../scss/_responsive.scss */
   .block.submission-proposal input[type=submit] {
     width: 100%;
   }
 }
 @media (max-width: 400px) {
-  /* line 178, ../../scss/_responsive.scss */
+  /* line 193, ../../scss/_responsive.scss */
   header .languages {
     margin-right: 0;
     width: 19%;
   }
 
-  /* line 182, ../../scss/_responsive.scss */
+  /* line 197, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     max-width: 80%;
   }
 
-  /* line 185, ../../scss/_responsive.scss */
+  /* line 200, ../../scss/_responsive.scss */
   header .primary-header-content {
     width: 80%;
   }

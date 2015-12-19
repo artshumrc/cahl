@@ -136,6 +136,21 @@
 	.block .block-inner {
 		width:88%;
 	}
+	.harvard-fas-logo {
+		width:200px;
+		img {
+			width:100%;
+		}
+	}
+	section#head h1 {
+		font-size:42px;
+	}
+	section#head nav .md-button {
+		font-size:11px;
+		padding:8px 15px;
+
+	}
+
 }
 @media (max-width:767px) {
 	header .hdr-logo-link h1.hdr-logo {
