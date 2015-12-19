@@ -49,6 +49,7 @@ $(document).ready(function($) {
 
 	$("nav a").bind("click",function(e){
 		$('html, body').animate({
+
 			scrollTop: $( "#" + e.target.dataset.link_id ).offset().top
 		}, 300);
 

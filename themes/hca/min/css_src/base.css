@@ -20712,22 +20712,21 @@ article.single .article-content a:hover {
   /* line 8, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     font-size: 14px;
-    margin-top: 26px;
   }
 
-  /* line 12, ../../scss/_responsive.scss */
+  /* line 11, ../../scss/_responsive.scss */
   header #nav-main a {
     font-size: 11px;
     padding-top: 28px;
     padding-bottom: 24px;
   }
 
-  /* line 17, ../../scss/_responsive.scss */
+  /* line 16, ../../scss/_responsive.scss */
   .block .block-inner {
     width: 98%;
   }
 
-  /* line 20, ../../scss/_responsive.scss */
+  /* line 19, ../../scss/_responsive.scss */
   .block.goals .goals-text, .block.intro .intro-block-text {
     width: 100%;
     padding: 30px 0;
@@ -20735,17 +20734,17 @@ article.single .article-content a:hover {
     display: block;
     text-align: center;
   }
-  /* line 26, ../../scss/_responsive.scss */
+  /* line 25, ../../scss/_responsive.scss */
   .block.goals .goals-text p, .block.intro .intro-block-text p {
     text-align: left;
   }
 
-  /* line 30, ../../scss/_responsive.scss */
+  /* line 29, ../../scss/_responsive.scss */
   .block.intro .intro-block-image {
     display: none;
   }
 
-  /* line 33, ../../scss/_responsive.scss */
+  /* line 32, ../../scss/_responsive.scss */
   .block.goals .goals-image {
     width: 50%;
     padding: 0 30px 30px;
@@ -20754,29 +20753,29 @@ article.single .article-content a:hover {
     margin: 0px auto 20px;
   }
 
-  /* line 40, ../../scss/_responsive.scss */
+  /* line 39, ../../scss/_responsive.scss */
   .block.project-description .project-description-text {
     width: 98%;
   }
 
-  /* line 43, ../../scss/_responsive.scss */
+  /* line 42, ../../scss/_responsive.scss */
   .block.submission-proposal .form-help-text {
     width: 98%;
   }
 
-  /* line 46, ../../scss/_responsive.scss */
+  /* line 45, ../../scss/_responsive.scss */
   .block.submission-proposal .submission-form {
     width: 98%;
   }
 
-  /* line 49, ../../scss/_responsive.scss */
+  /* line 48, ../../scss/_responsive.scss */
   .block p {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.7);
     line-height: 1.6em;
   }
 
-  /* line 55, ../../scss/_responsive.scss */
+  /* line 54, ../../scss/_responsive.scss */
   .block h3 {
     margin: 10px auto 20px;
     font-size: 28px;
@@ -20784,107 +20783,133 @@ article.single .article-content a:hover {
     display: inline-block;
   }
 
-  /* line 61, ../../scss/_responsive.scss */
+  /* line 60, ../../scss/_responsive.scss */
   .block.project-description .project-description-text {
     padding: 0 20px;
   }
 }
+@media (max-width: 1000px) {
+  /* line 65, ../../scss/_responsive.scss */
+  section#project .project-description-text {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* line 69, ../../scss/_responsive.scss */
+  section#propose-submission p.form-entry {
+    width: 100%;
+  }
+}
 @media (max-width: 900px) {
-  /* line 68, ../../scss/_responsive.scss */
+  /* line 74, ../../scss/_responsive.scss */
   header #nav-main {
     display: none;
   }
 
-  /* line 71, ../../scss/_responsive.scss */
+  /* line 77, ../../scss/_responsive.scss */
   header .languages .language {
     width: 20px;
     height: 20px;
     margin: 25px 5px;
   }
 
-  /* line 76, ../../scss/_responsive.scss */
+  /* line 82, ../../scss/_responsive.scss */
   .bottom-right {
     display: none;
   }
 
-  /* line 79, ../../scss/_responsive.scss */
+  /* line 85, ../../scss/_responsive.scss */
   footer .footer-text {
     display: block;
     width: 98%;
     text-align: center;
   }
 
-  /* line 84, ../../scss/_responsive.scss */
+  /* line 90, ../../scss/_responsive.scss */
   .block.goals .goals-image {
     width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  /* line 89, ../../scss/_responsive.scss */
+  /* line 95, ../../scss/_responsive.scss */
   .block.project-description .project-description-text {
     padding: 0;
   }
 
-  /* line 92, ../../scss/_responsive.scss */
+  /* line 98, ../../scss/_responsive.scss */
   .block.who-we-are .team-member-text {
     width: 100%;
   }
 
-  /* line 95, ../../scss/_responsive.scss */
+  /* line 101, ../../scss/_responsive.scss */
   .block.who-we-are .team-member-image {
     display: block;
     margin: 20px auto;
     width: 33%;
   }
 
-  /* line 100, ../../scss/_responsive.scss */
+  /* line 106, ../../scss/_responsive.scss */
   .block.submission-proposal .submission-input-field input[type=text], .block.submission-proposal .submission-input-field textarea {
     display: block;
     width: 100%;
     margin-left: 0;
   }
 
-  /* line 105, ../../scss/_responsive.scss */
+  /* line 111, ../../scss/_responsive.scss */
   .block.submission-proposal .submission-input-field label {
     display: block;
     width: 100%;
   }
+
+  /* line 115, ../../scss/_responsive.scss */
+  .modal-strip i.close-modal {
+    padding: 10px;
+    display: block;
+    float: right;
+    margin: 0 20px;
+  }
 }
 @media (max-width: 800px) {
-  /* line 111, ../../scss/_responsive.scss */
+  /* line 123, ../../scss/_responsive.scss */
   .harvard-romance-languages-department-logo {
     width: 60%;
   }
-  /* line 113, ../../scss/_responsive.scss */
+  /* line 125, ../../scss/_responsive.scss */
   .harvard-romance-languages-department-logo img {
     width: 100%;
   }
 
-  /* line 117, ../../scss/_responsive.scss */
+  /* line 129, ../../scss/_responsive.scss */
   .block.head h1 {
     font-size: 30px;
     margin-top: 100px;
   }
 
-  /* line 121, ../../scss/_responsive.scss */
+  /* line 133, ../../scss/_responsive.scss */
   .block.head nav a {
     font-size: 14px;
   }
 
-  /* line 124, ../../scss/_responsive.scss */
+  /* line 136, ../../scss/_responsive.scss */
   .block .block-inner {
     width: 88%;
   }
 }
+@media (max-width: 767px) {
+  /* line 141, ../../scss/_responsive.scss */
+  header .hdr-logo-link h1.hdr-logo {
+    margin-top: 16px;
+  }
+}
 @media (max-width: 500px) {
-  /* line 132, ../../scss/_responsive.scss */
+  /* line 150, ../../scss/_responsive.scss */
   header .hdr-logo-link img {
     margin: 22px 5px 22px 10px;
     width: 20px;
   }
 
-  /* line 136, ../../scss/_responsive.scss */
+  /* line 154, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     text-overflow: ellipsis;
     max-width: 80%;
@@ -20892,45 +20917,45 @@ article.single .article-content a:hover {
     white-space: nowrap;
   }
 
-  /* line 142, ../../scss/_responsive.scss */
+  /* line 160, ../../scss/_responsive.scss */
   .block.head .languages .language {
     width: 20px;
     height: 20px;
   }
 
-  /* line 146, ../../scss/_responsive.scss */
+  /* line 164, ../../scss/_responsive.scss */
   .block {
     padding: 30px 0;
   }
 
-  /* line 149, ../../scss/_responsive.scss */
+  /* line 167, ../../scss/_responsive.scss */
   .block.intro-image, .block.submission-image {
     background-size: cover;
   }
 
-  /* line 152, ../../scss/_responsive.scss */
+  /* line 170, ../../scss/_responsive.scss */
   .block.block-image {
     height: 300px;
   }
 
-  /* line 155, ../../scss/_responsive.scss */
+  /* line 173, ../../scss/_responsive.scss */
   .block.submission-proposal input[type=submit] {
     width: 100%;
   }
 }
 @media (max-width: 400px) {
-  /* line 160, ../../scss/_responsive.scss */
+  /* line 178, ../../scss/_responsive.scss */
   header .languages {
     margin-right: 0;
     width: 19%;
   }
 
-  /* line 164, ../../scss/_responsive.scss */
+  /* line 182, ../../scss/_responsive.scss */
   header .hdr-logo-link h1.hdr-logo {
     max-width: 80%;
   }
 
-  /* line 167, ../../scss/_responsive.scss */
+  /* line 185, ../../scss/_responsive.scss */
   header .primary-header-content {
     width: 80%;
   }
