@@ -80,6 +80,9 @@ function hca_get_posts_callback () {
 							$image_meta['is_image'] = wp_attachment_is_image( $attachment_id );
 							if( $image_meta['is_image'] ){
 								$image_meta['medium_thumb'] = wp_get_attachment_image_src( $attachment_id, $size='medium', $icon=false );
+							}else {
+								$image_meta['file'] = wp_get_attachment_url( $attachment_id );
+
 							}
 							$images[] = $image_meta;
 

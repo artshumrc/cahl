@@ -45,6 +45,7 @@
     overflow:hidden;
     border-bottom:1px solid #ddd;
     position:relative;
+    text-align:center;
 
     &:hover {
       .interaction-icons {
@@ -259,6 +260,8 @@
 
     .image-wrap {
       position:relative;
+      text-align:center;
+
       .interaction-icons {
         position:absolute;
         top:20px;
@@ -283,6 +286,7 @@
 
 
       }
+
 
     }
 
@@ -341,4 +345,10 @@
 
   }
 
+}
+.file-download {
+  font-size:60px;
+  padding:100px;
+  margin:0 auto;
+  display:inline-block;
 }

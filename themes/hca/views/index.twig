@@ -197,15 +197,6 @@
 		<div class="results">
 			<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" ng-hide="selected_result">
 				<div class="image-wrap">
-					<!--div class="interaction-icons">
-						<a href="{[result.images[0].medium_thumb[0]]}" ng-show="result.images[0].is_image">
-							<i class="material-icons interaction-icon fullscreen paper-shadow">fullscreen</i>
-						</a>
-						<a href="/{[result.images[0].file}" target="_blank" ng-show="!result.images[0].is_image">
-							<i class="material-icons interaction-icon download paper-shadow">file_download</i>
-						</a>
-
-					</div-->
 
 					<img class="submission-image" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="result.images[0].is_image" ng-click="show_single($event)"/>
 					<i class="material-icons file-download" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="!result.images[0].is_image" ng-click="show_single($event)">description</i>
@@ -243,7 +234,7 @@
 							<a class="image-modal-link" href="#" ng-click="show_image_modal($event)" ng-show="image.is_image" data-image-url="/wp-content/uploads/{[image.file]}">
 								<i class="material-icons interaction-icon paper-shadow">fullscreen</i>
 							</a>
-							<a href="/{[result.images[0].file}" target="_blank" ng-show="!images.is_image">
+							<a href="{[image.file]}" target="_blank" ng-show="!image.is_image">
 								<i class="material-icons interaction-icon download paper-shadow">file_download</i>
 							</a>
 
