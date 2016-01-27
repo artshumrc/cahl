@@ -20293,11 +20293,18 @@ form.sent .wpcf7-response-output {
 }
 
 /* line 642, ../../scss/_index.scss */
-.media-cards {
-  text-align: center;
+.media-block {
+  background: #f6f6f6;
 }
 
-/* line 645, ../../scss/_index.scss */
+/* line 646, ../../scss/_index.scss */
+.media-cards {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 651, ../../scss/_index.scss */
 .media-card {
   width: 44%;
   margin: 15px 2%;
@@ -20306,7 +20313,7 @@ form.sent .wpcf7-response-output {
   padding: 40px;
   text-align: left;
 }
-/* line 653, ../../scss/_index.scss */
+/* line 659, ../../scss/_index.scss */
 .media-card .organization {
   display: block;
   color: #3c1612;
@@ -20314,13 +20321,17 @@ form.sent .wpcf7-response-output {
   font-size: 14px;
   font-weight: 700;
 }
-/* line 662, ../../scss/_index.scss */
+/* line 668, ../../scss/_index.scss */
 .media-card h3 {
   font-size: 22px;
   padding: 0px 0;
   line-height: 1.5em;
 }
-/* line 668, ../../scss/_index.scss */
+/* line 672, ../../scss/_index.scss */
+.media-card h3:hover {
+  color: #3c1612;
+}
+/* line 677, ../../scss/_index.scss */
 .media-card p {
   font-size: 18px;
   color: #999;
@@ -20329,7 +20340,7 @@ form.sent .wpcf7-response-output {
   line-height: 1.5em;
   float: left;
 }
-/* line 677, ../../scss/_index.scss */
+/* line 686, ../../scss/_index.scss */
 .media-card .icon-link {
   float: right;
 }

@@ -639,8 +639,14 @@ form.sent {
 
 }
 
+.media-block {
+	background:#f6f6f6;
+}
+
 .media-cards {
 	text-align:center;
+	max-width:1200px;
+	margin:0 auto;
 }
 .media-card {
 	width:44%;
@@ -663,6 +669,9 @@ form.sent {
 		font-size:22px;
 		padding:0px 0;
 		line-height:1.5em;
+		&:hover {
+			color:$primary;
+		}
 
 	}
 	p {
