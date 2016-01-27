@@ -12,6 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "jquery": "*",
-    "headroom.js": "~0.7.0"
+    "headroom.js": "~0.7.0",
+    "masonry": "~4.0.0"
   }
 }

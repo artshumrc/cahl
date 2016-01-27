@@ -71,6 +71,9 @@ $(document).ready(function($) {
 		$target.children(".dropdown-panel").removeClass("lowered").addClass("raised");
 	});
 
+	$(".media-cards").masonry({
+		itemSelector : ".media-card",
+	});
 
 	// Smooth scroll to inner links
 

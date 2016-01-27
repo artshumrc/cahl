@@ -10,6 +10,15 @@
 	</div>
 </div>
 
+<div class="cahl-loading-modal cahl-modal">
+	<div class="sk-folding-cube">
+	  <div class="sk-cube1 sk-cube"></div>
+	  <div class="sk-cube2 sk-cube"></div>
+	  <div class="sk-cube4 sk-cube"></div>
+	  <div class="sk-cube3 sk-cube"></div>
+	</div>
+</div>
+
 <section class="cover fullscreen image-bg headline-image head " id="head">
 
 	<div class="background-image-holder">
@@ -195,32 +204,34 @@
 		</div-->
 
 		<div class="results">
-			<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" ng-hide="selected_result">
-				<div class="image-wrap">
+			<div class="results-grid">
+				<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" ng-hide="selected_result">
+					<div class="image-wrap">
 
-					<img class="submission-image" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="result.images[0].is_image" ng-click="show_single($event)"/>
-					<i class="material-icons file-download" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="!result.images[0].is_image" ng-click="show_single($event)">description</i>
+						<img class="submission-image" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="result.images[0].is_image" ng-click="show_single($event)"/>
+						<i class="material-icons file-download" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="!result.images[0].is_image" ng-click="show_single($event)">description</i>
 
-				</div>
-				<md-card-content>
-					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length===0||!result.images">{[result.post_title]}</h4>
-					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length === 1">{[result.post_title]} - {[result.images.length]} Attachment</h4>
-					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length>1">{[result.post_title]} - {[result.images.length]} Attachments</h4>
-					<div class="submission-author-wrap">
-					By&nbsp;<span class="submission-author">{[result.donated_by]}</span>
 					</div>
-					<div class="card-meta">
-						<div class="card-meta-item card-meta-location">
-							<i class="material-icons">map</i>
-							<span class="submission-location">{[result.location]}</span>
+					<md-card-content>
+						<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length===0||!result.images">{[result.post_title]}</h4>
+						<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length === 1">{[result.post_title]} - {[result.images.length]} Attachment</h4>
+						<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length>1">{[result.post_title]} - {[result.images.length]} Attachments</h4>
+						<div class="submission-author-wrap">
+						By&nbsp;<span class="submission-author">{[result.donated_by]}</span>
 						</div>
-						<!--div class="card-meta-item card-meta-date">
-							<i class="material-icons">date_range</i>
-							<span class="submission-date">{[result.date]}</span>
-						</div-->
-					</div>
-				</md-card-content>
-			</md-card>
+						<div class="card-meta">
+							<div class="card-meta-item card-meta-location">
+								<i class="material-icons">map</i>
+								<span class="submission-location">{[result.location]}</span>
+							</div>
+							<!--div class="card-meta-item card-meta-date">
+								<i class="material-icons">date_range</i>
+								<span class="submission-date">{[result.date]}</span>
+							</div-->
+						</div>
+					</md-card-content>
+				</md-card>
+			</div>
 
 			<div class="selected-result" ng-show="selected_result">
 				<div class="close-selected paper-shadow" ng-click="close_single()">
@@ -286,7 +297,7 @@
 		</div>
 
 		<div class="show-more-wrap" ng-hide="selected_result">
-			<md-button class="btn show-more" ng-click="show_more()" ng-show="more_to_show">
+			<md-button class="btn show-more paper-shadow" ng-click="show_more()" ng-show="more_to_show">
 				Show More
 			</md-button>
 		</div>
@@ -351,9 +362,9 @@
 </section>
 
 <section id="media" class="media-block">
+	<h2 ng-show="language=='english'">Media</h2>
+	<h2 ng-show="language=='francais'">Media</h2>
 	<div class=" media-cards">
-		<h2 ng-show="language=='english'">Media</h2>
-		<h2 ng-show="language=='francais'">Media</h2>
 
 		<md-card class="media-card paper-card">
 			<span class="organization">France Bleu</span>

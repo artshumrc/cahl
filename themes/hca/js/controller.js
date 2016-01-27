@@ -10,57 +10,9 @@ angular.module('cahl')
 	$scope.submission = {
 
 	};
-	$scope.search_results = [{
-				id : 1,
-				tags : ["Photograph", "Je suis Charlie"],
-				thumbnail : "/wp-content/themes/hca/min/img/submission5.jpg",
-				title : "Example Submission 1",
-				author : "Example Submitter",
-				date : "Feb 23, 2015",
-				location : "Paris, FR"
-			},{
-				id : 2,
-				tags : ["Graffiti", "Photograph"],
-				thumbnail : "/wp-content/themes/hca/min/img/submission2.jpg",
-				title : "Example Submission 2",
-				author : "Example Submitter",
-				date : "Jul 7, 2015",
-				location : "Boston, MA, USA"
-			},{
-				id : 3,
-				tags : ["News & Articles", "Magazine"],
-				thumbnail : "/wp-content/themes/hca/min/img/submission4.jpg",
-				title : "Example Submission 3",
-				author : "Example Submitter",
-				date : "Jan 30, 2015",
-				location : "Berlin, DE"
-			},{
-				id : 4,
-				tags : ["Photograph"],
-				thumbnail : "/wp-content/themes/hca/min/img/event_soldiers.jpg",
-				title : "Example Submission 4",
-				author : "Example Submitter",
-				date : "Feb 2, 2015",
-				location : "Paris, FR"
-			},{
-				id : 5,
-				tags : ["News & Articles"],
-				thumbnail : "/wp-content/themes/hca/min/img/submission3.jpg",
-				title : "Example Submission 5",
-				author : "Example Submitter",
-				date : "Mar 19, 2015",
-				location : "Boston, MA, USA"
-			},{
-				id : 6,
-				tags : ["Photograph", "Graffiti"],
-				thumbnail : "/wp-content/themes/hca/min/img/submission6.jpg",
-				title : "Example Submission 6",
-				author : "Example Submitter",
-				date : "Jun 6, 2015",
-				location : "Paris, FR"
-		}];
-		$scope.search_results = [];
-		$scope.more_to_show = true;
+	$scope.search_results = [];
+	$scope.more_to_show = true;
+	$scope.masonry_inited = false;
 
 	$scope.init = function(){
 
@@ -115,6 +67,23 @@ angular.module('cahl')
 				if(data.posts.length < 15){
 					$scope.more_to_show = false;
 				}
+				setTimeout(function(){
+
+					if( $scope.masonry_inited){
+						$(".results-grid").masonry('destroy');
+						$(".results-grid").masonry({
+							itemSelector: ".submission-teaser"
+						});
+
+					}else {
+						$(".results-grid").masonry({
+							itemSelector: ".submission-teaser"
+						});
+
+					}
+					$scope.masonry_inited = true;
+
+				},500);
 
 
 			})
