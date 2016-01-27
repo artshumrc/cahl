@@ -2,6 +2,13 @@
 
 {% block content %}
 
+<div class="cahl-image-modal cahl-modal">
+	<div class="close-modal paper-card" ng-click="close_image_modal()">
+		<i class="material-icons">close</i>
+	</div>
+	<div class="image-modal-image">
+	</div>
+</div>
 
 <section class="cover fullscreen image-bg headline-image head parallax" id="head">
 
@@ -190,21 +197,24 @@
 		<div class="results">
 			<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" ng-hide="selected_result">
 				<div class="image-wrap">
-					<div class="interaction-icons">
-						<a href="{[result.images[0]]}">
+					<!--div class="interaction-icons">
+						<a href="{[result.images[0].medium_thumb[0]]}" ng-show="result.images[0].is_image">
 							<i class="material-icons interaction-icon fullscreen paper-shadow">fullscreen</i>
 						</a>
-						<a href="{[result.images[0]]}">
+						<a href="/{[result.images[0].file}" target="_blank" ng-show="!result.images[0].is_image">
 							<i class="material-icons interaction-icon download paper-shadow">file_download</i>
 						</a>
 
-					</div>
+					</div-->
 
-					<img class="submission-image" ng-src="{[result.images[0]]}" ng-click="show_single($event)"/>
+					<img class="submission-image" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="result.images[0].is_image" ng-click="show_single($event)"/>
+					<i class="material-icons file-download" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="!result.images[0].is_image" ng-click="show_single($event)">description</i>
 
 				</div>
 				<md-card-content>
-					<h4 class="md-title" ng-click="show_single($event)">{[result.post_title]}</h4>
+					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length===0||!result.images">{[result.post_title]}</h4>
+					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length === 1">{[result.post_title]} - {[result.images.length]} Attachment</h4>
+					<h4 class="md-title" ng-click="show_single($event)" ng-show="result.images.length>1">{[result.post_title]} - {[result.images.length]} Attachments</h4>
 					<div class="submission-author-wrap">
 					By&nbsp;<span class="submission-author">{[result.donated_by]}</span>
 					</div>
@@ -227,20 +237,23 @@
 				</div>
 
 
-				<div class="image-wrap">
-					<div class="interaction-icons">
-						<a href="{[selected_result.thumbnail]}">
-							<i class="material-icons interaction-icon paper-shadow">fullscreen</i>
-						</a>
-						<a href="{[selected_result.thumbnail]}">
-							<i class="material-icons interaction-icon paper-shadow">file_download</i>
-						</a>
+				<md-card class="gallery-image" ng-repeat="image in selected_result.images">
+					<div class="image-wrap">
+						<div class="interaction-icons">
+							<a class="image-modal-link" href="#" ng-click="show_image_modal($event)" ng-show="image.is_image" data-image-url="/wp-content/uploads/{[image.file]}">
+								<i class="material-icons interaction-icon paper-shadow">fullscreen</i>
+							</a>
+							<a href="/{[result.images[0].file}" target="_blank" ng-show="!images.is_image">
+								<i class="material-icons interaction-icon download paper-shadow">file_download</i>
+							</a>
+
+						</div>
+
+						<img class="submission-image" ng-src="{[image.medium_thumb[0]]}"  ng-show="image.is_image"/>
+						<i class="material-icons file-download" ng-src="{[image.medium_thumb[0]]}"  ng-show="!image.is_image">description</i>
 
 					</div>
-
-					<img id="selected_result_image" class="submission-image" ng-src="{[selected_result.thumbnail]}" data-zoom-image="{[selected_result.thumbnail]}"/>
-
-				</div>
+				</md-card>
 
 				<div class="selected-meta">
 

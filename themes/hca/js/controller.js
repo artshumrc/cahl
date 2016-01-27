@@ -271,6 +271,29 @@ angular.module('cahl')
 
 	};
 
+	$scope.show_image_modal = function(e){
+		var $target = $(e.target)
+		,		image_url = ""
+		;
+
+		if(!$target.hasClass("image-modal-link")){
+			$target = $target.parents(".image-modal-link");
+		}
+
+		image_url = $target.data().imageUrl;
+
+		$(".image-modal-image").css("background-image", "url(" + image_url + ")");
+		$(".cahl-image-modal").fadeIn();
+		e.preventDefault();
+
+
+	};
+
+	$scope.close_image_modal = function(){
+		$(".cahl-image-modal").fadeOut();
+
+	};
+
 
 	$scope.init();
 

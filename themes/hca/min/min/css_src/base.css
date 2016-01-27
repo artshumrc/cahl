@@ -20252,6 +20252,46 @@ form.sent .wpcf7-response-output {
   color: #A33D31;
 }
 
+/* line 601, ../../scss/_index.scss */
+.cahl-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(70, 70, 70, 0.6);
+  display: none;
+}
+/* line 611, ../../scss/_index.scss */
+.cahl-image-modal .close-modal {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  background: #eee;
+  padding: 8px 10px 4px 9px;
+  border-radius: 50%;
+}
+/* line 618, ../../scss/_index.scss */
+.cahl-image-modal .close-modal i {
+  font-size: 32px;
+}
+/* line 624, ../../scss/_index.scss */
+.cahl-image-modal .image-modal-image {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  height: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*
  * Page styles
  */
@@ -20621,8 +20661,9 @@ article.single .article-content a:hover {
 /* line 224, ../../scss/_archive.scss */
 .selected-result {
   position: relative;
+  text-align: center;
 }
-/* line 227, ../../scss/_archive.scss */
+/* line 228, ../../scss/_archive.scss */
 .selected-result .close-selected {
   position: absolute;
   top: 20px;
@@ -20632,34 +20673,50 @@ article.single .article-content a:hover {
   padding: 7px 13px;
   z-index: 1;
 }
-/* line 236, ../../scss/_archive.scss */
+/* line 237, ../../scss/_archive.scss */
 .selected-result .close-selected i {
   padding-top: 5px;
 }
-/* line 243, ../../scss/_archive.scss */
-.selected-result .image-wrap {
+/* line 244, ../../scss/_archive.scss */
+.selected-result .gallery-image {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+}
+/* line 252, ../../scss/_archive.scss */
+.selected-result .gallery-image:hover .image-wrap .interaction-icons {
+  opacity: 1;
+}
+/* line 260, ../../scss/_archive.scss */
+.selected-result .gallery-image .image-wrap {
   position: relative;
 }
-/* line 245, ../../scss/_archive.scss */
-.selected-result .image-wrap .interaction-icons {
+/* line 262, ../../scss/_archive.scss */
+.selected-result .gallery-image .image-wrap .interaction-icons {
   position: absolute;
   top: 20px;
   left: 20px;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  opacity: 0;
 }
-/* line 251, ../../scss/_archive.scss */
-.selected-result .image-wrap .interaction-icons i {
+/* line 269, ../../scss/_archive.scss */
+.selected-result .gallery-image .image-wrap .interaction-icons i {
   background: #fff;
   border-radius: 30px;
   padding: 13px;
   z-index: 1;
   margin-right: 5px;
 }
-/* line 258, ../../scss/_archive.scss */
-.selected-result .image-wrap .interaction-icons i:hover {
+/* line 276, ../../scss/_archive.scss */
+.selected-result .gallery-image .image-wrap .interaction-icons i:hover {
   background: #3c1612;
   color: #fff;
 }
-/* line 271, ../../scss/_archive.scss */
+/* line 292, ../../scss/_archive.scss */
 .selected-result .selected-meta {
   text-align: left;
   padding: 50px 0;
@@ -20667,23 +20724,23 @@ article.single .article-content a:hover {
   width: 95%;
   margin: 0 auto;
 }
-/* line 278, ../../scss/_archive.scss */
+/* line 299, ../../scss/_archive.scss */
 .selected-result .selected-meta h4 {
   font-size: 42px;
 }
-/* line 282, ../../scss/_archive.scss */
+/* line 303, ../../scss/_archive.scss */
 .selected-result .selected-meta .submission-author-wrap, .selected-result .selected-meta .submission-author {
   font-size: 24px;
 }
-/* line 287, ../../scss/_archive.scss */
+/* line 308, ../../scss/_archive.scss */
 .selected-result .selected-meta .card-meta {
   padding: 20px 0;
 }
-/* line 290, ../../scss/_archive.scss */
+/* line 311, ../../scss/_archive.scss */
 .selected-result .selected-meta .card-meta .card-meta-item {
   padding: 10px 0;
 }
-/* line 293, ../../scss/_archive.scss */
+/* line 314, ../../scss/_archive.scss */
 .selected-result .selected-meta .card-meta .card-meta-item .card-tag {
   background: #512723;
   color: #fff;
@@ -20695,12 +20752,12 @@ article.single .article-content a:hover {
   font-weight: bold;
   cursor: pointer;
 }
-/* line 306, ../../scss/_archive.scss */
+/* line 327, ../../scss/_archive.scss */
 .selected-result .selected-meta .card-meta .card-meta-item i {
   padding-top: 0px;
   vertical-align: top;
 }
-/* line 311, ../../scss/_archive.scss */
+/* line 332, ../../scss/_archive.scss */
 .selected-result .selected-meta .card-meta .card-meta-item span {
   font-size: 18px;
 }

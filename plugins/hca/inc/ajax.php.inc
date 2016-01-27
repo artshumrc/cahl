@@ -73,10 +73,24 @@ function hca_get_posts_callback () {
 						$post->$rv = do_shortcode($post->$rv);
 					}else if ($rv == "post_excerpt") {
 						$post->$rv = strip_tags($post->$rv);
-					}
-					$post_data[$rv] = $post->$rv;
-				} elseif ( $rv == "thumbnail" ) {
+					}else if ($rv == "images"){
+						$images = array();
+						foreach( $post->$rv as $attachment_id ){
+							$image_meta = wp_get_attachment_metadata( $attachment_id );
+							$image_meta['is_image'] = wp_attachment_is_image( $attachment_id );
+							if( $image_meta['is_image'] ){
+								$image_meta['medium_thumb'] = wp_get_attachment_image_src( $attachment_id, $size='medium', $icon=false );
+							}
+							$images[] = $image_meta;
 
+						}
+						$post->$rv = $images;
+
+					}
+
+					$post_data[$rv] = $post->$rv;
+
+				} elseif ( $rv == "thumbnail" ) {
 					$thumb = get_the_post_thumbnail( $post->ID, 'article' );
 					$post_data['thumbnail_meta'] = '';
 					if ( strlen( $thumb ) > 0 ) {

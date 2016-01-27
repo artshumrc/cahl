@@ -223,6 +223,7 @@
 
 .selected-result {
   position:relative;
+  text-align: center;
 
   .close-selected {
     position:absolute;
@@ -240,33 +241,53 @@
 
   }
 
-  .image-wrap {
-    position:relative;
-    .interaction-icons {
-      position:absolute;
-      top:20px;
-      left:20px;
+  .gallery-image {
+    width:30%;
+    display:inline-block;
+    vertical-align: top;
+    margin:15px;
 
-
-      i {
-        background:$light;
-        border-radius:30px;
-        padding:13px;
-        z-index:1;
-        margin-right:5px;
-
-        &:hover {
-          background:$primary;
-          color:$light;
-
+    &:hover {
+      .image-wrap {
+        .interaction-icons {
+          opacity:1;
         }
 
       }
+    }
 
+
+    .image-wrap {
+      position:relative;
+      .interaction-icons {
+        position:absolute;
+        top:20px;
+        left:20px;
+        @include transition(all 300ms ease);
+        opacity:0;
+
+        i {
+          background:$light;
+          border-radius:30px;
+          padding:13px;
+          z-index:1;
+          margin-right:5px;
+
+          &:hover {
+            background:$primary;
+            color:$light;
+
+          }
+
+        }
+
+
+      }
 
     }
 
   }
+
 
   .selected-meta {
     text-align:left;

@@ -597,3 +597,44 @@ form.sent {
 .required {
 	color:$required;
 }
+
+.cahl-image-modal {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1000;
+	background:rgba(70,70,70,0.6);
+	display:none;
+
+	.close-modal {
+		position:fixed;
+		right:40px;
+		top:30px;
+		background:#eee;
+		padding:8px 10px 4px 9px;
+		border-radius:50%;
+		i {
+			font-size:32px;
+		}
+
+	}
+
+	.image-modal-image {
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		right:0;
+		left:0;
+		margin:auto;
+		text-align:center;
+		width:90%;
+		height:90%;
+		background-size:contain;
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+
+
+}
