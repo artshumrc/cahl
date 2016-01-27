@@ -204,8 +204,8 @@
 		</div-->
 
 		<div class="results">
-			<div class="results-grid">
-				<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" ng-hide="selected_result">
+			<div class="results-grid" ng-hide="selected_result">
+				<md-card class="submission-teaser paper-card" data-id="{[result.ID]}" ng-repeat="result in search_results" >
 					<div class="image-wrap">
 
 						<img class="submission-image" ng-src="{[result.images[0].medium_thumb[0]]}"  ng-show="result.images[0].is_image" ng-click="show_single($event)"/>
@@ -238,24 +238,27 @@
 					<i class="material-icons">close</i>
 				</div>
 
+				<div class="gallery-images">
 
-				<md-card class="gallery-image" ng-repeat="image in selected_result.images">
-					<div class="image-wrap">
-						<div class="interaction-icons">
-							<a class="image-modal-link" href="#" ng-click="show_image_modal($event)" ng-show="image.is_image" data-image-url="/wp-content/uploads/{[image.file]}">
-								<i class="material-icons interaction-icon paper-shadow">fullscreen</i>
-							</a>
-							<a href="{[image.file]}" target="_blank" ng-show="!image.is_image">
-								<i class="material-icons interaction-icon download paper-shadow">file_download</i>
-							</a>
+					<md-card class="gallery-image" ng-repeat="image in selected_result.images">
+						<div class="image-wrap">
+							<div class="interaction-icons">
+								<a class="image-modal-link" href="#" ng-click="show_image_modal($event)" ng-show="image.is_image" data-image-url="/wp-content/uploads/{[image.file]}">
+									<i class="material-icons interaction-icon paper-shadow">fullscreen</i>
+								</a>
+								<a href="{[image.file]}" target="_blank" ng-show="!image.is_image">
+									<i class="material-icons interaction-icon download paper-shadow">file_download</i>
+								</a>
+
+							</div>
+
+							<img class="submission-image" ng-src="{[image.medium_thumb[0]]}"  ng-show="image.is_image"/>
+							<i class="material-icons file-download" ng-src="{[image.medium_thumb[0]]}"  ng-show="!image.is_image">description</i>
 
 						</div>
+					</md-card>
 
-						<img class="submission-image" ng-src="{[image.medium_thumb[0]]}"  ng-show="image.is_image"/>
-						<i class="material-icons file-download" ng-src="{[image.medium_thumb[0]]}"  ng-show="!image.is_image">description</i>
-
-					</div>
-				</md-card>
+				</div>
 
 				<div class="selected-meta">
 
@@ -266,9 +269,9 @@
 					</div>
 
 					<div class="card-meta">
-						<div class="card-meta-item card-meta-location">
+						<!--div class="card-meta-item card-meta-location">
 								<span class="card-tag paper-shadow" ng-repeat="tag in selected_result.tags" data-tag="{[tag]}">{[tag]}</span>
-						</div>
+						</div-->
 						<div class="card-meta-item card-meta-location">
 							<i class="material-icons">map</i>
 							<span class="submission-location">{[selected_result.location]}</span>

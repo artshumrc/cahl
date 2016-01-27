@@ -24,7 +24,8 @@ angular.module('cahl')
 	};
 	$scope.search_results = [];
 	$scope.more_to_show = true;
-	$scope.masonry_inited = false;
+	$scope.results_masonry_inited = false;
+	$scope.gallery_masonry_inited = false;
 
 	$scope.init = function(){
 
@@ -83,19 +84,16 @@ angular.module('cahl')
 				}
 				setTimeout(function(){
 
-					if( $scope.masonry_inited){
+					if( $scope.results_masonry_inited){
 						$(".results-grid").masonry('destroy');
-						$(".results-grid").masonry({
-							itemSelector: ".submission-teaser"
-						});
-
-					}else {
-						$(".results-grid").masonry({
-							itemSelector: ".submission-teaser"
-						});
 
 					}
-					$scope.masonry_inited = true;
+
+					$(".results-grid").masonry({
+						itemSelector: ".submission-teaser"
+					});
+
+					$scope.results_masonry_inited = true;
 					$(".cahl-loading-modal").fadeOut();
 
 				},500);
@@ -219,16 +217,11 @@ angular.module('cahl')
 
 		}
 
-		/*
-		setTimeout(function(){
-			$("#selected_result_image").elevateZoom({
-				zoomType	: "lens",
-				lensShape : "round",
-				lensSize  : 200
-			});
+		$(".cahl-loading-modal").fadeIn();
 
-		}, 1000);
-		*/
+    $('html, body').animate({
+        scrollTop: $("#recent-submissions").offset().top
+    }, 300);
 
 		target_id = $target.data().id;
 
@@ -240,11 +233,44 @@ angular.module('cahl')
 
 		});
 
+		if ( $scope.selected_result.images.length > 3 ){
+
+			setTimeout(function(){
+
+				if( $scope.gallery_masonry_inited ){
+					$(".gallery-images").masonry('destroy');
+
+				}
+				$(".gallery-images").masonry({
+					itemSelector: ".gallery-image"
+				});
+				$scope.gallery_masonry_inited = true;
+
+				$(".cahl-loading-modal").fadeOut();
+
+			},1000)
+
+		}else {
+
+			$(".cahl-loading-modal").fadeOut();
+
+		}
 
 	};
 
 	$scope.close_single = function ( e ){
+		$(".cahl-loading-modal").fadeIn();
 		$scope.selected_result = null;
+
+		setTimeout(function(){
+			$(".results-grid").masonry('destroy');
+			$(".results-grid").masonry({
+				itemSelector: ".submission-teaser"
+			});
+
+			$(".cahl-loading-modal").fadeOut();
+
+		},1000)
 
 	};
 
