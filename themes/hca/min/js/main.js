@@ -61,6 +61,8 @@ angular.module('cahl')
 			document.title = "The Charlie Archive at the Harvard Library | Department of Romance Languages and Literatures and Harvard Libraries";
 		}
 
+		$(".cahl-loading-modal").fadeIn();
+
 		$http({
 				method : 'GET',
 				url : '/wp-admin/admin-ajax.php',
@@ -94,6 +96,7 @@ angular.module('cahl')
 
 					}
 					$scope.masonry_inited = true;
+					$(".cahl-loading-modal").fadeOut();
 
 				},500);
 

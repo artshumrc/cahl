@@ -20307,7 +20307,7 @@ form.sent .wpcf7-response-output {
 
 /* line 652, ../../scss/_index.scss */
 .media-card {
-  width: 47%;
+  width: 44%;
   margin: 15px 2%;
   display: inline-block;
   vertical-align: top;
@@ -20834,9 +20834,22 @@ article.single .article-content a:hover {
   display: inline-block;
 }
 
-/* line 366, ../../scss/_archive.scss */
+/* line 362, ../../scss/_archive.scss */
+.cahl-loading-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  text-align: center;
+  display: none;
+}
+
+/* line 376, ../../scss/_archive.scss */
 .sk-folding-cube {
-  margin: 20px auto;
+  margin: 200px auto;
   width: 40px;
   height: 40px;
   position: relative;
@@ -20844,7 +20857,7 @@ article.single .article-content a:hover {
   transform: rotateZ(45deg);
 }
 
-/* line 375, ../../scss/_archive.scss */
+/* line 385, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube {
   float: left;
   width: 50%;
@@ -20855,7 +20868,7 @@ article.single .article-content a:hover {
   transform: scale(1.1);
 }
 
-/* line 384, ../../scss/_archive.scss */
+/* line 394, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube:before {
   content: '';
   position: absolute;
@@ -20863,7 +20876,7 @@ article.single .article-content a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #3c1612;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -20871,37 +20884,37 @@ article.single .article-content a:hover {
   transform-origin: 100% 100%;
 }
 
-/* line 398, ../../scss/_archive.scss */
+/* line 408, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
   transform: scale(1.1) rotateZ(90deg);
 }
 
-/* line 402, ../../scss/_archive.scss */
+/* line 412, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube3 {
   -webkit-transform: scale(1.1) rotateZ(180deg);
   transform: scale(1.1) rotateZ(180deg);
 }
 
-/* line 406, ../../scss/_archive.scss */
+/* line 416, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube4 {
   -webkit-transform: scale(1.1) rotateZ(270deg);
   transform: scale(1.1) rotateZ(270deg);
 }
 
-/* line 410, ../../scss/_archive.scss */
+/* line 420, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube2:before {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
 
-/* line 414, ../../scss/_archive.scss */
+/* line 424, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube3:before {
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
-/* line 418, ../../scss/_archive.scss */
+/* line 428, ../../scss/_archive.scss */
 .sk-folding-cube .sk-cube4:before {
   -webkit-animation-delay: 0.9s;
   animation-delay: 0.9s;
