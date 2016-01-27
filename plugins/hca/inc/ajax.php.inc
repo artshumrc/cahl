@@ -26,7 +26,6 @@ function hca_get_posts_callback () {
 	$post = array();
 	$response = array();
 
-	error_log("query_args" . var_export($_REQUEST, true));
 
 	// assign the specified parameters to the query args if they are in the $allowed_parameters
 	foreach ( $post_query as $k => $v ) {
