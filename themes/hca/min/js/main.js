@@ -95,7 +95,7 @@ angular.module('cahl')
 						order : 'ASC',
 						orderby : 'post_date'
 					};
-		$scope.request = [ 'ID', 'post_title', 'post_name', 'post_content', 'donated_by', 'location', 'gallery'];
+		$scope.request = [ 'ID', 'post_title', 'post_name', 'post_content', 'donated_by', 'location', 'images'];
 
 
 		$scope.update();
@@ -114,7 +114,7 @@ angular.module('cahl')
 				url : '/wp-admin/admin-ajax.php',
 				headers: {'Content-Type': 'application/json'},
 				params : {
-					request_args : $scope.request,
+					request_args : $scope.request.join(","),
 					post_query : $scope.query,
 					action : 'hca_get_posts'
 				}
@@ -262,7 +262,7 @@ angular.module('cahl')
 
 		$scope.search_results.forEach(function(result){
 
-			if ( result.id === target_id ){
+			if ( result.ID === target_id ){
 				$scope.selected_result = result;
 			}
 
