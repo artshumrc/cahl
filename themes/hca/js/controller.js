@@ -59,6 +59,8 @@ angular.module('cahl')
 				date : "Jun 6, 2015",
 				location : "Paris, FR"
 		}];
+		$scope.search_results = [];
+		$scope.more_to_show = true;
 
 	$scope.init = function(){
 
@@ -72,6 +74,18 @@ angular.module('cahl')
 			$scope.language = "francais";
 
 		}
+
+		$scope.query 	= {
+						post_type	: 'submission',
+						post_status : 'publish',
+						showposts : 15,
+						paged : 0,
+						order : 'ASC',
+						orderby : 'post_date'
+					};
+		$scope.request = [ 'ID', 'post_title', 'post_name', 'post_content', 'donated_by', 'location', 'gallery'];
+
+
 		$scope.update();
 	};
 
@@ -82,6 +96,32 @@ angular.module('cahl')
 		}else{
 			document.title = "The Charlie Archive at the Harvard Library | Department of Romance Languages and Literatures and Harvard Libraries";
 		}
+
+		$http({
+				method : 'GET',
+				url : '/wp-admin/admin-ajax.php',
+				headers: {'Content-Type': 'application/json'},
+				params : {
+					request_args : $scope.request,
+					post_query : $scope.query,
+					action : 'hca_get_posts'
+				}
+			})
+			.success( function ( data ) {
+
+				console.log("query res:", data);
+				$scope.search_results.push.apply( $scope.search_results, data.posts );
+
+				if(data.posts.length < 15){
+					$scope.more_to_show = false;
+				}
+
+
+			})
+			.error( function ( e, a ) {
+				console.log( 'Error with query:', e, a );
+
+			});
 
 		$scope.update_form_labels();
 	};
@@ -224,6 +264,12 @@ angular.module('cahl')
 
 	};
 
+	$scope.show_more = function(){
+		$scope.query.paged = $scope.query.paged + 1;
+		$scope.update();
+
+
+	};
 
 
 	$scope.init();

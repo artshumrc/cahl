@@ -21,7 +21,20 @@ class HarvardSite extends TimberSite {
 	}
 
 	function register_post_types() {
-		//this is where you can register custom post types
+		register_post_type( 'submission',
+			array(
+				'labels' => array(
+					'name' => __( 'Example Submission' ),
+				),
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'public' => true,
+			'has_archive' => true,
+			'description' => 'Examples Submission to the Archive',
+			'map_meta_cap' => true,
+			'taxonomies' => array( 'category', 'post_tag' )
+			)
+		);
+
 	}
 
 	function register_taxonomies() {
@@ -47,12 +60,12 @@ class HarvardSite extends TimberSite {
 add_action( 'wpcf7_before_send_mail', 'save_submission_form' );
 function save_submission_form( $cf7 ) {
 	$submission = WPCF7_Submission::get_instance();
-  
+
 	if ( $submission ) {
 		$posted_data = $submission->get_posted_data();
 	}
 	$post_title = "Submission From " . $posted_data["text-159"] . " " . $posted_data["text-160"] . ": " . $posted_data['email-632'];
-	 
+
 	$radio_1 = $posted_data['radio-424'];
 	if ( count( $radio_1 ) ){
 		$radio_1 = $radio_1[0];
@@ -66,7 +79,7 @@ function save_submission_form( $cf7 ) {
 		$radio_3 = $radio_3[0];
 	}
 
-	 
+
 
 	$post_content = "
 			First name: " . $posted_data['text-159'] . "
@@ -77,10 +90,10 @@ function save_submission_form( $cf7 ) {
 			Will submit via email/internet?: " . $radio_1 . "
 			Will submit via postal services?: " . $radio_2 . "
 
-			Terms used to describe: " . 
+			Terms used to describe: " .
 			$posted_data['textarea-533']  . "
-			
-			Description in own words: " . 
+
+			Description in own words: " .
 			$posted_data['textarea-534']  . "
 
 
