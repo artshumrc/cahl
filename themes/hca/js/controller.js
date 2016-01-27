@@ -227,6 +227,7 @@ angular.module('cahl')
 
 				if( $scope.gallery_masonry_inited ){
 					$(".gallery-images").masonry('destroy');
+					$scope.gallery_masonry_inited = false;
 
 				}
 				$(".gallery-images").masonry({
@@ -249,6 +250,11 @@ angular.module('cahl')
 	$scope.close_single = function ( e ){
 		$(".cahl-loading-modal").fadeIn();
 		$scope.selected_result = null;
+		if( $scope.gallery_masonry_inited ){
+			$(".gallery-images").masonry('destroy');
+			$scope.gallery_masonry_inited = false;
+		}
+
 
 		setTimeout(function(){
 			$(".results-grid").masonry('destroy');
