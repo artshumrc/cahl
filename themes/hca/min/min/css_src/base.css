@@ -20841,7 +20841,7 @@ article.single .article-content a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.99);
   z-index: 100;
   text-align: center;
   display: none;
@@ -20850,8 +20850,8 @@ article.single .article-content a:hover {
 /* line 376, ../../scss/_archive.scss */
 .sk-folding-cube {
   margin: 200px auto;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
   transform: rotateZ(45deg);

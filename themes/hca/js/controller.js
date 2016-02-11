@@ -31,7 +31,7 @@ angular.module('cahl')
 		$scope.query 	= {
 						post_type	: 'submission',
 						post_status : 'publish',
-						showposts : 15,
+						showposts : 9,
 						paged : 0,
 						order : 'ASC',
 						orderby : 'post_date'
@@ -67,7 +67,7 @@ angular.module('cahl')
 				console.log("query res:", data);
 				$scope.search_results.push.apply( $scope.search_results, data.posts );
 
-				if(data.posts.length < 15){
+				if(data.posts.length < $scope.query.showposts){
 					$scope.more_to_show = false;
 				}
 				setTimeout(function(){
@@ -84,7 +84,7 @@ angular.module('cahl')
 					$scope.results_masonry_inited = true;
 					$(".cahl-loading-modal").fadeOut();
 
-				},500);
+				},2000);
 
 
 			})
