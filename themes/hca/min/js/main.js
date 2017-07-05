@@ -74,9 +74,9 @@ angular.module('cahl')
 					action : 'hca_get_posts'
 				}
 			})
-			.success( function ( data ) {
+			.then( function ( res ) {
 
-				console.log("query res:", data);
+				var data = res.data;
 				$scope.search_results.push.apply( $scope.search_results, data.posts );
 
 				if(data.posts.length < $scope.query.showposts){
@@ -99,8 +99,7 @@ angular.module('cahl')
 				},2000);
 
 
-			})
-			.error( function ( e, a ) {
+			}, function ( e, a ) {
 				console.log( 'Error with query:', e, a );
 
 			});
