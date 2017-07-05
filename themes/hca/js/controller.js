@@ -64,7 +64,7 @@ angular.module('cahl')
 			})
 			.success( function ( data ) {
 
-				console.log("query res:", data);
+				// console.log("query res:", data);
 				$scope.search_results.push.apply( $scope.search_results, data.posts );
 
 				if(data.posts.length < $scope.query.showposts){
